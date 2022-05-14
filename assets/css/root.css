@@ -1,0 +1,39 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+
+:root {
+   /* FONT FAMILY */
+   --montserrat-font: 'Montserrat', sans-serif;
+   --crimscon-pro-font: "Crimson Pro", serif;
+
+   /* COLORS */
+   --primary-font-color: #120E30;
+   --secondary-font-color: #43454F;
+   --bg-color: #F6F3FC;
+   --bg-color-light: #F9F7FC;
+
+   --btn-color: #FE3152;
+   --btn-color-light: #FE4764;
+   --cyan: #51DDE9;
+   --cyan-dark: #32CDDA;
+   --blue: #3B55E6;
+   --blue-dark: #334CD5;
+   --dark-gray: #B9BED1;
+   --dark-gray-dark: #A1A6BB;
+   --light-gray: #F0F2F7;
+   --light-gray-dark: #E4E7EF;
+   --dark-blue: #3A405B;
+   --dark-blue-dark: #222328;
+
+   --success: #4BE1AB;
+   --success-dark: #43D29E;
+
+   --pending: #F3D351;
+   --pending-dark: #E8C63B;
+
+   --error: #FE5339;
+   --error-dark: #EB4E36;
+
+
+
+}
