@@ -3,7 +3,7 @@
    justify-content: center;
    align-items: center;
    background-color: var(--bg-color);
-   min-height: 100vh;
+   height: 1080px;
    font-family: var(--montserrat-font);
    margin: 0;
 }
@@ -90,11 +90,11 @@
 
 .featured-books {
    display: flex;
-
-   justify-content: center;
-   align-items: center;
-   background-color: rgb(255, 158, 158);
-   min-height: 100vh;
+   flex-direction: column;
+   /* justify-content: center;
+   align-items: center; */
+   background-color: white;
+   height: 1080px;
    font-family: var(--montserrat-font);
    margin: 0;
 }
@@ -105,7 +105,7 @@
    align-items: center;
    flex-direction: column;
    /* background-color: var(--bg-color); */
-   min-height: 100vh;
+   height: 1080px;
    font-family: var(--montserrat-font);
    margin: 0;
    color: var(--dark-blue-dark)
@@ -178,16 +178,7 @@
    height: 279px;
 }
 
-.footer-wrapper {
-   display: flex;
 
-   justify-content: center;
-   align-items: center;
-   background-color: rgb(255, 158, 158);
-   min-height: 100vh;
-   font-family: var(--montserrat-font);
-   margin: 0;
-}
 
 @media only screen and (max-width: 1500px) {}
 
