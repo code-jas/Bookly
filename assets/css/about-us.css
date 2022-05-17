@@ -1,0 +1,347 @@
+.about-us-wrapper {
+
+   margin: 0 auto;
+   font-family: var(--montserrat-font);
+   color: var(--dark-blue-dark)
+}
+
+.about-us-desc-cont {
+
+   min-height: 100vh;
+   max-width: 1280px;
+   margin: 0 auto;
+   margin-top: 70px;
+   background-color: var(--dark-gray-dark);
+}
+
+
+.about-us-policy-cont {
+   max-width: 1280px;
+   margin: 0 auto;
+   min-height: 100vh;
+}
+
+.about-us-policy-header {
+   font-size: 2.5rem;
+   font-weight: 800;
+   margin: 100px 0 30px 0;
+}
+
+.about-us-policy-header2 {
+   font-size: 1.5rem;
+   font-weight: 600;
+   margin: 0 0 20px 0;
+   padding: 0 70px;
+
+}
+
+
+.about-us-policy-parag {
+   font-size: 1rem;
+   font-weight: 400;
+   margin: 0 0 20px 0;
+   padding: 0 130px;
+   text-indent: 50px;
+   text-align: justify;
+}
+
+.about-us-policy-parag2 {
+   font-size: 1rem;
+   font-weight: 400;
+   margin: 40px 0 20px 0;
+   padding: 0 70px;
+}
+
+.about-us-policy-collection-cont {
+   display: flex;
+   flex-direction: column;
+   height: auto;
+   width: 80%;
+   margin: 0 auto;
+   /* margin: 0 120px 0 120px; */
+   padding: 0 0;
+   /* background-color: var(--light-gray); */
+}
+
+.about-us-policy-list {
+   /* margin: 3px; */
+   /* padding: 10px 10px; */
+}
+
+.about-us-policy-question {
+   padding: 10px;
+   margin: 5px;
+}
+
+.about-us-policy-answer {
+   max-height: 0;
+   overflow: hidden;
+   -webkit-transition: max-height 0.5s ease-out;
+   -moz-transition: max-height 0.5s ease-out;
+   -o-transition: max-height 0.5s ease-out;
+   transition: max-height 0.5s ease-out;
+
+   width: 80%;
+   margin: 0 auto;
+
+
+}
+
+.about-us-policy-list-topic {
+   font-size: 1.2rem;
+   font-weight: 600;
+   margin: 0 0 0 10px;
+}
+
+.policy-active {
+   background-color: var(--light-gray);
+
+
+}
+
+.btn-policy-plus {
+   display: inline;
+   font-size: 1.2rem;
+   padding: 6px 7px;
+   border: .5px solid white;
+   /* margin-right: 20px; */
+   border-radius: 50%;
+   transition: var(--transition);
+   cursor: pointer;
+
+}
+
+.btn-policy-plus:hover {
+   transform: scale(1.1);
+   color: var(--success-dark);
+   border: .5px solid #4be1aa86;
+   background-color: #4be1aa3c;
+}
+
+.btn-policy-minus {
+   display: none;
+   font-size: 1rem;
+   padding: 4px 5px;
+   margin-left: 3px;
+   color: var(--error);
+   font-weight: 900;
+   border: 1px solid var(--error);
+   /* margin-right: 20px; */
+   border-radius: 50%;
+   transition: var(--transition);
+   cursor: pointer;
+}
+
+.btn-policy-minus:hover {
+   transform: scale(1.1);
+   color: var(--error-dark);
+   border: 1px solid var(--error);
+   background-color: #fe53392d;
+}
+
+
+
+.about-us-policy-list-parag {
+   /* text-indent: 50px; */
+   font-size: 1rem;
+   margin: 30px 0;
+
+}
+
+/* .policy-margin {
+   margin: 30px auto;
+} */
+
+.about-us-policy-list-parag span {
+   font-weight: 600;
+   margin: 0 0 0 0;
+}
+
+.line-break-policy {
+   background-color: var(--light-gray-dark);
+   width: 100%;
+   height: 1.5px;
+   margin: 0 auto;
+}
+
+
+
+
+
+.team-section {
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   padding-top: 3rem;
+   min-height: 1400px;
+
+   background-color: #f7f8fd;
+}
+
+/* .team-section .color-head {
+   color: var(--btn-color);
+} */
+
+.team-section h1 {
+   color: var(--dark-blue-dark);
+   font-size: 3rem;
+   font-weight: 800;
+   margin: 4rem 0 7px 0;
+}
+
+.team-section h4 {
+   color: var(--secondary-font-color);
+   font-size: 1.2rem;
+   font-weight: 400;
+   font-family: "Crimson Pro", serif;
+   margin-bottom: 3rem;
+}
+
+.team-cont {
+   display: flex;
+   justify-content: center;
+   flex-wrap: wrap;
+   max-width: 1200px;
+   row-gap: 7rem;
+}
+
+.team {
+   position: relative;
+   border-radius: 10px;
+   box-shadow: 0 4px 5px (0, 0, 0, 0.2);
+   width: 270px;
+   height: 380px;
+   margin: 2rem;
+}
+
+.team img {
+   border-radius: 10px;
+   width: 100%;
+   height: 100%;
+   object-fit: cover;
+}
+
+.team-details {
+   color: var(--dark-blue-dark);
+   display: flex;
+   flex-direction: column;
+   padding: 1rem;
+}
+
+.team-details h3 {
+   color: var(--dark-blue-dark);
+   text-align: center;
+   font: 500 1.2rem "Montserrat", sans-serif;
+   margin-bottom: 6px;
+}
+
+.team-details h4 {
+   color: var(--dark-gray-alt);
+   text-align: center;
+   font: 400 0.9rem "Montserrat", sans-serif;
+   text-transform: uppercase;
+   margin: 0;
+}
+
+.team-socmed-link {
+   position: relative;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+}
+
+.team-socmed-link a {
+   text-decoration: none;
+}
+
+.team-socmed-link .icon {
+   position: relative;
+   color: var(--dark-blue-dark);
+   background-color: #ffffff;
+   border-radius: 50%;
+   padding: 15px;
+   margin: 10px;
+   width: 40px;
+   height: 40px;
+   font-size: 18px;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   flex-direction: column;
+   box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+   cursor: pointer;
+   transition: all 0.2s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.team-socmed-link .tooltip {
+   position: absolute;
+   top: 0;
+   font-size: 10px;
+   background-color: #ffffff;
+   color: #ffffff;
+   padding: 3px 5px;
+   border-radius: 5px;
+   box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+   opacity: 0;
+   pointer-events: none;
+   transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.team-socmed-link .tooltip::before {
+   position: absolute;
+   content: "";
+   height: 8px;
+   width: 8px;
+   background-color: #ffffff;
+   bottom: -3px;
+   left: 50%;
+   transform: translate(-50%) rotate(45deg);
+   transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.team-socmed-link .icon:hover .tooltip {
+   top: -45px;
+   opacity: 1;
+   visibility: visible;
+   pointer-events: auto;
+}
+
+.team-socmed-link .icon:hover span,
+.team-socmed-link .icon:hover .tooltip {
+   text-shadow: 0px -1px 0px rgba(0, 0, 0, 0.1);
+}
+
+.team-socmed-link .facebook:hover,
+.team-socmed-link .facebook:hover .tooltip,
+.team-socmed-link .facebook:hover .tooltip::before {
+   background-color: #3b5999;
+   color: #ffffff;
+}
+
+.team-socmed-link .twitter:hover,
+.team-socmed-link .twitter:hover .tooltip,
+.team-socmed-link .twitter:hover .tooltip::before {
+   background-color: #46c1f6;
+   color: #ffffff;
+}
+
+.team-socmed-link .instagram:hover,
+.team-socmed-link .instagram:hover .tooltip,
+.team-socmed-link .instagram:hover .tooltip::before {
+   background-color: #e1306c;
+   color: #ffffff;
+}
+
+.team-socmed-link .github:hover,
+.team-socmed-link .github:hover .tooltip,
+.team-socmed-link .github:hover .tooltip::before {
+   background-color: #333333;
+   color: #ffffff;
+}
+
+.team-socmed-link .youtube:hover,
+.team-socmed-link .youtube:hover .tooltip,
+.team-socmed-link .youtube:hover .tooltip::before {
+   background-color: #de463b;
+   color: #ffffff;
+}
