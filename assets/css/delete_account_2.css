@@ -1,0 +1,70 @@
+.delete-account-header {
+    font-size: 40px;
+    font-weight: 600;
+    margin-bottom: 30px;
+ }
+
+ 
+ .delete-account-parag1,.delete-account-parag2,.delete-account-parag3,.delete-account-parag4,.delete-account-header2{
+    margin-bottom: 20px;
+    padding: 10px;
+ }
+
+ .delete-account-line-break-policy {
+    background-color: var(--light-gray-dark);
+    width: 100%;
+    height: 1px;
+ }
+ .delete_account_container {
+    width: 100%;
+    height: 781px;
+    padding: 30px;
+    background-color: white;
+    border-radius: 15px;
+ }
+ 
+ .delete_account_content{
+     position: relative;
+     width: 80%;
+     margin: 0 auto;
+ }
+
+ .cancel-btn:active {
+    transform: translateY(2px);
+ }
+ 
+ .cancel-btn {
+    appearance: button;
+    background-color: var(--btn-color);
+    border-radius: 100px;
+    border-width: 0;
+    font-family: var(--montserrat-font);
+    color: #fff;
+    cursor: pointer;
+    font-size: 100%;
+    width: 120;
+    height: 40px;
+    line-height: 1.15;
+    padding: 0 25px;
+    position: bottom;
+    right: 0;
+    bottom: 50px;
+    text-align: center;
+    text-transform: capitalize;
+    transform: translateZ(0);
+    transition: all .3s, box-shadow .08s ease-in;
+    user-select: none;
+    -webkit-user-select: none;
+ }
+ 
+ .cancel-btn:hover {
+    transform: scale(1.1);
+ }
+ 
+ .cancel-btn:active {
+    transform: translateY(2px);
+ }
+ 
+ .cancel-btn:disabled {
+    cursor: default;
+ }
