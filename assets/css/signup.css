@@ -1,0 +1,131 @@
+body{
+    background: #FFFFFF;
+    font-family: 'Montserrat', sans-serif;
+}
+
+h2.title{
+    text-align: center;
+    font-weight:900;
+}
+
+h3.title{
+    text-align: center;
+    font-weight:700;
+    
+    text-transform: none;
+}
+
+.w3-container{
+    padding: 10px;
+}
+
+
+div.w3-modal-content{
+    width: 30%;
+    border-radius: 10px;
+    
+}
+
+#form-container{
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+    
+    margin: 0 auto;
+
+    text-transform: uppercase;
+}
+label{
+    color: #A8ACB9;
+    font-size: 10px;
+    padding: 5px;
+}
+
+input.txt-field{
+    width: 100%;
+    color: #4F5362;
+    font-size: 12px;
+    border-radius: 10px;
+    background-color: #F6F3FC;
+    border-color: #F6F3FC;
+    padding: 5px;
+    border-style: none;
+}
+
+input[type=text]:focus, input[type=email]:focus, input[type=password]:focus{
+    box-shadow: 0px 0px 3px 3px rgba(255, 145, 163, 0.8);
+    outline-color: #f89baa;
+    outline-style:solid;
+    background-color: #FFFFFF;
+}
+
+.w3-footer-container{
+    width: 90%;
+    margin: 0 auto;  
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+}
+.footer-content{
+    font-size: 10px;
+    color: #3A405B;
+    text-align: center;
+}
+
+#btn-next{
+    font-size: 12px;
+    border-style: none;
+    width: 200px;
+    padding: 5px;
+
+    border-radius: 100px;
+    background-color: #FE4764;
+    color: #FFFFFF;
+    
+}
+
+#btn-next:hover{
+    background-color: #FE3152;
+    cursor: pointer;
+}
+
+a.link-fpw {
+    float: right;
+    font-size: 8px;
+    
+    text-decoration: none;
+}
+
+a.link-fpw:hover{
+    text-decoration: underline;
+    color:#1c2030;
+}
+
+a.links{
+    font-weight: bolder;
+}
+
+a.links:hover{
+    text-decoration: underline;
+    color:#1c2030;
+    cursor: pointer;
+}
+
+@media only screen and (max-width: 1500px) {}
+
+@media only screen and (max-width: 1366px) {}
+
+@media only screen and (max-width: 1280px) {}
+
+
+@media only screen and (max-width: 1024px) {}
+
+
+
+@media only screen and (max-width: 820px) {}
+
+@media only screen and (max-width: 375px) {}

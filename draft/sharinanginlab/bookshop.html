@@ -5,28 +5,39 @@
    <meta charset="UTF-8">
    <meta http-equiv="X-UA-Compatible" content="IE=edge">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <title>Home | Bookly</title>
+   <title>Book Shop | Bookly</title>
+
+    <!--google Fonts-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+
    <!-- import icons -->
-   <link rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.1/css/all.min.css">
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" />
+
+   <!--BOOK SHOP CSS-->
+   <link rel="stylesheet" href="../../assets/css/bookshop.css"
+
+
    <!-- root css -->
-   <link rel="stylesheet" href="./assets/css/root.css">
+   <link rel="stylesheet" href="../../assets/css/root.css">
    <!-- navbar css -->
-   <link rel="stylesheet" href="./assets/css/navbar.css">
+   <link rel="stylesheet" href="../../assets/css/navbar.css">
    <!-- footer css -->
-   <link rel="stylesheet" href="./assets/css/footer.css">
+   <link rel="stylesheet" href="../../assets/css/footer.css">
 
 </head>
 
-
+<body>
 <!-- START | NAVIGATION BAR -->
 <header>
 
    <nav class="navbar">
       <div class="logo">
          <a href="index.html" class="branding">
-            <img src="./assets/images/illustrations/book-icon.svg" alt="book icon" class="nav-image">
+            <img src="../../assets/images/illustrations/book-icon.svg" alt="book icon" class="nav-image">
             <h1 class="branding-text">BOOKLY</h1>
          </a>
       </div>
@@ -79,11 +90,117 @@
 <!-- END | NAVIGATION BAR -->
 
 
+<!-- START | BOOK SHOP GALLERY -->
+<section id="filter-search-section">
+<div class="filter-search-container">
+   <div class="filter-container">
+       <button class="filter"><i class="fa-solid fa-filter"></i>Filter</button>
+   </div>
 
+   <div class="search-container">
+       <form action="">
+           <input type="search" id="gsearch" name="gsearch" placeholder="Search for books">
+           <i class="magnifying fa-solid fa-magnifying-glass"></i>
+       </form>
+   </div>
+</div>
+</section>
 
+<section id="bookshop-gallery-section"> 
+<div class="grid-container">
+   <div class="grid-content">
+       <a id="book-links" href="../bookdescription.html">
+       <img class="img-book" src="../../assets/images/bookshop-gallery/6.jpg" alt=""/>
+       <div class="book-content">
+           <h6 class="book-title">The Dinosaur Lords</h6> 
+           <p class="authors">Jhon Carlos</p>
+           <p class="price">₱250</p>
+       </div>
+       </a>
+      
+   </div>
+   <div class="grid-content">
+       <img class="img-book" src="../../assets/images/bookshop-gallery/f4.jpg" alt=""/>
+       <div class="book-content">
+           <h6 class="book-title">The Girl Who Lived</h6> 
+           <p class="authors">Tiffany Go</p>
+           <p class="price">₱250</p>
+       </div>
+   </div>
 
+   <div class="grid-content">
+       <img class="img-book" src="../../assets/images/bookshop-gallery/Loloko.jpg" alt=""/>
+       <div class="book-content">
+           <h6 class="book-title">On The House</h6> 
+           <p class="authors">Angelo Silvestre</p>
+           <p class="price">₱250</p>
+       </div>
+   </div>
 
+   <div class="grid-content">
+       <img class="img-book" src="../../assets/images/bookshop-gallery/Robin.jpg" alt=""/>
+       <div class="book-content">
+           <h6 class="book-title">Fool's Errand</h6> 
+           <p class="authors">Sharina Atienza</p>
+           <p class="price">₱250</p>
+       </div>
+   </div>
 
+   <div class="grid-content">
+       <img class="img-book" src="../../assets/images/bookshop-gallery/Sell1.jpg" alt=""/>
+       <div class="book-content">
+           <h6 class="book-title">Night: The Last Of The Gods</h6> 
+           <p class="authors">Sharina Atienza</p>
+           <p class="price">₱250</p>
+       </div>
+   </div>
+
+   <div class="grid-content">
+       <img class="img-book" src="../../assets/images/bookshop-gallery/Sell2.jpg" alt=""/>
+       <div class="book-content">
+           <h6 class="book-title">Stephen King: Salem's Lot</h6> 
+           <p class="authors">Sharina Atienza</p>
+           <p class="price">₱250</p>
+       </div>
+   </div>
+
+   <div class="grid-content">
+       <img class="img-book" src="../../assets/images/bookshop-gallery/Sell3.jpg" alt=""/>
+       <div class="book-content">
+           <h6 class="book-title">Front Lines</h6> 
+           <p class="authors">Sharina Atienza</p>
+           <p class="price">₱250</p>
+       </div>
+   </div>
+
+   <div class="grid-content">
+       <img class="img-book" src="../../assets/images/bookshop-gallery/shshh.jpg" alt=""/>
+       <div class="book-content">
+           <h6 class="book-title">The Book Thief</h6> 
+           <p class="authors">Sharina Atienza</p>
+           <p class="price">₱250</p>
+       </div>
+   </div>
+
+</div>
+</section>
+
+<section id="pagination-section">
+   <div class="pagination-container">
+       <div class="pagination">
+           <a href="#"><</a>
+           <a href="#">1</a>
+           <a class="active" href="#">2</a>
+           <a href="#">3</a>
+           <a href="#">4</a>
+           <a href="#">5</a>
+           <a href="#">6</a>
+           <a href="#">></a>
+       </div>
+   </div>
+</section>
+
+<!-- END | BOOK SHOP GALLERY -->
 
 <!-- START | FOOTER -->
 <footer class="footer-wrapper">
@@ -170,7 +287,6 @@
 <script src="./assets/javascript/global.js"></script>
 <script src="https://kit.fontawesome.com/a0043d9bc2.js" crossorigin="anonymous"></script>
 
-<body>
 
 </body>
 
