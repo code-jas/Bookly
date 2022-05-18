@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Book Desctiption | Bookly</title>
+
+        <!--CSS-->
+        <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+        <link rel="stylesheet" type="text/css" href="../../assets/css/bookdescription.css">
+      
+        <!--Fonts-->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+
+        <!--Icons-->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" />
+    </head>
+
+<body>
+    <!--START | BOOK DESCRIPTION-->
+    <div class="icon-arrow-left-container">
+        <i class="fa-solid fa-arrow-left-long"></i>
+    </div>
+    <section>
+        <div class="book-description-container">
+            <div class="book-content-img">
+                <img class="cover-img" src="../../assets/images/bookshop-gallery/6.jpg" alt=""/>
+            </div>
+
+            <div class="description-content">
+                <h3 class="book-title-heading">The Dinosaur Lords</h3>
+                <div class="book-content-details">
+                    <h6 class="description-txt">Description</h6>
+
+                    <p class="book-sypnosis">Esme is born into a world of words. Motherless and irrepressibly curious, she spends her childhood in the Scriptorium, an Oxford garden shed in which her father and a team of dedicated lexicographers are collecting words for the very first Oxford English Dictionary. Young Esme’s place is beneath the sorting table, unseen and unheard. One day a slip of paper containing the word bondmaid flutters beneath the table. She rescues the slip and, learning that the word means “slave girl,” begins to collect other words that have been discarded or neglected by the dictionary men.
+                        As she grows up, Esme realizes that words and meanings relating to women’s and common folks’ experiences often go unrecorded. And so she begins in earnest to search out words for her own dictionary: the Dictionary of Lost Words. To do so she must leave the sheltered world of the university and venture out to meet the people whose words will fill those pages.
+                        
+                        Set during the height of the women’s suffrage movement and with the Great War looming, The Dictionary of Lost Words reveals a lost narrative, hidden between the lines of a history written by men. Inspired by actual events, author Pip Williams has delved into the archives of the Oxford English Dictionary to tell this highly original story. The Dictionary of Lost Words is a delightful, lyrical, and deeply thought-provoking celebration of words and the power of language to shape the world.
+                    </p>
+
+                    <h6 class="description-txt">Price</h6>
+                    <h2 class="book-price">₱250</h2>
+                </div>
+                
+                <div class="button-container">
+                    <button id="add-to-cart-btn">Add to cart</button>
+                    <button id="buy-btn" onclick="document.getElementById('id01').style.display='block'">Buy</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <h1 class="heading">More Information</h1>
+        <div class="more-info-container">
+            <div class="more-info-title">
+                <p id="info-title">Genre</p>
+                <p id="info-title">Author</p>
+                <p id="info-title">Publisher</p>
+                <p id="info-title">Length (cm)</p>
+                <p id="info-title">Width (cm)</p>
+                <p id="info-title">Height (cm)</p>
+                <p id="info-title">Format</p>
+            </div>
+
+            <div class="more-info-title-content">
+                <p id="genre-content">Literature</p>
+                <p id="author-content">Literature Division</p>
+                <p id="publisher-content">N/A</p>
+                <p id="length">N/A</p>
+                <p id="width">N/A</p>
+                <p id="height">N/A</p>
+                <p id="format">Paperback</p>
+            </div>
+        </div>
+    </section>
+    <!-- END | BOOK DESCRIPTION-->
+
+    <!--START | 1: ORDER MODAL-->
+    <div class="w3-container">
+        <div id="id01" class="w3-modal">
+          <div class="w3-modal-content">
+            <header class="w3-container"> 
+              <span onclick="document.getElementById('id01').style.display='none'" 
+              class="w3-button w3-display-topright">&times;</span>
+              
+              <section class="three-process-section">
+              <div class="three-process-container">
+                <div class=""></div>
+                <div class=""></div>
+                <div class=""></div>
+              </div>
+              </section>
+              
+            </header>
+            <div class="w3-container">
+                <p class="book-txt">Book</p>
+                <img id="img-content" src="../../assets/images/bookshop-gallery/6.jpg" alt=""/>
+                <h6 id="book-title">The Dinosaur Lords</h6>
+
+                <div class="price-content-container">
+                <p class="price-txt">Price</p>
+                <h6 id="price-title">₱ 250</h6>
+                </div>
+            </div>
+            <footer class="w3-footer-container">
+              <p class="footer-content">By signing up, you agree to the <a class="links">Terms of Service </a> and <a class="links">Privacy Policy</a>, including <a class="links">Cookie Use</a>.</p>
+              <button id="btn-next" onclick="nextPage(1)">Next</button></a>
+          </footer><br>
+          </div>
+        </div>
+      </div>
+    <!--END | 1: ORDER MODAL-->
+    
+    <!--START | 2: CHECKOUT MODAL-->
+    <div class="w3-container">
+      <div id="id02" class="w3-modal">
+        <div class="w3-modal-content">
+          <header class="w3-container"> 
+            <span onclick="document.getElementById('id02').style.display='none'" 
+            class="w3-button w3-display-topright">&times;</span>
+            
+            <section class="three-process-section">
+            <div class="three-process-container">
+              <div class=""></div>
+              <div class=""></div>
+              <div class=""></div>
+            </div>
+            </section>
+            
+          </header>
+          <div class="w3-container">
+            <h2 class="total-price-txt"> Here's your total order </h2>
+            <p id="total-price-title">₱ 500</p>
+
+            <p class="instruction-txt"> Kindly check your details before ordering</p>
+            <table class="billing-info-container">
+              <tr class="info-title-container">
+                <td id="name-title">Name</td>
+                <td id="name-content">Sharina Atienza</td>
+              </tr>
+              <tr class="info-title-container">
+                <td id="name-title">Address</td>
+                <td id="name-content">813 A Leo St., Sampaloc, Manila Brgy. 572 Zip Code 1008</td>
+              </tr>
+              <tr class="info-title-container">
+                <td id="name-title">Payment</td>
+                <td id="name-content">COD</td>
+              </tr>
+              <tr class="info-title-container">
+                <td id="name-title">Date Ordered</td>
+                <td id="name-content">05/17/2022</td>
+              </tr>
+            </table>
+          </div>
+          <footer class="w3-footer-container">
+            <p class="footer-content">By signing up, you agree to the <a class="links">Terms of Service </a> and <a class="links">Privacy Policy</a>, including <a class="links">Cookie Use</a>.</p>
+            <button id="btn-next" onclick="nextPage(1)">CHECKOUT</button></a>
+        </footer><br>
+        </div>
+      </div>
+    </div>
+    <!--END | 2: CHECKOUT MODAL-->
+
+    <!-- START | 3: DELIVERY MODAL-->
+    <div class="w3-container">
+      <div id="id03" class="w3-modal">
+        <div class="w3-modal-content">
+          <header class="w3-container"> 
+            <span onclick="document.getElementById('id03').style.display='none'" 
+            class="w3-button w3-display-topright">&times;</span>
+            
+            <section class="three-process-section">
+            <div class="three-process-container">
+              <div class=""></div>
+              <div class=""></div>
+              <div class=""></div>
+            </div>
+            </section>
+            
+          </header>
+          <div class="w3-container">
+            <section style="padding: 10px;">
+            <div class="circle-container">
+              <i id="circle-icon" class="fa-solid fa-check"></i>
+            </div>
+            
+            <h2 class="check-title">Thank you for ordering!</h2>
+            <p class="content">Your order has been processed. Items will be shipped within
+              3-5 days. See your order status at transaction history. </p>
+            </section>
+          </div>
+          <footer class="w3-footer-container">
+            
+            <button id="btn-next" onclick="nextPage(n)">DONE</button></a>
+        </footer><br>
+        </div>
+      </div>
+    </div>
+   <!-- END | 3: DELIVERY MODAL-->
+
+   
+    <!--JS SLIDER-->
+<script>
+    let slideIndex = 1;
+    showSlides(slideIndex);
+    
+    function nextPage(n) {
+      showSlides(slideIndex += n);
+    }
+    
+    
+    function showSlides(n) {
+      let i;
+      let slides = document.getElementsByClassName("w3-modal");
+      if (n > slides.length) {slideIndex = 1}    
+      if (n < 1) {slideIndex = slides.length}
+      for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";  
+      }
+      slides[slideIndex-1].style.display = "block";  
+    }
+    </script>
+    <script src="https://kit.fontawesome.com/a0043d9bc2.js" crossorigin="anonymous"></script>
+</body>
+</html>
