@@ -7,8 +7,14 @@
         {
             "type": "pwa-chrome",
             "request": "launch",
+<<<<<<< HEAD
+            "name": "Launch Chrome against localhost",
+            "url": "http://localhost:8080",
+            "webRoot": "${workspaceFolder}"
+=======
             "name": "Open delete_account_2.html",
             "file": "c:\\Users\\user\\Documents\\GitHub\\Bookly\\Account-Settings\\delete_account_2.html"
+>>>>>>> e032058c03173beb94234f1b89607f8468fe9eaf
         }
     ]
 }
