@@ -1,6 +1,8 @@
 .about-us-wrapper {
    display: flex;
    flex-direction: column;
+
+
    margin: 0 auto;
    font-family: var(--montserrat-font);
    color: var(--dark-blue-dark)
@@ -20,7 +22,6 @@
    position: absolute;
    bottom: 0;
    width: 100%;
-
 }
 
 #curve path {
@@ -28,12 +29,9 @@
    fill: #fff;
 }
 
-
-
 .about-us-desc-cont {
    display: flex;
    flex-direction: column;
-
    align-items: center;
    min-height: 1080px;
    max-width: 1280px;
@@ -46,15 +44,12 @@
    font-size: 5rem;
    font-weight: 900;
    margin: 4% 0 30px 0;
-
 }
 
 .about-us-desc {
-
    font-size: 1rem;
    line-height: 2rem;
    margin: 0 auto;
-
    width: 60%;
    text-align: center;
 }
@@ -72,7 +67,6 @@
    background-position: center;
 }
 
-
 .about-us-policy-cont {
    max-width: 1280px;
    margin: 0 auto;
@@ -81,6 +75,8 @@
 }
 
 .about-us-policy-header {
+
+
    font-size: 2.5rem;
    font-weight: 800;
    margin: 0 0 30px 0;
@@ -91,9 +87,7 @@
    font-weight: 600;
    margin: 0 0 20px 0;
    padding: 0 70px;
-
 }
-
 
 .about-us-policy-parag {
    font-size: 1rem;
@@ -122,10 +116,6 @@
    /* background-color: var(--light-gray); */
 }
 
-.about-us-policy-list {
-   /* margin: 3px; */
-   /* padding: 10px 10px; */
-}
 
 .about-us-policy-question {
    padding: 10px;
@@ -139,11 +129,8 @@
    -moz-transition: max-height 0.5s ease-out;
    -o-transition: max-height 0.5s ease-out;
    transition: max-height 0.5s ease-out;
-
    width: 80%;
    margin: 0 auto;
-
-
 }
 
 .about-us-policy-list-topic {
@@ -154,8 +141,6 @@
 
 .policy-active {
    background-color: var(--light-gray);
-
-
 }
 
 .btn-policy-plus {
@@ -167,7 +152,6 @@
    border-radius: 50%;
    transition: var(--transition);
    cursor: pointer;
-
 }
 
 .btn-policy-plus:hover {
@@ -198,19 +182,15 @@
    background-color: #fe53392d;
 }
 
-
-
 .about-us-policy-list-parag {
    /* text-indent: 50px; */
    font-size: 1rem;
    margin: 30px 0;
-
 }
 
 /* .policy-margin {
    margin: 30px auto;
 } */
-
 .about-us-policy-list-parag span {
    font-weight: 600;
    margin: 0 0 0 0;
@@ -223,10 +203,6 @@
    margin: 0 auto;
 }
 
-
-
-
-
 .team-section {
    display: flex;
    flex-direction: column;
@@ -235,6 +211,8 @@
    min-height: 1080px;
 
    background-color: #f7f8fd;
+
+
 }
 
 /* .team-section .color-head {
@@ -255,6 +233,8 @@
    color: var(--secondary-font-color);
    font-size: 1.2rem;
    font-weight: 400;
+
+
    font-family: "Crimson Pro", serif;
    margin-bottom: 3rem;
 }
@@ -452,7 +432,7 @@ linear-gradient(90deg, #ba81ff 0%, #ff6a95 99%); */
 
 /* background-image: linear-gradient(315deg, #63a4ff 0%, #83eaf1 74%); */
 
-.contact-us-co ntainer {
+.contact-us-container {
    display: flex;
    flex-direction: row-reverse;
    width: 70%;
