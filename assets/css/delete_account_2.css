@@ -29,13 +29,15 @@
      margin: 0 auto;
  }
 
+
+
  .cancel-btn:active {
     transform: translateY(2px);
  }
  
  .cancel-btn {
     appearance: button;
-    background-color: var(--btn-color);
+    background-color: #3A405B;
     border-radius: 100px;
     border-width: 0;
     font-family: var(--montserrat-font);
@@ -46,9 +48,9 @@
     height: 40px;
     line-height: 1.15;
     padding: 0 25px;
-    position: bottom;
+    position: absolute;
     right: 0;
-    bottom: 50px;
+    bottom: -500px;
     text-align: center;
     text-transform: capitalize;
     transform: translateZ(0);
