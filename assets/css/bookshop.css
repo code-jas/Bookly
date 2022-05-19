@@ -20,25 +20,22 @@ body{
 }
 
 .filter-dropdown-container {
-  border: 1px solid black;
   position: relative;
   display: inline-block;
 }
 
 .filter-grid-container{
-  border: 1px solid black;
   display: grid;
   justify-items: center;
   align-self: center;
   grid-template-columns: auto auto auto auto;
   grid-gap: 0px 0px;
-  height: 325px;
+  height: 345px;
 }
 
 .filter-grid-content{
-  border: 1px solid black;
   width: 90%;
-  height: 165px;
+  height: 170px;
   display: flex;
   flex-direction: column;
   align-self: center;
@@ -55,7 +52,7 @@ body{
   position: absolute;
   background-color: #FFFFFF;
   width: 800px;
-  height: 325px;
+  height: 345px;
   box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
   z-index: 1;
 }
