@@ -29,8 +29,6 @@
      margin: 0 auto;
  }
 
-
-
  .cancel-btn:active {
     transform: translateY(2px);
  }
