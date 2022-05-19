@@ -11,8 +11,7 @@
       href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" />
    <!-- root css -->
-   <link rel="stylesheet" href="../assets/css/root.css"
-   <!-- navbar css -->
+   <link rel="stylesheet" href="../assets/css/root.css" <!-- navbar css -->
    <link rel="stylesheet" href="../assets/css/navbar.css">
    <!-- footer css -->
    <link rel="stylesheet" href="../assets/css/footer.css">
@@ -24,71 +23,72 @@
 
 
 <!-- START | NAVIGATION BAR -->
-<header>
 
-   <nav class="navbar">
-      <div class="logo">
-         <a href="index.html" class="branding">
-            <img src="../assets/images/illustrations/book-icon.svg" alt="book icon" class="nav-image">
-            <h1 class="branding-text">BOOKLY</h1>
-         </a>
+
+<nav class="navbar">
+   <div class="logo">
+      <a href="index.html" class="branding">
+         <img src="../assets/images/illustrations/book-icon.svg" alt="book icon" class="nav-image">
+         <h1 class="branding-text">BOOKLY</h1>
+      </a>
+   </div>
+
+   <div class="right-navbar">
+
+      <div class="nav-menu">
+         <ul class="menu">
+            <li class="nav-item"><a href="../home.html" accesskey="1" tabindex="1" class="nav-link">Home</a></li>
+            <li class="nav-item"><a href="../book-shop.html" accesskey="2" tabindex="2" class="nav-link">Book
+                  Shop</a>
+            </li>
+            <li class="nav-item"><a href="../about-us.html" accesskey="3" tabindex="3" class="nav-link">About us</a>
+            </li>
+         </ul>
       </div>
-
-      <div class="right-navbar">
-
-         <div class="nav-menu">
-            <ul class="menu">
-               <li class="nav-item"><a href="../home.html" accesskey="1" tabindex="1" class="nav-link">Home</a></li>
-               <li class="nav-item"><a href="../book-shop.html" accesskey="2" tabindex="2" class="nav-link">Book
-                     Shop</a>
-               </li>
-               <li class="nav-item"><a href="../about-us.html" accesskey="3" tabindex="3" class="nav-link">About us</a>
-               </li>
-            </ul>
-         </div>
-         <div class="session-false">
-            <button class="sign-in-btn">SIGN IN</button>
-            <button class="sign-up-btn">SIGN UP</button>
-         </div>
-         <div class="session-true">
-            <span class="material-symbols-outlined">
-               shopping_cart
+      <div class="session-false">
+         <button class="sign-in-btn">SIGN IN</button>
+         <button class="sign-up-btn">SIGN UP</button>
+      </div>
+      <div class="session-true">
+         <span class="material-symbols-outlined">
+            shopping_cart
+         </span>
+         <span class="material-symbols-outlined">
+            notifications
+         </span>
+         <button>
+            <span class="material-symbols-outlined profile-button">
+               person
             </span>
-            <span class="material-symbols-outlined">
-               notifications
-            </span>
-            <button>
-               <span class="material-symbols-outlined profile-button">
-                  person
-               </span>
 
-            </button>
-         </div>
-
+         </button>
       </div>
 
-
-      <div class="hamburger">
-         <span class="burger-bar"></span>
-         <span class="burger-bar"></span>
-         <span class="burger-bar"></span>
-      </div>
+   </div>
 
 
-   </nav>
-</header>
+   <div class="hamburger">
+      <span class="burger-bar"></span>
+      <span class="burger-bar"></span>
+      <span class="burger-bar"></span>
+   </div>
+
+
+</nav>
+
+
 
 <!-- END | NAVIGATION BAR -->
 
 
 <!-- START | VIEW CART -->
-<div class="view-cart-wrapper-outer">
+<div class="sidebar-wrapper-outer">
 
 
-   <div class="view-cart-wrapper">
+   <div class="sidebar-wrapper">
 
       <nav class="my_book_sidebar">
-         <h1 class="view-cart-header">My Book</h1>
+         <h1 class="sidebar-header">My Book</h1>
          <div class="sidebar_menu">
             <a href="viewcart.html" class="sidebar-link sidebar-active">View
                Cart</a>
@@ -100,9 +100,71 @@
 
       <div class="view_cart_details_container">
 
+         <div class="view_cart_details_header">
+            <h1>View Cart</h1>
+            <h2>2 items</h2>
+         </div>
+         <div class="sidebar_line_break"></div>
+
+         <div class="book_cart_cont">
+            <!-- item 1 -->
+            <div class="cart_item">
+               <div class="cart_item_checkbox">
+                  <div>
+                     <label class="checkbox bounce">
+                        <input type="checkbox">
+                        <svg viewBox="0 0 21 21">
+                           <polyline points="5 10.75 8.5 14.25 16 6"></polyline>
+                        </svg>
+                     </label>
+                  </div>
+               </div>
+               <div class="cart_item_image">
+                  <img src="../assets/images/bookshop-gallery/The_Dictionary_of_Lost_Words.jpg" alt="book-1"
+                     class="cart_image">
+               </div>
+               <div class="cart_item_title">
+                  <h3>The Alchemist</h3>
+                  <h4>Paulo Coelho</h4>
+               </div>
+               <div class="cart_item_price">
+                  <h3>$15.99</h3>
+               </div>
+            </div>
+
+            <!-- item 2 -->
+            <div class="cart_item">
+               <div class="cart_item_checkbox">
+                  <div>
+                     <label class="checkbox bounce">
+                        <input type="checkbox">
+                        <svg viewBox="0 0 21 21">
+                           <polyline points="5 10.75 8.5 14.25 16 6"></polyline>
+                        </svg>
+                     </label>
+                  </div>
+               </div>
+               <div class="cart_item_image">
+                  <img src="../assets/images/bookshop-gallery/The_Dictionary_of_Lost_Words.jpg" alt="book-1"
+                     class="cart_image">
+               </div>
+               <div class="cart_item_title">
+                  <h3>The Alchemist</h3>
+                  <h4>Paulo Coelho</h4>
+               </div>
+               <div class="cart_item_price">
+                  <h3>$15.99</h3>
+               </div>
+            </div>
+            <div class="cart_btn_cont">
+
+               <button class="view_cart_delete_btn">Remove</button>
+               <button class="view_cart_buy_btn">Buy</button>
+            </div>
+
+
+         </div>
       </div>
-
-
    </div>
 
 </div>
