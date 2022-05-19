@@ -43,14 +43,32 @@
 }
 
 
+.upload-btn {
+    background-color: var(--btn-color);
+    border-radius: 100px;
+    font-family: var(--montserrat-font);
+    all: unset;
+    cursor: pointer;
+    transition: all .3s ease-in;
+    margin-right: 20px;
+    position: absolute;
+    margin-bottom: 50px;
 
 
+ }
  
+ .upload-btn:hover {
+    transform: scale(1.1);
+ }
  
-
-
+ .upload-btn:hover {
+    transform: scale(1.1);
+    color: var(--btn-color-light);
+ }
  
- 
+ .upload-btn:active {
+    transform: scale(1.1);
+ }
 
  .remove-btn {
     background-color: var(--btn-color);
@@ -65,5 +83,55 @@
     margin-bottom: 50px;
  
 
-
+ }  
+ 
+ .remove-btn:hover {
+    transform: scale(1.1);
  }
+ 
+ .remove-btn:hover {
+    transform: scale(1.1);
+    color: var(--btn-color-light);
+ }
+ 
+ .remove-btn:active {
+    transform: scale(1.1);
+ }
+
+ .save-changes-btn {
+    appearance: button;
+    background-color: #3A405B;
+    border-radius: 100px;
+    border-width: 0;
+    font-family: var(--montserrat-font);
+    color: #fff;
+    font-weight: 600;
+    cursor: pointer;
+    font-size: 100%;
+    width: 120;
+    height: 40px;
+    line-height: 1.15;
+    padding: 0 25px;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    text-align: center;
+    text-transform: capitalize;
+    transform: translateZ(0);
+    transition: all .3s, box-shadow .08s ease-in;
+    user-select: none;
+    -webkit-user-select: none;
+ }
+ 
+ .save-changes-btn:hover {
+    transform: scale(1.1);
+ }
+ 
+ .save-changes-btn:active {
+    transform: translateY(2px);
+ }
+ 
+ .save-changes-btn:disabled {
+    cursor: default;
+ }
+ 
