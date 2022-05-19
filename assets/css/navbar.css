@@ -96,7 +96,7 @@ header {
    position: relative;
 }
 
-
+.nav-link:hover {}
 
 .nav-link::after {
    content: "";
