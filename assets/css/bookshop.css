@@ -5,26 +5,105 @@ body{
     font-family: 'Montserrat', sans-serif;
 }
 
+/*DROPDOWN CSS*/
+.filter{
+  width: 120px;
+  height: 35px;
+  background-color: #E4E7EF;
+  border: none;
+  border-radius: 10px;
+  text-transform: uppercase;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.filter-dropdown-container {
+  border: 1px solid black;
+  position: relative;
+  display: inline-block;
+}
+
+.filter-grid-container{
+  border: 1px solid black;
+  display: grid;
+  justify-items: center;
+  align-self: center;
+  grid-template-columns: auto auto auto auto;
+  grid-gap: 0px 0px;
+  height: 325px;
+}
+
+.filter-grid-content{
+  border: 1px solid black;
+  width: 90%;
+  height: 165px;
+  display: flex;
+  flex-direction: column;
+  align-self: center;
+
+}
+
+#category-1, #cat1-genre1, #cat1-genre2, #cat1-genre3, #cat1-genre4, #cat1-genre5, #cat1-all{
+  font-size: 10px;
+  padding: 5px;
+}
+
+.filter-dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #FFFFFF;
+  width: 800px;
+  height: 325px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.filter-dropdown-content a {
+  color: black;
+  padding: 5px 5px;
+  text-decoration: none;
+  display: block;
+}
+
+.filter-dropdown-content a:hover {background-color: #F6F3FC; color: black;}
+
+.filter-dropdown-container:hover .filter-dropdown-content {display: block;}
+
+.filter-dropdown-container:hover .filter{background-color: #f6f3fc;}
+
+
+/*END DEOPDOWN CSS*/
+
+
 i.fa-solid{
   font-size: 20px;
   color: black;
 }
 
-input{
-  border: 1px solid #B8BFD3;
+input {
+  border-top: 1px;
+  border-bottom: 1px;
+  border-left: 1px;
+  border-right: 0px;
+  border-style: solid;
+  border-color: #B8BFD3;
   padding: 10px;
   width: 400px;
   height: 35px;
-  border-radius: 10px;
+  border-radius: 10px 0px 0px 10px;
 }
 
+
 i.magnifying{
-  font-size: 20px;
+  font-size: 15px;
   color: white;
   background-color: #FE3152;
   padding: 10px;
-
+  border-radius: 0px 10px 10px 0px;
 }
+
 
 .filter{
   width: 120px;
@@ -79,7 +158,6 @@ i.magnifying{
 
 
 .book-content{
-  
   text-align: left;
   
   height: 50px;
@@ -89,8 +167,9 @@ i.magnifying{
 }
 
 .book-title, .authors{
-  margin-top: 0px;
+  margin-bottom:  px;
 }
+
 .authors{
   font-size: 10px;
 }
@@ -99,7 +178,6 @@ i.magnifying{
 
 .price{
   float: right;
-  margin-top: -30px;
   font-size: 15px;
 }
 

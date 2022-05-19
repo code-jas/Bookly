@@ -90,22 +90,105 @@
 <!-- END | NAVIGATION BAR -->
 
 
-<!-- START | BOOK SHOP GALLERY -->
+
+<!--START | FILTER DROPDOWN-->
 <section id="filter-search-section">
 <div class="filter-search-container">
-   <div class="filter-container">
-       <button class="filter"><i class="fa-solid fa-filter"></i>Filter</button>
+   <div  class="filter-dropdown-container">
+       <button id="filter-btn" class="filter"><i class="fa-solid fa-filter"></i>Filter</button>
+       <div id="filter-dropdown"class="filter-dropdown-content">
+           <div class="filter-grid-container">
+               <div class="filter-grid-content">
+                   <h6 id="category-1" style="padding-left: 5px; padding-right: 5px">Biographies & Memoirs</h6>
+                   <a href="#" id="cat1-genre1">Arts & Literature</a>
+                   <a href="#" id="cat1-genre2">Cultural</a>
+                   <a href="#" id="cat1-genre3">European</a>
+                   <a href="#" id="cat1-genre4">Historical</a>
+                   <a href="#" id="cat1-genre5">Leaders & Notable People</a>
+                   <a href="#" id="cat1-all">Shop All</a>
+               </div>
+
+               <div class="filter-grid-content">
+                   <h6 id="category-1" style="padding-left: 5px; padding-right: 5px">Children's</h6>
+                   <a href="#" id="cat1-genre1">Action & Adventure</a>
+                   <a href="#" id="cat1-genre2">Activity Books</a>
+                   <a href="#" id="cat1-genre3">Animals</a>
+                   <a href="#" id="cat1-genre4">Cars & Trucks</a>
+                   <a href="#" id="cat1-genre5">Classics</a>
+                   <a href="#" id="cat1-all">Shop All</a>
+               </div>
+
+               <div class="filter-grid-content">
+                   <h6 id="category-1" style="padding-left: 5px; padding-right: 5px">Education & Reference</h6>
+                   <a href="#" id="cat1-genre1">Catalogs</a>
+                   <a href="#" id="cat1-genre2">Colleges</a>
+                   <a href="#" id="cat1-genre3">Curriculum</a>
+                   <a href="#" id="cat1-genre4">Dictonaries</a>
+                   <a href="#" id="cat1-genre5">Education</a>
+                   <a href="#" id="cat1-all">Shop All</a>
+               </div>
+
+               <div class="filter-grid-content">
+                   <h6 id="category-1" style="padding-left: 5px; padding-right: 5px">History</h6>
+                   <a href="#" id="cat1-genre1">African</a>
+                   <a href="#" id="cat1-genre2">Ancient</a>
+                   <a href="#" id="cat1-genre3">Asian</a>
+                   <a href="#" id="cat1-genre4">Black History</a>
+                   <a href="#" id="cat1-genre5">Canadian</a>
+                   <a href="#" id="cat1-all">Shop All</a>
+               </div>
+
+               <div class="filter-grid-content">
+                   <h6 id="category-1" style="padding-left: 5px; padding-right: 5px">Literature & Fiction</h6>
+                   <a href="#" id="cat1-genre1">Classics</a>
+                   <a href="#" id="cat1-genre2">Contemporary</a>
+                   <a href="#" id="cat1-genre3">Genre Fiction</a>
+                   <a href="#" id="cat1-all">Shop All</a>
+               </div>
+
+               <div class="filter-grid-content">
+                   <h6 id="category-1" style="padding-left: 5px; padding-right: 5px">Mystery & Suspense</h6>
+                   <a href="#" id="cat1-genre1">Conspiracy</a>
+                   <a href="#" id="cat1-genre2">Crime</a>
+                   <a href="#" id="cat1-genre3">Detective</a>
+                   <a href="#" id="cat1-genre4">Mysteries</a>
+                   <a href="#" id="cat1-all">Shop All</a>
+               </div>
+
+               <div class="filter-grid-content">
+                   <h6 id="category-1" style="padding-left: 5px; padding-right: 5px">WALA PA HEHE</h6>
+                   <a href="#" id="cat1-genre1"></a>
+                   <a href="#" id="cat1-genre2"></a>
+                   <a href="#" id="cat1-genre3"></a>
+                   <a href="#" id="cat1-genre4"></a>
+                   <a href="#" id="cat1-genre5"></a>
+                   <a href="#" id="cat1-all">Shop All</a>
+               </div>
+
+               <div class="filter-grid-content">
+                   <h6 id="category-1" style="padding-left: 5px; padding-right: 5px">More Categories</h6>
+                   <a href="#" id="cat1-genre1">Romance</a>
+                   <a href="#" id="cat1-genre2">Sci-Fi & Fantasy</a>
+                   <a href="#" id="cat1-genre3">Science & Math</a>
+                   <a href="#" id="cat1-genre4">Teen & Young Adult</a>
+                   <a href="#" id="cat1-genre5">Health, Fitness & Dieting</a>
+                   <a href="#" id="cat1-all">Shop All</a>
+               </div>
+           </div>
+       </div>
    </div>
 
    <div class="search-container">
-       <form action="">
+       <form action="" style="display: flex;">
            <input type="search" id="gsearch" name="gsearch" placeholder="Search for books">
            <i class="magnifying fa-solid fa-magnifying-glass"></i>
        </form>
    </div>
 </div>
 </section>
+<!-- END | Filter Dropdown-->
 
+<!-- START | BOOK SHOP GALLERY -->
 <section id="bookshop-gallery-section"> 
 <div class="grid-container">
    <div class="grid-content">
@@ -188,14 +271,14 @@
 <section id="pagination-section">
    <div class="pagination-container">
        <div class="pagination">
-           <a href="#"><</a>
+           <a href="#"><i class="fa-solid fa-angle-left"></i></a>
            <a href="#">1</a>
            <a class="active" href="#">2</a>
            <a href="#">3</a>
            <a href="#">4</a>
            <a href="#">5</a>
            <a href="#">6</a>
-           <a href="#">></a>
+           <a href="#"><i class="fa-solid fa-angle-right"></i></a>
        </div>
    </div>
 </section>
