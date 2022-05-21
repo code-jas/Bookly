@@ -5,7 +5,7 @@
    <meta charset="UTF-8">
    <meta http-equiv="X-UA-Compatible" content="IE=edge">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <title>View Cart - MyBooks | Bookly</title>
+   <title>Account Settings - Edit Profile | Bookly</title>
    <!-- import icons -->
    <link rel="stylesheet"
       href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
@@ -18,8 +18,6 @@
    <link rel="stylesheet" href="../assets/css/footer.css">
    <!-- my-books css -->
    <link rel="stylesheet" href="../assets/css/my-books.css">
-   <!-- delete-account css-->
-   <link rel="stylesheet" href="../assets/css/delete-account.css">
    <!-- edit-profile css-->
    <link rel="stylesheet" href="../assets/css/edit-profile.css">
 
@@ -93,65 +91,78 @@
       <nav class="my_book_sidebar">
          <h1 class="view-cart-header">Account Settings</h1>
          <div class="sidebar_menu">
-            <a href="#" class="sidebar-link sidebar-active">Account Overview</a>
-            <a href="#" class="sidebar-link">Edit Profile</a>
+            <a href="../Account-Settings/account_overview.html" class="sidebar-link">Account Overview</a>
+            <a href="../Account-Settings/edit-profile.html" class="sidebar-link sidebar-active">Edit Profile</a>
             <a href="#" class="sidebar-link">Change Password</a>
-            <a href="Kim-Delete.html" class="sidebar-link">Delete Account</a>
+            <a href="../Account-Settings/Delete.html" class="sidebar-link">Delete Account</a>
          </div>
 
       </nav>
 
       
 
-       <div class="edit_profile_container">
+      <div class="edit_profile_container">
          <div class="edit_profile_content">
-
-      
-         <h2 class="edit-profile-margin">Edit Profile</h2>
-         <div class="profile_pic">
-         </div>
-         <button class="upload-btn">Upload</button>
-         <button class="remove-btn">Remove</button>
+            <h2 class="edit-profile-margin">Edit Profile</h2>
+            <div class="avatar-info-container">
+               <img class="profile_pic" src="../assets/images/teams/angelo.jpg" alt=""/>
+               <section id="personal-margin-section">
+                  <button class="upload-btn" name="Save Changes"> Upload</button>
+                  <button class="remove-btn" name="Save Changes"> Remove</button>
+               </section>
+            </div>
+         
+         <section id="personal-info-section">
          <h2 class="personal-margin">Personal Information</h2>
-         <div class="first-name-margin">
-         <td><b>First Name</b></td>  
-         <input type="name" id="name" name="name"><label for="name"></label>
-         </div>
+         <table class="personal-info-container">
+            <tr class="info-title-container">
+              <td id="name-title">First Name</td>
+              <td id="name-content"><input class="txt-field" id="fname" name="fname" type="name" value="Angelo"></td>
+            </tr>
+            <tr>
+               <td id="name-title">Last Name</td>
+               <td id="name-content"><input class="txt-field" id="lname" name="lname" type="name" value="Silvestre"></td>
+             </tr>
+            <tr class="info-title-container">
+              <td id="name-title">Username</td>
+              <td id="name-content"><input class="txt-field" id="uname" name="uname" type="name" value="@angel_oh"></td>
+            </tr>
+            <tr class="info-title-container">
+              <td id="name-title">Email</td>
+              <td id="name-content"><input class="txt-field" id="email" name="email" type="email" value="angel_oh@gmail.com"></td>
+            </tr>
+            <tr class="info-title-container">
+              <td id="name-title">Birth Date</td>
+              <td id="name-content"><input class="txt-field" id="bdate" name="bdate" type="birthdate" value="05/22/2022"></td>
+            </tr>
+          </table>
+         </section>
 
-         <div class="username-margin">
-         <td><b>Username</b></td>
-         <input type="name" id="name" name="name"><label for="name"></label>
-         </div>
-
-         <div class="email-margin">
-            <td><b>Email</b></td>
-            <input type="email" id="email" name="email"><label for="email"></label>
-            </div>
-
-            <div class="birthdate-margin">
-               <td><b>Birthdate</b></td><input type="date" id="date" name="date"><label for="date"></label>
-                </div>
-
-         <h2 class="location-margin">Location Information</h2>
-         <div class="address-margin">
-         <td><b>Address</b></td><input type="name" id="name" name="name"><label for="name"></label>
-         </div>
-
-         <div class="barangay-margin">
-            <td><b>Barangay</b></td><input type="name" id="name" name="name"><label for="name"></label>
-            </div>
-
-            <div class="city-margin">
-               <td><b>City/Municipality</b></td><input type="name" id="name" name="name"><label for="name"></label>
-                </div>
-
-                <div class="zip-margin">
-                  <td><b>Zip Code</b></td><input type="number" id="number" name="number"><label for="number"></label>
-                    </div>
-
-                    <button class="save-changes-btn">Save Changes</button>
-
-
+         <section id="location-info-section">
+            <h2 class="personal-margin">Location Information</h2>
+            <table class="location-info-container">
+               <tr>
+                 <td id="name-title">Address</td>
+                 <td id="name-content"><input class="txt-field" id="address" name="address" type="name" value="Address"></td>
+               </tr>
+               <tr class="info-title-container">
+                 <td id="name-title">Baranagay</td>
+                 <td id="name-content"><input class="txt-field" id="brgy" name="brgy" type="num" value="572"></td>
+               </tr>
+               <tr class="info-title-container">
+                 <td id="name-title">City/Municipality</td>
+                 <td id="name-content"><input class="txt-field" id="city" name="city" type="name" value="Manila"></td>
+               </tr>
+               <tr class="info-title-container">
+                 <td id="name-title">Zip Code</td>
+                 <td id="name-content"><input class="txt-field" id="zip" name="ip" type="num" value="1008"></td>
+               </tr>
+             </table>
+         </section>
+         
+            <section class ="btn_wrapper_section">
+               <button class="Save-btn" name="Save Changes"> Save Changes</button>
+            </section>
          </div>
       </div>
    
