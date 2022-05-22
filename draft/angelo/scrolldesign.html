@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Document</title>
+
+   <style>
+      html {
+         background: linear-gradient(left, #99a, #eee, #99a);
+      }
+
+      .page-xyzsqw {
+         margin: 0 auto 0 -40px;
+         text-align: center;
+         padding: 1em 0;
+      }
+
+      .scroll-kjre {
+         height: 300px;
+         width: 40px;
+         overflow-y: scroll;
+         display: inline-block;
+      }
+
+      .scroll-kjre .inner-scroll {
+         height: 300%;
+         width: 100%;
+         content: ".";
+      }
+
+      .scroll--simple::-webkit-scrollbar {
+         width: 6px;
+         height: 6px;
+      }
+
+      .scroll--simple::-webkit-scrollbar-track {
+         border-radius: 10px;
+         background: rgba(0, 0, 0, 0.1);
+      }
+
+      .scroll--simple::-webkit-scrollbar-thumb {
+         border-radius: 10px;
+         background: rgba(0, 0, 0, 0.2);
+      }
+
+      .scroll--simple::-webkit-scrollbar-thumb:hover {
+         background: rgba(0, 0, 0, 0.4);
+      }
+
+      .scroll--simple::-webkit-scrollbar-thumb:active {
+         background: rgba(0, 0, 0, 0.9);
+      }
+   </style>
+</head>
+
+<body>
+   <div class="page-xyzsqw">
+      <div class="scroll-kjre scroll--simple">
+         <div class="inner-scroll"></div>
+      </div>
+
+   </div>
+
+</body>
+
+</html>

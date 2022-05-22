@@ -26,12 +26,16 @@
    --dark-blue-dark: #222328;
 
    --success: #4BE1AB;
+   --success-15: #4BE1AB26;
+
    --success-dark: #43D29E;
 
    --pending: #F3D351;
+   --pending-15: #F3D35126;
    --pending-dark: #E8C63B;
 
    --error: #FE5339;
+   --error-15: #FE533926;
    --error-dark: #EB4E36;
 
 
