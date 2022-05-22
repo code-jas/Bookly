@@ -16,6 +16,7 @@
     height: 1px;
  }
  .delete_account_container {
+    
     width: 100%;
     height: 781px;
     padding: 30px;
@@ -25,14 +26,19 @@
  
  .delete_account_content{
      position: relative;
-     width: 80%;
-     margin: 0 auto;
+     width: 95%;
+     height: 700px;
+  
+     padding: 10px;
  }
 
  .delete-btn:active {
     transform: translateY(2px);
  }
  
+ 
+
+
  .delete-btn {
     appearance: button;
     background-color: var(--btn-color);

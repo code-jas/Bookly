@@ -5,7 +5,7 @@
    <meta charset="UTF-8">
    <meta http-equiv="X-UA-Compatible" content="IE=edge">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <title>View Cart - MyBooks | Bookly</title>
+   <title>Account Overview | Bookly</title>
    <!-- import icons -->
    <link rel="stylesheet"
       href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
@@ -85,12 +85,9 @@
 <!-- END | NAVIGATION BAR -->
 
 
-<!-- START | Account Settings-Delete Account -->
-<div class="view-cart-wrapper-outer">
-
-
-   <div class="view-cart-wrapper">
-
+<!-- START | Account Overview -->
+<div class="sidebar-wrapper-outer">
+   <div class="sidebar-wrapper">
       <nav class="my_book_sidebar">
          <h1 class="view-cart-header">Account Settings</h1>
          <div class="sidebar_menu">
@@ -106,69 +103,69 @@
 
        <div class="edit_profile_container">
          <div class="edit_profile_content">
-
-      
-         <h2 class="edit-profile-margin">Edit Profile</h2>
-         <div class="profile_pic">
-         </div>
-
-         <h2 class="personal-margin">Personal Information</h2>
-         <div class="first-name-margin">
-         <td><b>First Name</b></td>  
-
-         <p>Angelo Silvestre</p>
-         </div>
-
-         <div class="username-margin">
-         <td><b>Username</b></td>
-         <p>@angel_oh</p>
+            <h2 class="edit-profile-margin">Account Overview</h2>
+            <div class="avatar-info-container">
+               <img class="profile_pic" src="../assets/images/teams/angelo.jpg" alt=""/>
+               <section id="personal-margin-section">
+               <h3 class="personal-margin">Angelo Silvestre</h3>
+               <span class="personal-margin">@angel_oh</span>
+               </section>
+            </div>
          
-         </div>
+         <section id="personal-info-section">
+         <h2 class="personal-margin">Personal Information</h2>
+         <table class="personal-info-container">
+            <tr>
+              <td id="name-title">First Name</td>
+              <td id="name-content">Angelo</td>
+            </tr>
+            <tr>
+               <td id="name-title">Last Name</td>
+               <td id="name-content">Silvestre</td>
+             </tr>
+            <tr class="info-title-container">
+              <td id="name-title">Username</td>
+              <td id="name-content">@angel_oh</td>
+            </tr>
+            <tr class="info-title-container">
+              <td id="name-title">Email</td>
+              <td id="name-content">angel_oh@gmail.com</td>
+            </tr>
+            <tr class="info-title-container">
+              <td id="name-title">Birth Date</td>
+              <td id="name-content">05/17/2022</td>
+            </tr>
+          </table>
+         </section>
 
-         <div class="email-margin">
-            <td><b>Email</b></td>
-            <p>@angel_oh@gmail.com</p>
-            </div>
-
-            <div class="birthdate-margin">
-               <td><b>Birthdate</b></td>
-               <p>07/26/2001</p>
-                </div>
-
-         <h2 class="location-margin">Location Information</h2>
-         <div class="address-margin">
-         <td><b>Address</b></td>
-         <p>123 Manila</p>
-         </div>
-
-         <div class="barangay-margin">
-            <td><b>Barangay</b></td>
-            <p>Barangay 123 Manila</p>
-            </div>
-
-            <div class="city-margin">
-               <td><b>City/Municipality</b></td>
-               <p>Manila</p>
-                </div>
-
-                <div class="zip-margin">
-                  <td><b>Zip Code</b></td>
-                  <p>1008</p>
-                    </div>
-
-                    
-
-
+         <section id="location-info-section">
+            <h2 class="personal-margin">Location Information</h2>
+            <table class="location-info-container">
+               <tr>
+                 <td id="name-title">Address</td>
+                 <td id="name-content">813 A Leo St., Sampaloc, Manila
+                 </td>
+               </tr>
+               <tr class="info-title-container">
+                 <td id="name-title">Baranagay</td>
+                 <td id="name-content">572</td>
+               </tr>
+               <tr class="info-title-container">
+                 <td id="name-title">City/Municipality</td>
+                 <td id="name-content">Manila City</td>
+               </tr>
+               <tr class="info-title-container">
+                 <td id="name-title">Zip Code</td>
+                 <td id="name-content">1008</td>
+               </tr>
+             </table>
+            </section>
          </div>
       </div>
-   
-
    </div>
-
 </div> 
 
-
-<!-- END | Account Settings-Delete Account -->
+<!-- END | Account Overview -->
 
 
 
