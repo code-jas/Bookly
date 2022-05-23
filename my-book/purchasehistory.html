@@ -19,73 +19,74 @@
 
    <!-- my-books css -->
    <link rel="stylesheet" href="../assets/css/my-books.css">
+   <!-- my-books - ORDER STATUS css -->
+   <link rel="stylesheet" href="../assets/css/mybook-order-status.css">
+
 
 </head>
 
 
 <!-- START | NAVIGATION BAR -->
-<header>
 
-   <nav class="navbar">
-      <div class="logo">
-         <a href="index.html" class="branding">
-            <img src="../assets/images/illustrations/book-icon.svg" alt="book icon" class="nav-image">
-            <h1 class="branding-text">BOOKLY</h1>
-         </a>
+
+<nav class="navbar">
+   <div class="logo">
+      <a href="index.html" class="branding">
+         <img src="../assets/images/illustrations/book-icon.svg" alt="book icon" class="nav-image">
+         <h1 class="branding-text">BOOKLY</h1>
+      </a>
+   </div>
+
+   <div class="right-navbar">
+
+      <div class="nav-menu">
+         <ul class="menu">
+            <li class="nav-item"><a href="../home.html" accesskey="1" tabindex="1" class="nav-link">Home</a></li>
+            <li class="nav-item"><a href="../book-shop.html" accesskey="2" tabindex="2" class="nav-link">Book
+                  Shop</a>
+            </li>
+            <li class="nav-item"><a href="../about-us.html" accesskey="3" tabindex="3" class="nav-link">About us</a>
+            </li>
+         </ul>
       </div>
-
-      <div class="right-navbar">
-
-         <div class="nav-menu">
-            <ul class="menu">
-               <li class="nav-item"><a href="../home.html" accesskey="1" tabindex="1" class="nav-link">Home</a></li>
-               <li class="nav-item"><a href="../book-shop.html" accesskey="2" tabindex="2" class="nav-link">Book
-                     Shop</a>
-               </li>
-               <li class="nav-item"><a href="../about-us.html" accesskey="3" tabindex="3" class="nav-link">About us</a>
-               </li>
-            </ul>
-         </div>
-         <div class="session-false">
-            <button class="sign-in-btn">SIGN IN</button>
-            <button class="sign-up-btn">SIGN UP</button>
-         </div>
-         <div class="session-true">
-            <span class="material-symbols-outlined">
-               shopping_cart
+      <div class="session-false">
+         <button class="sign-in-btn">SIGN IN</button>
+         <button class="sign-up-btn">SIGN UP</button>
+      </div>
+      <div class="session-true">
+         <span class="material-symbols-outlined">
+            shopping_cart
+         </span>
+         <span class="material-symbols-outlined">
+            notifications
+         </span>
+         <button>
+            <span class="material-symbols-outlined profile-button">
+               person
             </span>
-            <span class="material-symbols-outlined">
-               notifications
-            </span>
-            <button>
-               <span class="material-symbols-outlined profile-button">
-                  person
-               </span>
 
-            </button>
-         </div>
-
-
+         </button>
       </div>
 
 
-      <div class="hamburger">
-         <span class="burger-bar"></span>
-         <span class="burger-bar"></span>
-         <span class="burger-bar"></span>
-      </div>
+   </div>
 
 
-   </nav>
-</header>
+   <div class="hamburger">
+      <span class="burger-bar"></span>
+      <span class="burger-bar"></span>
+      <span class="burger-bar"></span>
+   </div>
+
+
+</nav>
+
 
 <!-- END | NAVIGATION BAR -->
 
 
 <!-- START | VIEW CART -->
 <div class="sidebar-wrapper-outer">
-
-
    <div class="sidebar-wrapper">
 
       <nav class="my_book_sidebar">
@@ -101,11 +102,11 @@
 
       <div class="view_cart_details_container">
 
+
+
+
       </div>
-
-
    </div>
-
 </div>
 
 
@@ -199,7 +200,7 @@
 
 <!-- END | FOOTER -->
 
-<script src="./assets/javascript/global.js"></script>
+<script src="/assets/javascript/navbar.js"></script>
 <script src="https://kit.fontawesome.com/a0043d9bc2.js" crossorigin="anonymous"></script>
 
 <body>
