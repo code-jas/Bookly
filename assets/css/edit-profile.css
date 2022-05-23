@@ -37,7 +37,7 @@
 
 
 #personal-margin-section{
-   width: 40%;
+   width: 50%;
    padding: 20px;
    display: flex;
    flex-direction: row;
@@ -106,7 +106,7 @@ input[type=name]:focus, input[type=email]:focus, input[type=birthdate]:focus, in
      font-weight: bold;
      cursor: pointer;
      font-size: 15px;
-     width: 130px;
+     width: 200px;
      height: 40px;
      padding: 0 25px;
      position: relative;
@@ -120,6 +120,7 @@ input[type=name]:focus, input[type=email]:focus, input[type=birthdate]:focus, in
 }
 
 .upload-btn {
+   text-align: center;
    border: 1px solid #3A405B;
    background-color: #FFFFFF;
    border-radius: 100px;
@@ -127,7 +128,7 @@ input[type=name]:focus, input[type=email]:focus, input[type=birthdate]:focus, in
    font-weight: bold;
    cursor: pointer;
    font-size: 15px;
-   width: 90px;
+   width: 150px;
    height: 40px;
    padding: 0 25px;
    position: relative;
@@ -156,7 +157,7 @@ input[type=name]:focus, input[type=email]:focus, input[type=birthdate]:focus, in
    font-weight: bold;
    cursor: pointer;
    font-size: 15px;
-   width: 90px;
+   width: 150px;
    height: 40px;
    padding: 0 25px;
    position: relative;
