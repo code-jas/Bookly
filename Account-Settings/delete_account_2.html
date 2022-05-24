@@ -5,7 +5,7 @@
    <meta charset="UTF-8">
    <meta http-equiv="X-UA-Compatible" content="IE=edge">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <title>View Cart - MyBooks | Bookly</title>
+   <title>Delete Account Verification | Bookly</title>
    <!-- import icons -->
    <link rel="stylesheet"
       href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
@@ -83,7 +83,8 @@
 
 
 <!-- START | Account Settings-Delete Account -->
-<div class="sidebar-wrapper-outer"></div>
+
+<div class="sidebar-wrapper-outer">
 
 
    <div class="sidebar-wrapper">
@@ -91,26 +92,36 @@
       <nav class="my_book_sidebar">
          <h1 class="view-cart-header">Account Settings</h1>
          <div class="sidebar_menu">
-            <a href="#" class="sidebar-link sidebar-active">Account Overview</a>
-            <a href="#" class="sidebar-link">Edit Profile</a>
-            <a href="#" class="sidebar-link">Change Password</a>
-            <a href="Kim-Delete.html" class="sidebar-link">Delete Account</a>
+            <a href="../Account-Settings/account_overview.html" class="sidebar-link">Account Overview</a>
+            <a href="../Account-Settings/edit-profile.html" class="sidebar-link ">Edit Profile</a>
+            <a href="../Account-Settings/change-password.html" class="sidebar-link">Change Password</a>
+            <a href="../Account-Settings/Delete.html" class="sidebar-link sidebar-active">Delete Account</a>
          </div>
 
       </nav>
 
-      <div class="delete_account_container">
-         <div class="delete_account_content">
-
+      <div class="content-container">
+        <h1 class="delete-account-header">Verify your Account</h1>
+         <form id="delete-account-container">   
       
-         <h1 class="delete-account-header">Verify your Account</h1>
-         <h2 class="delete-account-header2">Enter your password to verify if it's you.</h2>
-         
-         <td> <b>Password </b></td>  
-        <input type = "password" id = "pswd" value = "">   
-        <button class="cancel-btn">Cancel</button>
-        
+         <div class="container">
+            <p class="delete-account-header" style="font-weight: lighter;">Enter your password to verify if it's you before deleting your account.</p>
+            <section style="margin-top: 20px;">
+            <div class="textfield-wrapper">
+               <label for="password">Password</label>
+                  <div class="inputContainer">
+                     <input type="password" name="password"/>
+                     <i class="fa fa-eye" aria-hidden="true"></i>
+                  </div>
+            </div> 
+            </section>
+            <div class ="btn_wrapper">
+               <button class="cancel-btn" >Cancel</button>
+            </div>
+            
          </div>
+         </form>
+
       </div>
    
 

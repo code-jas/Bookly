@@ -1,60 +1,117 @@
-.delete-account-header {
-    font-size: 40px;
-    font-weight: 600;
-    margin-bottom: 30px;
- }
+body{
+   font-family: var(--montserrat-font);
+}
 
+.delete-account-header{
+   padding: 5px;
+   font-family: var(--montserrat-font);
+}
+.content-container{
+
+   background-color: #f8f9fd;
+     
+     border-radius: 20px;
+     width: 100%;
+     height: 780px;
+     justify-content: right;
+     align-items: center;
  
- .delete-account-parag1,.delete-account-parag2,.delete-account-parag3,.delete-account-parag4,.delete-account-header2{
-    margin-bottom: 20px;
-    padding: 10px;
+     font-family: 'Montserrat', sans-serif;
+     font-size: 20px;
+     padding: 30px;
+     font-weight: bold ;
+ 
  }
+ .container{
+    width: 100%;
+    height: 700px;
+   display: flex;
+   flex-direction: column;
+   justify-content: flex-start;
+   position: relative;
+   
+ 
+}
 
+.container .textfield-wrapper{
+  width: 100%;
+  padding: 10px;
+
+
+}
+
+.container .textfield-wrapper .inputContainer{
+  position: relative;
+  display: flex;
+  width: 100%; 
+  padding: 10px;
+}
+
+.textfield-wrapper label{
+   font-size: 20px;
+   padding: 10px;
+}
+.container .textfield-wrapper .inputContainer i{
+   position: absolute;
+   right: 0;
+   padding: 10px 20px 0px 0px;
+   font-size: 12px;
+}
+
+.container .textfield-wrapper .inputContainer input{
+  height: 40px;
+  width: 100%;
+  color: #4F5362;
+  font-size: 12px;
+  border-radius: 10px;
+  background-color: #F6F3FC;
+  border-color: #F6F3FC;
+  padding: 10px;
+  border-style: none;
+}
+
+input[type=password]:focus{
+  box-shadow: 0px 0px 3px 3px rgba(255, 145, 163, 0.8);
+  outline-color: #f89baa;
+  outline-style:solid;
+  background-color: #FFFFFF;
+}
  .delete-account-line-break-policy {
     background-color: var(--light-gray-dark);
     width: 100%;
     height: 1px;
  }
- .delete_account_container {
-    width: 100%;
-    height: 781px;
-    padding: 30px;
-    background-color: white;
-    border-radius: 15px;
- }
- 
- .delete_account_content{
-     position: relative;
-     width: 80%;
-     margin: 0 auto;
- }
+
+
+
+ .btn_wrapper{
+   
+   display:flex;
+   justify-content: flex-end;
+   align-items:flex-end;
+   height: 500px;
+   padding: 5px;
+}
 
  .cancel-btn:active {
     transform: translateY(2px);
  }
  
  .cancel-btn {
-    appearance: button;
-    background-color: #3A405B;
-    border-radius: 100px;
-    border-width: 0;
-    font-family: var(--montserrat-font);
-    color: #fff;
-    cursor: pointer;
-    font-size: 100%;
-    width: 120;
-    height: 40px;
-    line-height: 1.15;
-    padding: 0 25px;
-    position: absolute;
-    right: 0;
-    bottom: -500px;
-    text-align: center;
-    text-transform: capitalize;
-    transform: translateZ(0);
-    transition: all .3s, box-shadow .08s ease-in;
-    user-select: none;
-    -webkit-user-select: none;
+   background-color: #3A405B;
+   border: none;
+   border-radius: 100px;
+   color: #ffffff;
+   font-weight: bold;
+   cursor: pointer;
+   font-size: 15px;
+   width: 200px;
+   height: 40px;
+   padding: 0 25px;
+   position: relative;
+   transition: all .3s, box-shadow .08s ease-in;
+   user-select: none;
+   -webkit-user-select: none;
  }
  
  .cancel-btn:hover {
