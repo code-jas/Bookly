@@ -36,3 +36,10 @@ window.addEventListener("scroll", () =>
    header.classList.toggle("sticky", window.scrollY > 0)
 )
 /****************  change bg navbar when scroll - start     *********************/
+
+
+const dd_main = document.querySelector(".dd_main");
+
+		dd_main.addEventListener("click", function () {
+			this.classList.toggle("active");
+		})
