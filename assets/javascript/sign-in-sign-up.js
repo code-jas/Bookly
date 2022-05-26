@@ -1,18 +1,9 @@
 $('#sign-up-btn').on('click', function() {
-   // $('#check').prop('checked', false);
-   // $('#artwork-accepted').hide();
-   // $('#close-button').hide();
- 
+   $('.sign-in-section-container-bg').fadeOut('fast');
     $('.sign-up-modal-container-bg').fadeIn('fast');
     $('.sign-up-section').show();
     $('.verify-email-section').hide();
-   //  $('.set-payment').hide();
-   //  $('.verification-product').hide();
-   //  $('.done-section').hide();
-   //  currentActive = 1;
-   //  update();
- 
- 
+
  
 });
 
@@ -25,6 +16,7 @@ $('#sign-up-submit-btn').on('click', function(){
 
 
 $('.close').on('click',function(){
+   $('.sign-in-section-container-bg').fadeOut('fast');
    $('.sign-up-modal-container-bg').fadeOut('fast');
 });
 
@@ -32,3 +24,15 @@ $('#sign-up-done-btn').on('click',function(){
    
    $('.sign-up-modal-container-bg').fadeOut('fast');
 });
+
+
+$('#sign-in-btn').on('click', function() {
+   $('.sign-up-modal-container-bg').fadeOut('fast');
+ 
+    $('.sign-in-section-container-bg').fadeIn('fast');
+   //  $('.sign-up-section').show();
+   //  $('.verify-email-section').hide();
+});
+
+
+

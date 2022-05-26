@@ -52,7 +52,7 @@
             <div class="session-false">
                <!-- <button class="sign-in-btn">SIGN IN</button>
                <button class="sign-up-btn">SIGN UP</button> -->
-               <button type="button" id="sign-in-button" class="sign-in-btn" name="button">SIGN IN</button>
+               <button type="button" id="sign-in-btn" class="sign-in-btn" name="button">SIGN IN</button>
                <button type="button" id="sign-up-btn" class="sign-up-btn" name="button">SIGN UP</button>
 
 
@@ -272,13 +272,32 @@
       </nav>
    </header>
 
+   <div class="sign-in-section-container-bg">
+      <div class="sign-in-section-container">
+         <span tabIndex="0" class="close"><i class="fas fa-times"></i></span>
+
+         <h2 class="title">Sign-in Account</h2>
+         <form action="" id="sign-in-form-container" class="su_form_cont">
+            <div class="su-input-item wks31">
+               <label for="username">Username</label>
+               <input class="txt-field wks231" id="username" name="username" type="text" /><br>
+            </div>
+            <div class="su-input-item wks31">
+               <label for="password">Password</label>
+               <input class="txt-field wks231" id="password" name="password" type="password" />
+            </div>
+            <p><a href="" class="link-fpw">Forgot Password?</a></p>
+            <button id="sign-in-submit-btn" class="sign-in-submit" name="sign_up_submit">Sign In</button></a>
+         </form>
+      </div>
+   </div>
    <div class="sign-up-modal-container-bg">
       <div class="sign-up-section-container">
          <span tabIndex="0" class="close"><i class="fas fa-times"></i></span>
 
          <div class="sign-up-section">
             <h2 class="title">Create Account</h2>
-            <form action="" id="form-container" class="su_form_cont">
+            <form action="" id="sign-up-form-container" class="su_form_cont">
                <div class="su-input-item">
                   <label for="email">Email</label>
                   <input class="txt-field" id="email" name="email" type="email" /><br>
