@@ -5,22 +5,22 @@
    <meta charset="UTF-8">
    <meta http-equiv="X-UA-Compatible" content="IE=edge">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <title>Delete Account | Bookly</title>
+   <title>Get Started | Bookly</title>
    <!-- import icons -->
    <link rel="stylesheet"
       href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" />
    <!-- root css -->
-   <link rel="stylesheet" href="../assets/css/root.css">
+   <link rel="stylesheet" href="../../assets/css/root.css">
    <!-- navbar css -->
-   <link rel="stylesheet" href="../assets/css/navbar.css">
+   <link rel="stylesheet" href="../../assets/css/navbar.css">
    <!-- footer css -->
-   <link rel="stylesheet" href="../assets/css/footer.css">
-
+   <link rel="stylesheet" href="../../assets/css/footer.css">
    <!-- my-books css -->
-   <link rel="stylesheet" href="../assets/css/my-books.css">
-   <!-- delete-account css-->
-   <link rel="stylesheet" href="../assets/css/delete-account.css">
+   <link rel="stylesheet" href="../../assets/css/my-books.css">
+   <!-- get-started css-->
+   <link rel="stylesheet" href="../../assets/css/getstarted.css">
+
 </head>
 
 
@@ -30,7 +30,7 @@
    <nav class="navbar">
       <div class="logo">
          <a href="index.html" class="branding">
-            <img src="../assets/images/illustrations/book-icon.svg" alt="book icon" class="nav-image">
+            <img src="../../assets/images/illustrations/book-icon.svg" alt="book icon" class="nav-image">
             <h1 class="branding-text">BOOKLY</h1>
          </a>
       </div>
@@ -87,38 +87,74 @@
 
 
    <div class="sidebar-wrapper">
-
-      <nav class="my_book_sidebar">
-         <h1 class="view-cart-header">Account Settings</h1>
-         <div class="sidebar_menu">
-            <a href="#" class="sidebar-link ">Account Overview</a>
-            <a href="#" class="sidebar-link">Edit Profile</a>
-            <a href="#" class="sidebar-link">Change Password</a>
-            <a href="../Account-Settings/Delete.html" class="sidebar-link sidebar-active">Delete Account</a>
-         </div>
-
-      </nav>
-
-      <div class="delete_account_container">
-         <div class="delete_account_content">
-         <h1 class="delete-account-header">Delete your Account</h1>
-         <h2 class="delete-account-header2">Please read this carefully.</h2>
-         <p class="delete-account-parag1">You’re trying to delete your Bookly Account, which provides you to access online bookstore.</p>
-         <p class="delete-account-parag2">You’ll no longer be able to use any services from our websites, and your account and data will be permanentaly lost.</p>
-         <div class="delete-account-line-break-policy"></div>
-         <p class="delete-account-parag3">If you're decide to permantly deleted your account, we are not responsible on all date have been delete from your choice</p>
-         <input type="checkbox" id="delete" name="delete"><label class="delete-account-parag4" for="delete">Yes, I want to permanently delete this Account and all its data.</label>
+      <div class="edit_profile_container">
+         <div class="edit_profile_content">
+            <h2 class="edit-profile-margin">Welcome! Let's create your profile</h2>
+            <div class="avatar-info-container">
+               <!-- UPLOAD IMAGE-->
+               <section id="personal-margin-section">
+                  <button class="choose-img-btn" name="Save Changes"> Choose an image</button>
+               </section>
+            </div>
          
-         <section class ="btn_wrapper_section">
-            <a href="delete_account_2.html"><button class="delete-btn">Delete Account</button></a>
-         </section>
+         <section id="personal-info-section">
+         <h2 class="personal-margin">Add Personal Information</h2>
+         <div class="personal-info-container">
+           
+              <label class="content-fields" for="fname">First Name</td>
+              <input class="txt-field" id="fname" name="fname" type="name" value="Angelo"/>
+         
+            
+               <td id="name-title">Last Name</td>
+               <td id="name-content"><input class="txt-field" id="lname" name="lname" type="name" value="Silvestre"></td>
+          
+          
+              <td id="name-title">Username</td>
+              <td id="name-content"><input class="txt-field" id="uname" name="uname" type="name" value="@angel_oh"></td>
         
+           
+              <td id="name-title">Email</td>
+              <td id="name-content"><input class="txt-field" id="email" name="email" type="email" value="angel_oh@gmail.com"></td>
+         
+           
+              <td id="name-title">Birth Date</td>
+              <td id="name-content"><input class="txt-field" id="bdate" name="bdate" type="birthdate" value="05/22/2022"></td>
+            
+        </div>
+         </section>
+
+         <section id="location-info-section">
+            <h2 class="personal-margin">Add Your Location</h2>
+            <table class="location-info-container">
+               <tr>
+                 <td id="name-title">Address</td>
+                 <td id="name-content"><input class="txt-field" id="address" name="address" type="name" value="Address"></td>
+               </tr>
+               <tr class="info-title-container">
+                 <td id="name-title">Baranagay</td>
+                 <td id="name-content"><input class="txt-field" id="brgy" name="brgy" type="num" value="572"></td>
+               </tr>
+               <tr class="info-title-container">
+                 <td id="name-title">City/Municipality</td>
+                 <td id="name-content"><input class="txt-field" id="city" name="city" type="name" value="Manila"></td>
+               </tr>
+               <tr class="info-title-container">
+                 <td id="name-title">Zip Code</td>
+                 <td id="name-content"><input class="txt-field" id="zip" name="ip" type="num" value="1008"></td>
+               </tr>
+             </table>
+         </section>
+         
+            <section class ="btn_wrapper_section">
+               <button class="Save-btn" name="Save Changes"> Save Changes</button>
+            </section>
+         </div>
       </div>
    
 
    </div>
 
-</div>
+</div> 
 
 
 <!-- END | Account Settings-Delete Account -->

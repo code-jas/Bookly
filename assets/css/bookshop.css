@@ -79,7 +79,7 @@ i.fa-solid{
   color: black;
 }
 
-input {
+input.search-field {
   border-top: 1px;
   border-bottom: 1px;
   border-left: 1px;
@@ -92,7 +92,11 @@ input {
   border-radius: 10px 0px 0px 10px;
 }
 
+input.search-field[type=search]:focus{
+  border: none;
+  outline: 3px solid #ffc7d2;
 
+}
 i.magnifying{
   font-size: 15px;
   color: white;
