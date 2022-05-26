@@ -4,7 +4,6 @@
     padding: 30px;
     background-color: white;
     border-radius: 15px;
-
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
@@ -20,7 +19,6 @@
 .avatar-info-container{
     display: flex;
     flex-direction: row;
-    
     align-items:center ;
 }
 

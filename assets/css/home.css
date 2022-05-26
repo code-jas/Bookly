@@ -65,8 +65,6 @@
    background-color: var(--btn-color-light);
    border: 1px solid var(--btn-color);
    outline: 5px solid #ffc7d2;
-
-
 }
 
 .btn-get-started:active {

@@ -72,13 +72,12 @@ input.txt-field{
    background-color: #F6F3FC;
    border-color: #F6F3FC;
    padding: 5px;
+   padding-left: 15px;
    border-style: none;
 }
 
 input[type=name]:focus, input[type=email]:focus, input[type=birthdate]:focus, input[type=num]:focus{
-   box-shadow: 0px 0px 3px 3px rgba(255, 145, 163, 0.8);
-   outline-color: #f89baa;
-   outline-style:solid;
+   outline: 3px solid #ffc7d2;
    background-color: #FFFFFF;
 }
 
