@@ -38,8 +38,23 @@ window.addEventListener("scroll", () =>
 /****************  change bg navbar when scroll - start     *********************/
 
 
-const dd_main = document.querySelector(".dd_main");
+const ddProfMain = document.querySelector(".prof_dd_main");
+const ddNotifMain = document.querySelector(".notif_dd_main");
+const ddCartMain = document.querySelector(".cart_dd_main");
 
-		dd_main.addEventListener("click", function () {
-			this.classList.toggle("active");
-		})
+   ddProfMain.addEventListener("click", function () {
+      ddCartMain.classList.toggle("active", false);
+      ddNotifMain.classList.toggle("active", false);
+      this.classList.toggle("active");
+   })
+
+   ddNotifMain.addEventListener("click", function () {
+      ddProfMain.classList.toggle("active", false);
+      ddCartMain.classList.toggle("active", false);
+      this.classList.toggle("active");
+   })
+   ddCartMain.addEventListener("click", function () {
+      ddProfMain.classList.toggle("active", false);
+      ddNotifMain.classList.toggle("active", false);
+      this.classList.toggle("active");
+   })
