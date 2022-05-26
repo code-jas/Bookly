@@ -82,8 +82,8 @@ let movies = [
   {
     src:
       "./assets/images/feature-books/template-3.png",
-      title: "The Siderman",
-      author: "The SPidermean Brothers",
+      title: "Last Movie",
+      author: "The Moviews Brothers",
       price: "$12.99",
       genre: "Sci-Fi",
   },
@@ -223,7 +223,7 @@ btnLeft.addEventListener("click", (e) => {
 btnRight.addEventListener("click", (e) => {
   let movieWidth = document.querySelector(".ft-books").getBoundingClientRect()
     .width;
-  let scrollDistance = movieWidth * 5; // Scroll the length of 6 movies. TODO: make work for mobile because (4 movies/page instead of 6)
+  let scrollDistance = movieWidth * 3; // Scroll the length of 6 movies. TODO: make work for mobile because (4 movies/page instead of 6)
 
   console.log(`movieWidth = ${movieWidth}`);
   console.log(`scrolling right ${scrollDistance}`);

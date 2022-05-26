@@ -13,6 +13,7 @@
    <!-- root css -->
    <link rel="stylesheet" href="./assets/css/root.css">
    <link rel="stylesheet" href="./assets/css/navbar.css">
+   <link rel="stylesheet" href="./assets/css/signup.css">
    <!-- home css -->
    <link rel="stylesheet" href="./assets/css/home.css">
    <!-- footer css -->
@@ -49,8 +50,19 @@
                </ul>
             </div>
             <div class="session-false">
-               <button class="sign-in-btn">SIGN IN</button>
-               <button class="sign-up-btn">SIGN UP</button>
+               <!-- <button class="sign-in-btn">SIGN IN</button>
+               <button class="sign-up-btn">SIGN UP</button> -->
+               <button type="button" id="sign-in-button" class="sign-in-btn" name="button">SIGN IN</button>
+               <button type="button" id="sign-up-btn" class="sign-up-btn" name="button">SIGN UP</button>
+
+
+
+
+
+
+
+
+
             </div>
             <div class="session-true">
                <!-- <span class="material-symbols-outlined">
@@ -260,6 +272,55 @@
       </nav>
    </header>
 
+   <div class="sign-up-modal-container-bg">
+      <div class="sign-up-section-container">
+         <span tabIndex="0" class="close"><i class="fas fa-times"></i></span>
+
+         <div class="sign-up-section">
+            <h2 class="title">Create Account</h2>
+            <form action="" id="form-container" class="su_form_cont">
+               <div class="su-input-item">
+                  <label for="email">Email</label>
+                  <input class="txt-field" id="email" name="email" type="email" /><br>
+               </div>
+               <div class="su-input-item">
+                  <label for="username">Username</label>
+                  <input class="txt-field" id="username" name="username" type="text" /><br>
+               </div>
+               <div class="su-input-item">
+                  <label for="password">Create Password</label>
+                  <input class="txt-field" id="password" name="password" type="password" /><br>
+               </div>
+               <div class="su-input-item">
+                  <label for="confirm_password">Confirm Password</label>
+                  <input class="txt-field" id="confirm_password" name="confirm_password" type="password" />
+
+               </div>
+               <button id="sign-up-submit-btn" class="sign-up-submit" name="sign_up_submit">Create Account</button></a>
+            </form>
+            <p class="terms-a3m3">By signing up, you agree to the <a class="links">Terms of Service </a>
+               and <a class="links">Privacy Policy</a>, including <a class="links">Cookie Use</a>.</p>
+         </div>
+         <!--END | CREATE ACCOUNT-->
+         <!--START | VERIFY EMAIL-->
+         <div class="verify-email-section">
+
+            <div class="verify-email-img-card">
+               <img class="img-content" src="./assets/images/illustrations/email-verification.png">
+            </div>
+            <h2 class="title">Verify your Email Address</h2>
+
+            <p class="terms-a3m3">You’ve entered <b>BuildBuildBuild@gmail.com</b> as the email
+               address for your
+               account.
+               To complete the process please check your email for a validation request.</p>
+
+            <button id="sign-up-done-btn" class="sign-up-submit">Done</button>
+
+         </div>
+      </div>
+   </div>
+   </div>
 
 
    <!-- END | NAVIGATION BAR -->
@@ -476,7 +537,8 @@
 
 
    <!-- END | FOOTER -->
-
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+   <script src="./assets/javascript/sign-in-sign-up.js"></script>
    <script src="./assets/javascript/global.js"></script>
 
    <script src="./assets/javascript/feature-books.js"></script>

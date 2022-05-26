@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Title</title>
+   <link rel="stylesheet" href="style.css">
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
+   <link href="time-pick-light.css" rel="stylesheet">
+   <link rel="stylesheet" href="check-verified-2.css">
+   <script src="time-picker.js"></script>
+
+   <script class="jsbin" src="https://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+</head>
+
+<body>
+
+   <div class="add-product">
+      <button type="button" id="add-button" name="button"><i class="fas fa-plus"></i> Add Product</button>
+   </div>
+
+
+   <div class="new-product">
+
+      <div class="add-artwork">
+         <!-- header -->
+
+         <div class="add-artwork-head">
+
+            <span tabIndex="0" class="close"><i class="fas fa-times"></i></span>
+            <!-- radio button -->
+            <div class="container">
+
+               <div class="progress-container">
+
+                  <div class="circle active">
+                     <li class="b1">ADD PRODUCT</li><i class="check"></i>
+                  </div>
+                  <div class="circle">
+                     <li class="b1">PRICING</li><i class="check"></i>
+                  </div>
+                  <div class="circle">
+                     <li class="b1">SUMMARY </li><i class="check"></i>
+                  </div>
+                  <div class="circle">
+                     <li class="b1">DONE</li><i class="check"></i>
+                  </div>
+                  <div class="progress" id="progress"></div>
+               </div>
+
+
+
+            </div>
+         </div>
+
+         <!-- main -->
+         <div class="add-artwork-body">
+            <!-- <p class="error-msg">Please fill all the input!</p> -->
+            <div class="file-upload">
+
+               <div class="image-upload-wrap">
+                  <input class="file-upload-input" id="file-upload-input" type='file' onchange="readURL(this);"
+                     accept="image/*" />
+                  <div class="drag-text">
+                     <h3>Drag and drop a file or select add Image</h3>
+                  </div>
+                  <button class="file-upload-btn" type="button" onclick="$('.file-upload-input').trigger( 'click' )"><i
+                        class="fas fa-plus"></i></button>
+               </div>
+               <div class="file-upload-content">
+                  <img class="file-upload-image" id="file-upload-image" src="" alt="your image" />
+                  <span class="image-title">uploaded image</span>
+                  <div class="image-title-wrap">
+                     <button type="button" onclick="removeUpload()" class="remove-image"><i class="fas fa-times"></i>
+                        delete </button>
+                  </div>
+               </div>
+               <span class="error-msg-1"><br>Please upload artwork.</span>
+            </div>
+
+            <div class="text-upload-content">
+               <label class="profile-label">Artwork Name</label><br>
+               <input class="textbox" id="artwork-name" type="text" name="artwork-name" id="artwork-name"
+                  placeholder="Digtal Art Illustration" required />
+               <span class="error-msg-2"><br>Please fill this section.</span>
+
+               <label class="profile-label">Description</label><br>
+               <textarea class="text-area" id="artwork-description" name="artwork-description" req></textarea>
+               <span class="error-msg-3"><br>Please input atleast 25 character.</span>
+            </div>
+            <input class="next-btn" id="continue1-submit" type="button" value="Continue">
+            <!-- <input id="prev" type="button" value="Back" disabled>   -->
+         </div>
+
+         <!-- end main -->
+
+
+         <!-- <button class="btn" id="next" >Next</button> -->
+
+         <div class="set-payment">
+
+            <div class="artwork-category">
+               <div class="category-title">Category of your product</div>
+               <div class="box">
+                  <input type="radio" class="select" name="select" id="option-1">
+                  <input type="radio" class="select" name="select" id="option-2">
+                  <input type="radio" class="select" name="select" id="option-3">
+                  <input type="radio" class="select" name="select" id="option-4">
+                  <input type="radio" class="select" name="select" id="option-5">
+                  <input type="radio" class="select" name="select" id="option-6">
+                  <label for="option-1" class="option-1">
+                     <div class="dot"></div>
+                     <div class="text">Digital Art</div>
+                  </label>
+                  <label for="option-2" class="option-2">
+                     <div class="dot"></div>
+                     <div class="text">Painting</div>
+                  </label>
+                  <label for="option-3" class="option-3">
+                     <div class="dot"></div>
+                     <div class="text">Pixel art</div>
+                  </label>
+                  <label for="option-4" class="option-4">
+                     <div class="dot"></div>
+                     <div class="text">Integrated Art</div>
+                  </label>
+                  <label for="option-5" class="option-5">
+                     <div class="dot"></div>
+                     <div class="text">Chibi Art</div>
+                  </label>
+                  <label for="option-6" class="option-6">
+                     <div class="dot"></div>
+                     <div class="text">Vector Art</div>
+                  </label>
+               </div>
+
+               <div class="bid-range-title">Bid Time Range</div>
+               <div class="bid-range">
+                  <div class="from-container">
+                     <div class="bid-label">Start</div>
+                     <i class="fas fa-calendar-alt"></i>
+                     <input class="date-input" type="date" name="date" max="" id="fromDate" placeholder="dd/mm/yyyy"
+                        onfocus="(this.type='date')">
+                  </div>
+                  <div class="to-container">
+                     <div class="bid-label">End</div>
+                     <i class="fas fa-calendar-alt"></i>
+                     <input class="date-input" type="date" name="date" max="" id="toDate" placeholder="dd/mm/yyyy"
+                        onfocus="(this.type='date')">
+                  </div>
+                  <!-- <input type="button" value="date" id="datebtn">  -->
+               </div>
+               <div class="bid-time">
+                  <div class="time-container">
+                     <i class="fas fa-clock"></i>
+                     <input class="time-input" type="text" id="time-start" />
+                  </div>
+
+                  <div class="time-container">
+                     <i class="fas fa-clock"></i>
+                     <input class="time-input" type="text" id="time-end" />
+                  </div>
+               </div>
+
+
+               <div class="pricing">
+                  <div class="bid-start-price" tabindex="0">
+                     <p class="input-bidprice-text">Start Bid Price at</p>
+                     <div class="input-bid-start-price">
+                        <input id="bid-start-amount" type="number" name="amount" maxlength="8"
+                           placeholder="15.00 - 15000.00">
+                        <div class="alp-token">
+                           <div><i class="icon-2 fab fa-gg"></i></div>
+                           <span>ALP</span>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+               <p class="error-msg-5">The limit per transaction is between 15.00 - 15000.00 USD. Please adjust the
+                  amount.</p>
+               <p class="error-msg-4">Please fill all the input!</p>
+            </div>
+
+
+            <input class="next-btn" id="pricing-btn" type="button" value="Continue">
+            <input class="prev-btn" id="prev-to-body" type="button" value="Back to product">
+         </div>
+
+         <div class="verification-product">
+
+            <div class="summary-artwork-image">
+               <img id="summary-img" src="" alt="your image" />
+
+               <label class="summary-details-label" id="summary-details-label1">Bid Start Amount</label><br>
+               <p class="summary-product-amount">
+                  <i class="fab fa-gg"></i>
+                  <span id="alp-price">5&nbsp;0&nbsp;</span>
+                  A&nbsp;L&nbsp;P&nbsp;
+                  <span id="usd-price">= $ 198.88</span>
+               </p>
+            </div>
+            <div class="summary-details">
+
+               <label class="summary-details-label">Artwork Name</label><br>
+               <input class="summary-textbox" id="summary-artwork-name" type="text" readonly />
+               <label class="summary-details-label">Artwork Category</label><br>
+               <input class="summary-textbox" id="summary-artwork-category" type="text" readonly />
+
+               <label class="summary-details-label">Description</label><br>
+               <textarea class="summarytext-area" id="summary-artwork-description" readonly></textarea>
+               <label class="summary-details-label">Bid Starts At</label><br>
+               <input class="summary-textbox" id="summary-bid-start" type="text" readonly />
+               <label class="summary-details-label">Bid Ends At</label><br>
+               <input class="summary-textbox" id="summary-bid-end" type="text" readonly />
+
+
+            </div>
+
+
+            <input class="next-btn" id="verify-btn" type="button" value="Continue">
+            <input class="prev-btn" id="prev-to-pricing" type="button" value="Back">
+         </div>
+         <div class="done-section">
+
+            <div class="check-container">
+               <input type="checkbox" id="check">
+               <label for="check" class="check-es">
+                  <div class="check-icon"></div>
+               </label>
+            </div>
+            <h1 id="artwork-accepted">Congrats! Your artwork has been Accepted.</h1>
+            <input class="next-btn" id="close-button" type="button" value="Return to my product">
+
+
+         </div>
+
+
+
+      </div>
+
+
+      <script>
+         window.addEventListener("load", function () {
+            tp.attach({
+               target: "time-start"
+            });
+            tp.attach({
+               target: "time-end"
+            });
+            //   tp.attach({
+            //     target: "demoB1",
+            //     wrap: "demoB2"
+            //   });
+         });
+      </script>
+
+      <script type="text/javascript" src="add-artwork.js"></script>
+
+      <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+</body>
+
+</html>

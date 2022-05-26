@@ -29,6 +29,8 @@
   position: relative;
   overflow-y: hidden;
   transition: all 0.5s ease-in-out;
+  width: 75%;
+  margin: 0 auto;
 
 }
 

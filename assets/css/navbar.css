@@ -116,11 +116,11 @@ header {
 }
 
 .session-false {
-   display: none;
+   display: flex;
 }
 
 .session-true {
-   display: flex;
+   display: none;
 }
 
 .right-navbar {
