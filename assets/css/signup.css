@@ -139,7 +139,7 @@ h3.title {
     width: 100%;
     color: #4F5362;
     font-size: 12px;
-    border-radius: 10px;
+    border-radius: 5px;
     background-color: #EFF0F4;
     /* border-color: #F6F3FC; */
     padding: 8px 12px;
@@ -163,7 +163,7 @@ h3.title {
     margin-bottom: 13px;
 }
 
-.su_terms_agreement {}
+/* .su_terms_agreement {} */
 
 /* .footer-content {
     font-size: 10px;
@@ -231,6 +231,7 @@ a.links {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    transition: all 0.3s ease-in-out;
 }
 
 a.links:hover {
