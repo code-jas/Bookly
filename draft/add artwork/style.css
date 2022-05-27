@@ -913,7 +913,7 @@
     align-items: center;
   }
 
-  #close-button {
+  /* #close-button {
     height: 40px;
     width: 200px;
     position: absolute;
@@ -925,7 +925,7 @@
     margin: 0;
     transition: ease .3s;
     cursor: pointer;
-  }
+  } */
 
 
 

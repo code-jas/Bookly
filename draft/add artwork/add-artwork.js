@@ -155,6 +155,7 @@ $('#add-button').on('click', function() {
  $('.close').on('click',function(){
    $('.buy-book-modal-container').fadeOut('fast');
  });
+ 
  $('#close-button').on('click',function(){
   $('#artwork-name').val("");
   $('#artwork-description').val("");

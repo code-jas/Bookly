@@ -9,8 +9,6 @@
 
 .summary-body-mod {
    width: 85%;
-
-   overflow-x: auto;
 }
 
 .order-item-head-between,
@@ -94,6 +92,10 @@
    margin: 10px auto;
 }
 
+.mg-b {
+   margin: 5px auto;
+}
+
 .order-total-om {
    display: flex;
    flex-direction: row;
@@ -120,8 +122,9 @@
 
 
 .submit-btn-osd1 {
+   justify-items: flex-end;
    font-size: 14px;
-   font-weight: 700;
+   font-weight: 600;
    border-style: none;
    width: 200px;
    height: 35px;
@@ -153,7 +156,7 @@
    bottom: 0;
    right: 0;
 
-   margin: 10px 50px 40px 10px;
+   margin: 10px 50px 30px 10px;
    width: 161px;
    height: 38px;
 }
@@ -166,7 +169,7 @@
    color: #FE4764;
    background: white;
    border: 1px solid #FE4764;
-   margin: 10px 10px 40px 50px;
+   margin: 10px 10px 30px 50px;
    width: 161px;
    height: 38px;
 
@@ -182,6 +185,11 @@
    outline: 3px solid #ffc7d2;
 }
 
+.summary-booklist-buy {
+   max-height: 160px;
+   overflow-x: auto;
+}
+
 .summary-book-item {
    display: flex;
    flex-direction: row;
@@ -192,8 +200,8 @@
 }
 
 .summary-img-card {
-   width: 43px;
-   height: 68.17px;
+   width: 39px;
+   height: 65px;
    margin-right: 20px;
 }
 
@@ -219,15 +227,94 @@
 }
 
 .summary-book-desc h2 {
-   font-size: 15px;
+   font-size: 13px;
    font-weight: 500;
    color: #222328;
    margin-bottom: 5px;
 }
 
 .summary-book-desc h1 {
-   font-size: 17px;
-   font-weight: 700;
+   font-size: 14px;
+   font-weight: 600;
    color: #222328;
    margin-bottom: 5px;
+}
+
+.summary-user-add {
+   display: flex;
+   margin-bottom: 20px;
+}
+
+.summary-body-mod h4 {
+   font-size: 12px;
+   font-weight: 600;
+   color: #222328;
+   margin-bottom: 5px;
+
+}
+
+.summary-user-add-title {
+   flex: 25%;
+
+}
+
+
+.summary-user-add-title p {
+   font-size: 12px;
+   font-weight: 400;
+   color: #686D81;
+   margin: 10px
+}
+
+.summary-user-add-title p:nth-child(3) {
+   font-size: 12px;
+   font-weight: 400;
+   color: #686D81;
+   height: 30px;
+   margin: 10px
+}
+
+
+.summary-user-add-details {
+   flex: 85%;
+}
+
+.summary-user-add-details p {
+   font-size: 12px;
+   font-weight: 400;
+   color: #222328;
+   margin: 10px 0;
+}
+
+.summary-user-add-details p:nth-child(3) {
+   font-size: 12px;
+   font-weight: 400;
+   color: #222328;
+   margin: 10px 0;
+   height: 30px;
+   max-height: 30px;
+}
+
+.artwork-accepted {
+   text-align: center;
+}
+
+.artwork-accepted h1 {
+   font-size: 25px;
+   margin-bottom: 15px;
+}
+
+.artwork-accepted p {
+   font-size: 14px;
+   font-weight: 400;
+   color: #222328;
+   padding: 0 20px;
+}
+
+.fixed-bottom {
+   position: absolute;
+   bottom: 0;
+
+   margin-bottom: 40px;
+
 }

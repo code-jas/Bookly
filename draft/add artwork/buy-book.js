@@ -8,9 +8,9 @@ let currentActive = 1;
 
 
 $('#vb-buy-book-btn').on('click', function() {
-   // $('#check').prop('checked', false);
-   // $('#artwork-accepted').hide();
-   // $('#close-button').hide();
+   $('#check').prop('checked', false);
+   $('.artwork-accepted').hide();
+   $('#close-button').hide();
  
     $('.buy-book-modal-container').fadeIn('fast');
     $('.buy-book-cont').show();
@@ -56,7 +56,7 @@ $('#summary-next-btn').on('click', function(){
   setTimeout(function(){
     $('#check').prop('checked', true);
     $(".check").addClass("fas fa-check");  
-    $('#artwork-accepted').show();
+    $('.artwork-accepted').show();
     $('#close-button').show();
   }, 4000);
 });
@@ -81,7 +81,10 @@ $("#check").click(function() {
 
 
 
+  $('#close-button').on('click',function(){
 
+    $('.buy-book-modal-container').fadeOut('fast');
+  });
   function nextfunc(){
    currentActive++;
  
