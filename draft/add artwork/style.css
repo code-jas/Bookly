@@ -42,7 +42,7 @@
     right: 2rem;
   }
 
-  #add-button {
+  #vb-buy-book-btn {
     background-color: white;
     border-radius: 3px;
 
@@ -60,15 +60,15 @@
     cursor: pointer;
   }
 
-  #add-button:hover,
-  #add-button:focus {
+  #vb-buy-book-btn:hover,
+  #vb-buy-book-btn:focus {
     background: var(--green-alt);
     color: white;
     box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
     border: none;
   }
 
-  #pricing-btn:disabled {
+  #summary-next-btn:disabled {
     background: gray;
     color: var(--dark-blue-alt);
     cursor: not-allowed;
@@ -104,8 +104,8 @@
 
   .close {
     position: absolute;
-    right: 20px;
-    top: 20px;
+    right: 10px;
+    top: 10px;
     padding: 4px 12px;
     color: var(--dark-blue-alt);
     font-size: 25px;
@@ -134,7 +134,7 @@
 
 
 
-  .new-product {
+  .buy-book-modal-container {
     position: fixed;
     top: 0;
     display: none;
@@ -143,7 +143,7 @@
     background: rgba(0, 0, 0, .7);
   }
 
-  .add-artwork,
+  .buy-book-cont,
   .done-section {
     position: absolute;
     top: 50%;
@@ -151,24 +151,25 @@
     transform: translate(-50%, -50%);
     background: white;
     padding: 20px;
-    width: 1100px;
-    height: 650px;
-    max-width: 1110px;
+    width: 500px;
+    height: 600px;
+    border-radius: 10px;
+
     margin: 0 auto;
   }
 
-  .add-artwork-head {
+  .buy-book-head {
     background-color: #ffffff;
     display: flex;
     justify-content: center;
     height: 15%;
     align-items: center;
-    margin: 0 0 30px 0;
-    border-bottom: 1px solid var(--light-gray-alt);
+    margin: 0 0 20px 0;
+    border-bottom: 1px solid #E4E7EF;
   }
 
 
-  .add-artwork-body {
+  .buy-book-body {
     width: 100%;
 
   }
@@ -180,7 +181,9 @@
 
 
 
-  .container {
+  .pro-container {
+
+    width: 85%;
     text-align: center;
   }
 
@@ -188,9 +191,9 @@
     display: flex;
     justify-content: space-between;
     position: relative;
-    margin-bottom: 30px;
-    max-width: 100%;
-    width: 700px;
+    margin: 20px 0;
+
+    width: 100%;
   }
 
   .progress-container::before {
@@ -226,15 +229,15 @@
     background-color: #fff;
     color: #999;
     border-radius: 80px;
-    height: 35px;
-    width: 150px;
+    height: 28px;
+    width: 110px;
     font-weight: 600;
     border: 1px solid #b2bec3;
     display: flex;
     align-items: center;
     justify-content: center;
     transition: 0.4s ease;
-    font-size: 13px;
+    font-size: 11px;
     list-style-type: none;
     z-index: 2;
   }
@@ -506,7 +509,7 @@
   }
 
   /*end of body artwork*/
-
+  /* 
   .next-btn {
     position: absolute;
     bottom: 0;
@@ -530,8 +533,8 @@
 
   .next-btn:active:not([disabled]) {
     transform: scale(.97);
-  }
-
+  } */
+  /* 
 
   .prev-btn {
     position: absolute;
@@ -558,16 +561,14 @@
   .prev-btn:active {
     transform: scale(.97);
   }
-
+ */
 
   /* set payment */
 
-  .set-payment {
+  .summary-body-mod {
     display: flex;
-
     flex-direction: column;
-    height: 100%;
-    width: 630px;
+    width: 100%;
     margin: 0 auto;
   }
 
@@ -925,3 +926,9 @@
     transition: ease .3s;
     cursor: pointer;
   }
+
+
+
+
+
+  /******************************** new css creation ************************************/

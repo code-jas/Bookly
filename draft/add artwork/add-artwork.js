@@ -139,10 +139,10 @@ $('#add-button').on('click', function() {
   $('#artwork-accepted').hide();
   $('#close-button').hide();
 
-   $('.new-product').fadeIn('fast');
-   $('.add-artwork').show();
-   $('.add-artwork-body').show();
-   $('.set-payment').hide();
+   $('.buy-book-modal-container').fadeIn('fast');
+   $('.buy-book-cont').show();
+   $('.buy-book-body').show();
+   $('.summary-body-mod').hide();
    $('.verification-product').hide();
    $('.done-section').hide();
    currentActive = 1;
@@ -153,7 +153,7 @@ $('#add-button').on('click', function() {
  });
  // close button on the upper right (B)
  $('.close').on('click',function(){
-   $('.new-product').fadeOut('fast');
+   $('.buy-book-modal-container').fadeOut('fast');
  });
  $('#close-button').on('click',function(){
   $('#artwork-name').val("");
@@ -164,7 +164,7 @@ $('#add-button').on('click', function() {
   $('.date-input').val("");
   $('.time-input').val("");
   $('#bid-start-amount').val("");
-  $('.new-product').fadeOut('fast');
+  $('.buy-book-modal-container').fadeOut('fast');
 });
 
 
@@ -219,8 +219,8 @@ $('#add-button').on('click', function() {
     if(isRed == false){
   
       nextfunc();
-      $('.add-artwork-body').hide();
-      $('.set-payment').show();
+      $('.buy-book-body').hide();
+      $('.summary-body-mod').show();
 
      $('#summary-artwork-name').val($('#artwork-name').val());
      $('#summary-artwork-description').val($('#artwork-description').val());
@@ -228,15 +228,15 @@ $('#add-button').on('click', function() {
     }
     isRed= false;
     if($('#bid-start-amount').val() == ""){
-      $('#pricing-btn').prop('disabled', true);
+      $('#summary-next-btn').prop('disabled', true);
     }
 
  });
  // first previous button
  $('#prev-to-body').on('click', function(){
    prevfunc();
-   $('.add-artwork-body').show();
-   $('.set-payment').hide();
+   $('.buy-book-body').show();
+   $('.summary-body-mod').hide();
  });
 
 
@@ -248,8 +248,8 @@ $('#add-button').on('click', function() {
         isRed = true; // check if there is an error in section
         $('.error-msg-2').css('visibility','visible');
         $('.textbox').css('box-shadow','0 0 0 1pt red');
-        $('.add-artwork-body').show();
-        $('.set-payment').hide();
+        $('.buy-book-body').show();
+        $('.summary-body-mod').hide();
         $('.verification-product').hide();
       }
       if($('#artwork-description').val() == "" || $('#artwork-description').val().length < 20){
@@ -257,14 +257,14 @@ $('#add-button').on('click', function() {
         $('.error-msg-3').css('visibility','visible');
         $('.text-area').css('box-shadow','0 0 0 1pt red');
       
-        $('.add-artwork-body').show();
-        $('.set-payment').hide();
+        $('.buy-book-body').show();
+        $('.summary-body-mod').hide();
         $('.verification-product').hide();
       }
       if ($('.file-upload-image').attr('src') == '') {
         isRed = true;
-        $('.add-artwork-body').show();
-        $('.set-payment').hide();
+        $('.buy-book-body').show();
+        $('.summary-body-mod').hide();
         $('.verification-product').hide();
         $('.image-upload-wrap').css('border','4px dashed red');
         $('.error-msg-1').css('visibility','visible');
@@ -274,8 +274,8 @@ $('#add-button').on('click', function() {
       if (!$("input[name='select']:checked").val()) {
         isRed = true;
         //alert('Nothing is checked!');
-        $('.add-artwork-body').hide();
-        $('.set-payment').show();
+        $('.buy-book-body').hide();
+        $('.summary-body-mod').show();
         $('.verification-product').hide();
         $('.error-msg-4').css('visibility','visible');
         
@@ -287,16 +287,16 @@ $('#add-button').on('click', function() {
       if (isNaN(timestamp1)) {
         isRed = true;
         $('#fromDate').css('box-shadow','0 0 0 1pt red');
-        $('.add-artwork-body').hide();
-        $('.set-payment').show();
+        $('.buy-book-body').hide();
+        $('.summary-body-mod').show();
         $('.verification-product').hide();
         $('.error-msg-4').css('visibility','visible');
       }
       if (isNaN(timestamp2)) {
         isRed = true;
         $('#toDate').css('box-shadow','0 0 0 1pt red');
-        $('.add-artwork-body').hide();
-        $('.set-payment').show();
+        $('.buy-book-body').hide();
+        $('.summary-body-mod').show();
         $('.verification-product').hide();
         $('.error-msg-4').css('visibility','visible');
       }
@@ -321,11 +321,11 @@ $('#add-button').on('click', function() {
     if(parseInt($('#bid-start-amount').val()) < 15 || parseInt($('#bid-start-amount').val()) > 15000 || $('#bid-start-amount').val() == ""){
       $('.error-msg-5').css('visibility','visible');
       $('.bid-start-price').css('box-shadow','0 0 0 1pt red');
-       $('#pricing-btn').attr('disabled', true);
+       $('#summary-next-btn').attr('disabled', true);
     } else {  
       $('.error-msg-5').css('visibility','hidden');
       $('.bid-start-price').css('box-shadow','0 0 0 1pt var(--blue)');
-      $('#pricing-btn').attr('disabled', false);
+      $('#summary-next-btn').attr('disabled', false);
     }
   }
 
@@ -369,7 +369,7 @@ $('#toDate').on('change',function(){
 });
 //////////////////////////////////////////////////////////////////////////////////////////////////////
 
-$('#pricing-btn').on('click', function(){
+$('#summary-next-btn').on('click', function(){
 
   testClicked();
   errorDetected();
@@ -380,8 +380,8 @@ $('#pricing-btn').on('click', function(){
     prodCategory = artworkCategory[getSelected()];
    
     
-    $('.add-artwork-body').hide();
-    $('.set-payment').hide();
+    $('.buy-book-body').hide();
+    $('.summary-body-mod').hide();
     $('.verification-product').show();
     $('#summary-artwork-category').val(prodCategory);
     $('#summary-bid-start-amount').val($('#bid-start-amount').val());
@@ -400,8 +400,8 @@ $('#pricing-btn').on('click', function(){
 
 $('#prev-to-pricing').on('click', function(){
   prevfunc();
-  $('.add-artwork-body').hide();
-  $('.set-payment').show();
+  $('.buy-book-body').hide();
+  $('.summary-body-mod').show();
   $('.verification-product').hide();
   $('.done-section').hide();
 });
@@ -455,3 +455,6 @@ function artworkData() {
 
 
 }
+
+
+
