@@ -81,72 +81,77 @@
 
 <!-- END | NAVIGATION BAR -->
 
-
-<!-- START | Account Settings-Delete Account -->
+<!-- START | Create Profile -->
 <div class="sidebar-wrapper-outer">
-
-
    <div class="sidebar-wrapper">
       <div class="edit_profile_container">
          <div class="edit_profile_content">
-            <h2 class="edit-profile-margin">Welcome! Let's create your profile</h2>
-            <div class="avatar-info-container">
-               <!-- UPLOAD IMAGE-->
-               <section id="personal-margin-section">
-                  <button class="choose-img-btn" name="Save Changes"> Choose an image</button>
-               </section>
+            <h2 class="edit-profile-margin">Welcome! Let's create your profile</h2> 
+            <h4 class="edit-profile-margin">Add an avatar</h4>
+            <div class="upload-img-wrapper">
+                  <form class="img-wrapper"method="post" enctype="multipart/form-data">
+                        <input id="imgfile" type="file" name="imgfile">
+                        <input class="choose-img-btn" type="submit" name="submit" value="Upload">
+                  </form>
             </div>
          
          <section id="personal-info-section">
-         <h2 class="personal-margin">Add Personal Information</h2>
+         <h4 class="personal-margin">Add Personal Information</h4>
          <div class="personal-info-container">
-           
-              <label class="content-fields" for="fname">First Name</td>
-              <input class="txt-field" id="fname" name="fname" type="name" value="Angelo"/>
-         
-            
-               <td id="name-title">Last Name</td>
-               <td id="name-content"><input class="txt-field" id="lname" name="lname" type="name" value="Silvestre"></td>
-          
-          
-              <td id="name-title">Username</td>
-              <td id="name-content"><input class="txt-field" id="uname" name="uname" type="name" value="@angel_oh"></td>
-        
-           
-              <td id="name-title">Email</td>
-              <td id="name-content"><input class="txt-field" id="email" name="email" type="email" value="angel_oh@gmail.com"></td>
-         
-           
-              <td id="name-title">Birth Date</td>
-              <td id="name-content"><input class="txt-field" id="bdate" name="bdate" type="birthdate" value="05/22/2022"></td>
-            
+               <div class="content-wrapper">
+                  <label id="name-title" for="fname">First Name</label>
+                  <input class="txt-field" id="fname" name="fname" type="name" value="Angelo"/>
+               </div>
+
+               <div class="content-wrapper">
+                  <label id="name-title" for="lname">Last Name</label>
+                  <input class="txt-field" id="lname" name="lname" type="name" value="Silvestre"/>
+               </div>
+
+               <div class="content-wrapper">
+                  <label id="name-title" for="uname">Username</label>
+                  <input class="txt-field" id="uname" name="uname" type="name" value="@angel_oh"/>
+               </div>
+
+               <div class="content-wrapper">
+                  <label id="name-title" for="email">Email</label>
+                  <input class="txt-field" id="email" name="email" type="email" value="angel_oh@gmail.com"/>
+               </div>
+
+               <div class="content-wrapper">
+                  <label id="name-title" for="bday">Birth Date</label>
+                  <input class="txt-field" id="bdate" name="bdate" type="birthdate" value="05/22/2022"/>
+               </div>
         </div>
-         </section>
+        </section>
 
          <section id="location-info-section">
-            <h2 class="personal-margin">Add Your Location</h2>
-            <table class="location-info-container">
-               <tr>
-                 <td id="name-title">Address</td>
-                 <td id="name-content"><input class="txt-field" id="address" name="address" type="name" value="Address"></td>
-               </tr>
-               <tr class="info-title-container">
-                 <td id="name-title">Baranagay</td>
-                 <td id="name-content"><input class="txt-field" id="brgy" name="brgy" type="num" value="572"></td>
-               </tr>
-               <tr class="info-title-container">
-                 <td id="name-title">City/Municipality</td>
-                 <td id="name-content"><input class="txt-field" id="city" name="city" type="name" value="Manila"></td>
-               </tr>
-               <tr class="info-title-container">
-                 <td id="name-title">Zip Code</td>
-                 <td id="name-content"><input class="txt-field" id="zip" name="ip" type="num" value="1008"></td>
-               </tr>
-             </table>
+         <h4 class="personal-margin">Add Your Location</h4>
+         <div class="personal-info-container">
+            <div class="content-wrapper">
+               <label id="name-title" for="address">Address</label>
+               <input class="txt-field" id="address" name="address" type="name" value="Manila"/>
+            </div>
+
+            <div class="content-wrapper">
+               <label id="name-title" for="brgy">Barangay</label>
+               <input class="txt-field" id="brgy" name="brgy" type="number" value="572"/>
+            </div>
+
+            <div class="content-wrapper">
+               <label id="name-title" for="city">City / Municipality</label>
+               <input class="txt-field" id="cuty" name="city" type="name" value="Manila City"/>
+            </div>
+
+            <div class="content-wrapper">
+               <label id="name-title" for="zip">Zip Code</label>
+               <input class="txt-field" id="zip" name="zip" type="number" value="1008"/>
+            </div>
+         </div>
          </section>
          
             <section class ="btn_wrapper_section">
-               <button class="Save-btn" name="Save Changes"> Save Changes</button>
+               <button class="create-acct-btn">Create Account</button>
             </section>
          </div>
       </div>
@@ -155,9 +160,7 @@
    </div>
 
 </div> 
-
-
-<!-- END | Account Settings-Delete Account -->
+<!-- END | Create Profile-->
 
 
 
