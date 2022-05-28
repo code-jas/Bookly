@@ -5,26 +5,94 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Book Desctiption | Bookly</title>
-
-        <!--CSS-->
-        <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-        <link rel="stylesheet" type="text/css" href="../../assets/css/bookdescription.css">
-      
-        <!--Fonts-->
+        <!--google Fonts-->
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
 
-        <!--Icons-->
+        <!-- import icons -->
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.1/css/all.min.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" />
+
+        <!--BOOK SHOP CSS-->
+        <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+        <link rel="stylesheet" href="../../assets/css/bookdescription.css">
+
+
+        <!-- root css -->
+        <link rel="stylesheet" href="../../assets/css/root.css">
+        <!-- navbar css -->
+        <link rel="stylesheet" href="../../assets/css/navbar.css">
+        <!-- footer css -->
+        <link rel="stylesheet" href="../../assets/css/footer.css">
     </head>
 
 <body>
+<!-- START | NAVIGATION BAR -->
+<header>
+
+  <nav class="navbar">
+     <div class="logo">
+        <a href="index.html" class="branding">
+           <img src="../../assets/images/illustrations/book-icon.svg" alt="book icon" class="nav-image">
+           <h1 class="branding-text">BOOKLY</h1>
+        </a>
+     </div>
+
+     <div class="right-navbar">
+
+        <div class="nav-menu">
+           <ul class="menu">
+              <li class="nav-item"><a href="index.html" accesskey="1" tabindex="1" class="nav-link">Home</a></li>
+              <li class="nav-item"><a href="book-shop.html" accesskey="2" tabindex="2" class="nav-link">Book
+                    Shop</a>
+              </li>
+              <li class="nav-item"><a href="about-us.html" accesskey="3" tabindex="3" class="nav-link">About us</a>
+              </li>
+           </ul>
+        </div>
+        <div class="session-false">
+           <button class="sign-in-btn">SIGN IN</button>
+           <button class="sign-up-btn">SIGN UP</button>
+        </div>
+        <div class="session-true">
+           <span class="material-symbols-outlined">
+              shopping_cart
+           </span>
+           <span class="material-symbols-outlined">
+              notifications
+           </span>
+           <button>
+              <span class="material-symbols-outlined profile-button">
+                 person
+              </span>
+
+           </button>
+        </div>
+
+
+     </div>
+
+
+     <div class="hamburger">
+        <span class="burger-bar"></span>
+        <span class="burger-bar"></span>
+        <span class="burger-bar"></span>
+     </div>
+
+
+  </nav>
+</header>
+
+<!-- END | NAVIGATION BAR -->
+
+
     <!--START | BOOK DESCRIPTION-->
-    <div class="icon-arrow-left-container">
+    <section id="description-section">
+      <div class="icon-arrow-left-container">
         <i class="fa-solid fa-arrow-left-long"></i>
-    </div>
-    <section>
+      </div>
         <div class="book-description-container">
             <div class="book-content-img">
                 <img class="cover-img" src="../../assets/images/bookshop-gallery/6.jpg" alt=""/>
@@ -83,20 +151,16 @@
     <div class="w3-container">
         <div id="id01" class="w3-modal">
           <div class="w3-modal-content">
-            <header class="w3-container"> 
+            <div class="w3-container">  
               <span onclick="document.getElementById('id01').style.display='none'" 
               class="w3-button w3-display-topright">&times;</span>
-              
-              <section class="three-process-section">
+             
               <div class="three-process-container">
                 <div class=""></div>
                 <div class=""></div>
                 <div class=""></div>
               </div>
-              </section>
-              
-            </header>
-            <div class="w3-container">
+             
                 <p class="book-txt">Book</p>
                 <img id="img-content" src="../../assets/images/bookshop-gallery/6.jpg" alt=""/>
                 <h6 id="book-title">The Dinosaur Lords</h6>
@@ -107,7 +171,7 @@
                 </div>
             </div>
             <footer class="w3-footer-container">
-              <p class="footer-content">By signing up, you agree to the <a class="links">Terms of Service </a> and <a class="links">Privacy Policy</a>, including <a class="links">Cookie Use</a>.</p>
+              <p class="footer-content-par">By signing up, you agree to the <a class="links">Terms of Service </a> and <a class="links">Privacy Policy</a>, including <a class="links">Cookie Use</a>.</p>
               <button id="btn-next" onclick="nextPage(1)">Next</button></a>
           </footer><br>
           </div>
@@ -119,20 +183,16 @@
     <div class="w3-container">
       <div id="id02" class="w3-modal">
         <div class="w3-modal-content">
-          <header class="w3-container"> 
+          <div class="w3-container">
             <span onclick="document.getElementById('id02').style.display='none'" 
             class="w3-button w3-display-topright">&times;</span>
-            
-            <section class="three-process-section">
+          
             <div class="three-process-container">
               <div class=""></div>
               <div class=""></div>
               <div class=""></div>
             </div>
-            </section>
-            
-          </header>
-          <div class="w3-container">
+          
             <h2 class="total-price-txt"> Here's your total order </h2>
             <p id="total-price-title">₱ 500</p>
 
@@ -157,7 +217,7 @@
             </table>
           </div>
           <footer class="w3-footer-container">
-            <p class="footer-content">By signing up, you agree to the <a class="links">Terms of Service </a> and <a class="links">Privacy Policy</a>, including <a class="links">Cookie Use</a>.</p>
+            <p class="footer-content-par">By signing up, you agree to the <a class="links">Terms of Service </a> and <a class="links">Privacy Policy</a>, including <a class="links">Cookie Use</a>.</p>
             <button id="btn-next" onclick="nextPage(1)">CHECKOUT</button></a>
         </footer><br>
         </div>
@@ -169,20 +229,16 @@
     <div class="w3-container">
       <div id="id03" class="w3-modal">
         <div class="w3-modal-content">
-          <header class="w3-container"> 
+          <div class="w3-container"> 
             <span onclick="document.getElementById('id03').style.display='none'" 
             class="w3-button w3-display-topright">&times;</span>
-            
-            <section class="three-process-section">
+          
             <div class="three-process-container">
               <div class=""></div>
               <div class=""></div>
               <div class=""></div>
             </div>
-            </section>
-            
-          </header>
-          <div class="w3-container">
+          
             <section style="padding: 10px;">
             <div class="circle-container">
               <i id="circle-icon" class="fa-solid fa-check"></i>
@@ -202,7 +258,87 @@
     </div>
    <!-- END | 3: DELIVERY MODAL-->
 
-   
+   <!-- START | FOOTER -->
+<footer class="footer-wrapper">
+  <div class="footer-content">
+     <div class="footer-text">
+        <h1 class="footer-header">
+           Stay Connected
+        </h1>
+        <p class="footer-parag">
+           Books lists, affordable prices, special offers, and more - right in your
+           inbox!
+        </p>
+     </div>
+
+     <div class="footer-menu-container">
+
+        <div class="footer-menu-item">
+           <p class="footer-menu-item-header">ABOUT</p>
+           <ul class="footer-list">
+              <li class="footer-item"><a href="#" class="footer-link">Contact Us</a></li>
+              <li class="footer-item"><a href="#" class="footer-link">Team</a></li>
+              <li class="footer-item"><a href="#" class="footer-link">Policy </a></li>
+           </ul>
+        </div>
+
+        <div class="footer-menu-item">
+           <p class="footer-menu-item-header">EXPLORE</p>
+           <ul class="footer-list">
+              <li class="footer-item"><a href="#" class="footer-link">Home</a></li>
+              <li class="footer-item"><a href="#" class="footer-link">Book Shop</a></li>
+              <li class="footer-item"><a href="#" class="footer-link">About Us </a></li>
+           </ul>
+        </div>
+
+        <div class="footer-menu-item">
+           <p class="footer-menu-item-header">ACCOUNT</p>
+           <ul class="footer-list">
+              <li class="footer-item"><a href="#" class="footer-link">Account Overview</a></li>
+              <li class="footer-item"><a href="#" class="footer-link">Edit Profile</a></li>
+              <li class="footer-item"><a href="#" class="footer-link">Change Password</a></li>
+           </ul>
+        </div>
+     </div>
+
+  </div>
+  <div class="line-break"></div>
+
+  <div class="footer-socmed-link">
+     <a href="https://www.facebook.com/angelo.silvestre.315">
+        <div class="icon facebook">
+
+           <div class="tooltip">Facebook</div>
+           <span><i class="fab fa-facebook-f"></i></span>
+
+        </div>
+     </a>
+     <a href="https://twitter.com/CodeJs04">
+        <div class="icon twitter">
+           <div class="tooltip">Twitter</div>
+           <span><i class="fab fa-twitter"></i></span>
+        </div>
+     </a>
+     <a href="https://www.instagram.com/iamgroot04/">
+        <div class="icon instagram">
+           <div class="tooltip">Instagram</div>
+           <span><i class="fab fa-instagram"></i></span>
+        </div>
+     </a>
+  </div>
+
+  <div class="footer-copyright">
+     <p class="footer-copyright-text">
+        © 2020 Bookly, Inc. All rights reserved.
+     </p>
+  </div>
+
+
+
+</footer>
+
+
+<!-- END | FOOTER -->
     <!--JS SLIDER-->
 <script>
     let slideIndex = 1;
