@@ -50,7 +50,7 @@ let movies = [
   {
     src:
       "./assets/images/feature-books/template-2.png",
-      title: "The Siderman",
+      title: "The Siderman and the Lover boy  ",
       author: "The SPidermean Brothers",
       price: "$12.99",
       genre: "Sci-Fi",

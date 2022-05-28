@@ -1,3 +1,218 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300;400;600;900&display=swap%27');
+
+:root {
+   --light-gray: #f0f2f7;
+   --light-gray-alt: #e4e7ef;
+   --dark-gray: #b9bed1;
+   --dark-gray-alt: #a1a6bb;
+   --dark-blue: #2a405b;
+   --dark-blue-alt: #222328;
+   --blue: #3b55e6;
+   --blue-alt: #334cd5;
+   --yellow: #f3d351;
+   --yellow-alt: #ebc63b;
+   --orange: #fd5339;
+   --orange-alt: #eb4e36;
+   --aqua: #51dae7;
+   --aqua-alt: #31ccda;
+   --green: #4be1aa;
+   --green-alt: #42d29e;
+   --line-border-fill: #9c27b0;
+   --line-border-empty: #bdbdbd;
+}
+
+* {
+   box-sizing: border-box;
+   font-family: "Montserrat", sans-serif;
+   margin: 0px;
+   padding: 0px;
+}
+
+body {
+   display: flex;
+   justify-content: center;
+   min-height: 100vh;
+   margin: 0;
+   color: var(--dark-blue-alt)
+}
+
+
+
+.add-product {
+   position: fixed;
+   top: 2rem;
+   right: 2rem;
+}
+
+
+#vb-buy-book-btn {
+   background-color: white;
+   border-radius: 3px;
+
+   width: 200px;
+   height: 50px;
+   border: 1px solid var(--dark-gray);
+   margin-right: 50px;
+   margin-bottom: 45px;
+   font-size: 20px;
+   color: var(--dark-gray-alt);
+   text-align: center;
+   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+   transition: all 0.3s cubic-bezier(.25, .8, .25, 1);
+   outline: none;
+   cursor: pointer;
+}
+
+#vb-buy-book-btn:hover,
+#vb-buy-book-btn:focus {
+   background: var(--green-alt);
+   color: white;
+   box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+   border: none;
+}
+
+
+.close {
+   position: absolute;
+   right: 10px;
+   top: 10px;
+   padding: 4px 12px;
+   color: var(--dark-blue-alt);
+   font-size: 25px;
+   outline: 0;
+   text-align: right;
+   transition: ease .2s;
+   cursor: pointer;
+}
+
+.close:hover,
+.close:focus {
+   background: rgba(0, 0, 0, 0.1);
+   border-radius: 50%;
+   transition: 0.5s;
+   color: var(--orange-alt);
+   -webkit-transition: 0.5s;
+   -moz-transition: 0.5s;
+   -ms-transition: 0.50s;
+   -o-transition: 0.50s;
+   -webkit-transform: rotate(90deg);
+   -moz-transform: rotate(90deg);
+   -o-transform: rotate(90deg);
+   -ms-transform: rotate(90deg);
+   transform: rotate(90deg);
+}
+
+.pro-container {
+
+   width: 85%;
+   text-align: center;
+}
+
+
+
+
+.buy-book-modal-container {
+   position: fixed;
+   top: 0;
+   display: none;
+   width: 100vw;
+   height: 100vh;
+   background: rgba(0, 0, 0, .7);
+}
+
+
+.buy-book-cont,
+.done-section {
+   position: absolute;
+   top: 50%;
+   left: 50%;
+   transform: translate(-50%, -50%);
+   background: white;
+   padding: 20px;
+   width: 500px;
+   height: 600px;
+   border-radius: 10px;
+
+   margin: 0 auto;
+}
+
+.buy-book-head {
+   background-color: #ffffff;
+   display: flex;
+   justify-content: center;
+   height: 15%;
+   align-items: center;
+   margin: 0 0 20px 0;
+   border-bottom: 1px solid #E4E7EF;
+}
+
+
+.progress-container {
+   display: flex;
+   justify-content: space-between;
+   position: relative;
+   margin: 20px 0;
+
+   width: 100%;
+}
+
+.progress-container::before {
+   content: "";
+   background-color: var(--line-border-empty);
+   position: absolute;
+   top: 50%;
+   left: 0;
+   transform: translateY(-50%);
+   height: 2px;
+   width: 100%;
+   z-index: 1;
+   transition: .4s ease;
+}
+
+.progress {
+   background-color: var(--dark-blue);
+   position: absolute;
+   top: 50%;
+   left: 0;
+
+   height: 3px;
+   width: 0%;
+   z-index: 1;
+   transition: 0.4s ease;
+}
+
+.fa-check {
+   margin-left: 5px;
+}
+
+.circle {
+   background-color: #fff;
+   color: #999;
+   border-radius: 80px;
+   height: 28px;
+   width: 110px;
+   font-weight: 600;
+   border: 1px solid #b2bec3;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   transition: 0.4s ease;
+   font-size: 11px;
+   list-style-type: none;
+   z-index: 2;
+}
+
+.circle.active {
+   border: 1px solid var(--dark-blue);
+   background-color: var(--dark-blue);
+   color: white;
+}
+
+.buy-book-body {
+   width: 100%;
+
+}
+
 .order-container-flex,
 .summary-body-mod {
    display: flex;
@@ -317,4 +532,19 @@
 
    margin-bottom: 40px;
 
+}
+
+.done-section {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   flex-direction: column;
+}
+
+.check-container {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   margin: 30px auto;
+   width: fit-content;
 }

@@ -36,11 +36,12 @@
     color: var(--dark-blue-alt)
   }
 
+  /* 
   .add-product {
     position: fixed;
     top: 2rem;
     right: 2rem;
-  }
+  } 
 
   #vb-buy-book-btn {
     background-color: white;
@@ -67,6 +68,8 @@
     box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
     border: none;
   }
+  
+  */
 
   #summary-next-btn:disabled {
     background: gray;
@@ -911,6 +914,8 @@
     display: flex;
     justify-content: center;
     align-items: center;
+
+
   }
 
   /* #close-button {
