@@ -1,0 +1,318 @@
+/* ACCOUNT OVERVIEW CSS */
+.account-settings-container {
+    width: 100%;
+    height: 910px;
+    padding: 30px;
+    background-color: white;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+ }
+ 
+ .account-settings-content{
+     position: relative;
+     width: 100%;
+     height: 905px;
+}
+
+.personal-margin, .location-margin, .account-settings-margin{   
+    padding: 10px;
+}
+
+#personal-info-section, #location-info-section{
+    margin-top: 30px;
+}
+
+#personal-margin-section{
+    padding: 10px;
+}
+
+.personal-info-container, .location-info-container{
+    width: 100%;
+}
+
+.avatar-info-container{
+    display: flex;
+    flex-direction: row;
+    align-items:center ;
+}
+
+ .profile_pic{
+    width: 120px;
+    height: 120px;
+    background-color: none;
+    border-radius: 50%;
+}
+
+#name-title{ 
+    width: 20%;
+    --montserrat-font: 'Montserrat', sans-serif;
+    font-size: 15px;
+    font-weight: bolder;
+
+    padding: 10px;
+}
+
+#name-content{
+    width: 80%;
+    --montserrat-font: 'Montserrat', sans-serif;
+    font-size: 15px;
+    font-weight: light;
+
+    padding: 10px;
+}
+
+
+
+ 
+/* EDIT PROFILE CSS */
+
+#personal-margin-section-edit{
+    width: 50%;
+    padding: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items:center;
+ }
+input.txt-field{
+    height: 25px;
+    width: 90%;
+    color: #4F5362;
+    font-size: 12px;
+    border-radius: 10px;
+    background-color: #EFF0F4;
+    border-color: #EFF0F4;
+    padding: 5px;
+    padding-left: 15px;
+    border-style: none;
+ }
+ 
+ input[type=name]:focus, input[type=email]:focus, input[type=birthdate]:focus, input[type=num]:focus{
+    outline: 3px solid #ffc7d2;
+    background-color: #FFFFFF;
+ }
+
+ .btn_wrapper_section{
+    display:flex;
+    justify-content: flex-end;
+    margin-top: 100px;
+    padding: 20px;
+ }
+ 
+ .Save-btn{
+      background-color: #3A405B;
+      border: none;
+      border-radius: 100px;
+      color: #ffffff;
+      font-weight: bold;
+      cursor: pointer;
+      font-size: 15px;
+      width: 200px;
+      height: 40px;
+      padding: 0 25px;
+      position: relative;
+      transition: all .3s, box-shadow .08s ease-in;
+      user-select: none;
+      -webkit-user-select: none;
+ }
+ 
+ .Save-btn:hover{
+    transform: scale(1.1);
+ }
+ 
+ .upload-btn {
+    text-align: center;
+    border: 1px solid #3A405B;
+    background-color: #FFFFFF;
+    border-radius: 100px;
+    color: #3A405B;
+    font-weight: bold;
+    cursor: pointer;
+    font-size: 15px;
+    width: 150px;
+    height: 40px;
+    padding: 0 25px;
+    position: relative;
+    transition: all .3s, box-shadow .08s ease-in;
+    user-select: none;
+    -webkit-user-select: none;
+ 
+ 
+  }
+  
+  .upload-btn:hover {
+     transform: scale(1.1);
+  }
+  
+  
+  
+  .upload-btn:active {
+     transform: scale(1.1);
+  }
+ 
+  .remove-btn {
+    border: none;
+    background-color: var(--btn-color);
+    border-radius: 100px;
+    color: #FFFFFF;
+    font-weight: bold;
+    cursor: pointer;
+    font-size: 15px;
+    width: 150px;
+    height: 40px;
+    padding: 0 25px;
+    position: relative;
+    transition: all .3s, box-shadow .08s ease-in;
+    user-select: none;
+    -webkit-user-select: none;
+ 
+ 
+  }  
+  
+  .remove-btn:hover {
+     transform: scale(1.1);
+  }
+  
+ 
+  .remove-btn:active {
+     transform: scale(1.1);
+  }
+ 
+ /* CHANGE PASSWORD CSS */
+ 
+ .container{
+    display: flex;
+    flex-direction: column;
+    position: relative;
+   
+  
+ }
+
+ .container .textfield-wrapper{
+   width: 100%;
+
+ }
+ 
+ .container .textfield-wrapper .inputContainer{
+   position: relative;
+   display: flex;
+   width: 100%; 
+   padding: 10px;
+ }
+
+ .textfield-wrapper label{
+    font-size: 12px;
+    padding: 10px;
+ }
+ .container .textfield-wrapper .inputContainer i{
+    position: absolute;
+    right: 0;
+    padding: 10px 20px 0px 0px;
+    font-size: 12px;
+ }
+ 
+ .container .textfield-wrapper .inputContainer input{
+   height: 30px;
+   width: 100%;
+   color: #4F5362;
+   font-size: 12px;
+   border-radius: 10px;
+   background-color: #EFF0F4;
+   border-color: #F6F3FC;
+   padding: 10px;
+   padding-left: 15px;
+   border-style: none;
+ }
+
+
+ input[type=password]:focus{
+   outline: 3px solid #ffc7d2;
+   background-color: #FFFFFF;
+}
+
+ .btn_wrapper{
+     display:flex;
+     justify-content: flex-end;
+     align-items:flex-end;
+     height: 140px;
+     padding: 5px;
+     
+ }
+ .Save-btn{
+   background-color: #3A405B;
+   border: none;
+   border-radius: 100px;
+   color: #ffffff;
+   font-weight: bold;
+   cursor: pointer;
+   font-size: 15px;
+   width: 200px;
+   height: 40px;
+   padding: 0 25px;
+   position: relative;
+   transition: all .3s, box-shadow .08s ease-in;
+   user-select: none;
+   -webkit-user-select: none;
+ 
+ }
+ 
+.Save-btn:hover{
+   transform: scale(1.1);
+   cursor: pointer;
+}
+     
+ 
+/* DELETE ACCOUNT */
+.delete-account-parag1,.delete-account-parag2,.delete-account-parag3,.delete-account-parag4,.delete-account-header2{
+    
+    padding: 10px;
+ }
+
+ .delete-account-line-break-policy {
+    background-color: var(--light-gray-dark);
+    width: 100%;
+    height: 1px;
+ }
+
+ .delete-btn:active {
+    transform: translateY(2px);
+ }
+ 
+ .delete-btn {
+    appearance: button;
+    background-color: var(--btn-color);
+    border-radius: 100px;
+    border-width: 0;
+    font-family: var(--montserrat-font);
+    color: #fff;
+    cursor: pointer;
+    font-size: 100%;
+    width: 120;
+    height: 40px;
+    line-height: 1.15;
+    padding: 0 25px;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    text-align: center;
+    text-transform: capitalize;
+    transform: translateZ(0);
+    transition: all .3s, box-shadow .08s ease-in;
+    user-select: none;
+    -webkit-user-select: none;
+ }
+ 
+ .delete-btn:hover {
+    transform: scale(1.1);
+ }
+ 
+ .delete-btn:active {
+    transform: translateY(2px);
+ }
+ 
+ .delete-btn:disabled {
+    cursor: default;
+ }

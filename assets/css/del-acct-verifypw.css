@@ -6,6 +6,7 @@ body{
 .w3-container{
     height: 80%;
     width: 100%;
+    padding: 10px;
 }
 h2.title{
     text-align: center;
@@ -19,17 +20,13 @@ h5.title{
     text-transform: none;
 }
 
-.w3-container{
-    padding: 10px;
-}
-
 
 div.w3-modal-content{
     width: 25%;
     height: 40%;
-    border-radius: 10px;
-    
+    border-radius: 10px;  
 }
+
 
 #form-container{
     width: 100%;
