@@ -350,4 +350,32 @@
   }
 }
 
-@media only screen and (max-width: 390px) {}
+@media only screen and (max-width: 390px) {
+  :root {
+
+    --movie-height: 180px;
+    --arrow-width: 50px;
+  }
+
+
+  .right-btn,
+  .left-btn {
+    transform: scale(1.7);
+    font-size: 15px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+  }
+
+  .ft-books {
+
+    margin: 10px;
+  }
+
+  .slider {
+    padding: 50px 0;
+  }
+
+
+
+
+}

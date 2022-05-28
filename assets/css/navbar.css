@@ -21,7 +21,7 @@ header {
    justify-content: space-between;
    align-items: center;
    min-height: 50px;
-   max-width: 1440px;
+   max-width: 1340px;
    width: 1440px;
    margin: 10px auto 5px auto;
    padding: 0 40px;
@@ -45,7 +45,7 @@ header {
 
 .branding-text {
    font-family: var(--montserrat-font);
-   font-size: 27px;
+   font-size: 23px;
    font-weight: 900;
    color: var(--primary-font-color);
    text-decoration: none;
@@ -62,7 +62,7 @@ header {
    align-items: center;
    justify-content: space-between;
    /* transform: translateX(-10%); */
-   min-width: 350px;
+   min-width: 320px;
    margin: 0 0 0 auto;
 }
 
@@ -79,7 +79,7 @@ header {
 .nav-item {
 
    font-family: var(--montserrat-font);
-   font-size: 17px;
+   font-size: 15px;
    font-weight: 500;
    color: var(--primary-font-color);
    text-transform: capitalize;
@@ -116,11 +116,11 @@ header {
 }
 
 .session-false {
-   display: flex;
+   display: none;
 }
 
 .session-true {
-   display: none;
+   display: flex;
 }
 
 .right-navbar {
@@ -135,21 +135,19 @@ header {
    font-family: var(--montserrat-font);
    all: unset;
    cursor: pointer;
-   transition: all .3s ease-in;
+   transition: all .1s ease-in;
    margin-right: 20px;
 }
 
-.sign-in-btn:hover {
-   transform: scale(1.1);
-}
+
 
 .sign-in-btn:hover {
-   transform: scale(1.1);
+   transform: scale(1.02);
    color: var(--btn-color-light);
 }
 
 .sign-in-btn:active {
-   transform: scale(1.1);
+   transform: scale(1.02);
 }
 
 .sign-up-btn:active {
@@ -165,7 +163,7 @@ header {
    color: #fff;
    cursor: pointer;
    font-size: 100%;
-   width: 120;
+   width: 120px;
    height: 40px;
    line-height: 1.15;
    padding: 0 25px;
@@ -173,13 +171,13 @@ header {
    text-align: center;
    text-transform: capitalize;
    transform: translateZ(0);
-   transition: all .3s, box-shadow .08s ease-in;
+   transition: all .2s, box-shadow .08s ease-in;
    user-select: none;
    -webkit-user-select: none;
 }
 
 .sign-up-btn:hover {
-   transform: scale(1.1);
+   transform: scale(1.05);
 }
 
 .sign-up-btn:active {
@@ -583,12 +581,72 @@ header {
 
 @media only screen and (max-width: 1500px) {}
 
-@media only screen and (max-width: 1366px) {}
+@media only screen and (max-width: 1366px) {
+   .navbar {
+      width: 1200px;
+   }
+}
 
 @media only screen and (max-width: 1280px) {}
 
 
-@media only screen and (max-width: 1024px) {}
+@media only screen and (max-width: 1024px) {
+   .navbar {
+      width: 95%;
+      padding: 0;
+   }
+
+   .nav-menu {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      /* transform: translateX(-10%); */
+      min-width: 280px;
+      margin: 0 0 0 auto;
+   }
+
+   .nav-item {
+      font-size: 13px;
+   }
+
+   .sign-in-btn {
+      font-size: 12px;
+      margin: 0 10px 0 10px;
+
+   }
+
+   .sign-up-btn {
+      font-size: 12px;
+      width: 86px;
+      height: 28.67px;
+      padding: 0;
+   }
+
+   .right-navbar .session-true ul li.nr_li {
+      margin-left: 10px;
+      font-size: 10px;
+   }
+
+   .right-navbar .session-true ul li .profile-card-nav-br {
+      width: 30px;
+      height: 30px;
+      margin: 5px
+   }
+
+
+   .right-navbar .session-true ul li .ic-prof-view-tgl {
+
+      padding: 8px;
+
+
+
+   }
+
+   /* .menu {
+
+         gap: 20px;
+      } */
+}
 
 
 
@@ -622,7 +680,7 @@ header {
 
    .hamburger.navbar-active:hover span {
       transform: scale(1.5);
-      background-color: var(--orange-alt);
+      background-color: var(--error);
    }
 
    .nav-menu {
@@ -678,9 +736,85 @@ header {
    } */
 
 
+   .sign-in-btn {
+      font-size: 15px;
+      margin: 0 20px;
+
+   }
+
+   .sign-up-btn {
+      font-size: 15px;
+      width: 100px;
+      height: 30px;
+      padding: 0 10px;
+   }
+
+
 }
 
-@media only screen and (max-width: 375px) {}
+@media only screen and (max-width: 390px) {
+   .navbar {
+      width: 100vw;
+      min-height: 40px;
+      margin: 3px auto;
+      padding: 0 20px;
+   }
+
+   .nav-image {
+      width: 18px;
+      height: 18px;
+
+   }
+
+   .branding-text {
+      display: none;
+   }
+
+   .sign-in-btn {
+      font-size: 10px;
+      margin: 0 15px;
+
+   }
+
+   .sign-up-btn {
+      font-size: 10px;
+      width: 65px;
+      height: 19px;
+      padding: 0;
+      margin-right: 5px;
+   }
+
+   .hamburger {
+      margin: 10px;
+      right: 10px;
+      top: 4px;
+   }
+
+   .logo {
+
+      margin: 0;
+   }
+
+   .burger-bar {
+      display: block;
+      width: 20px;
+      height: 2px;
+      margin: 3px auto;
+      border-radius: 3px;
+      -webkit-transition: all 0.3s ease-in-out;
+      transition: all 0.3s ease;
+      background-color: var(--dark-blue-dark);
+   }
+
+   .hamburger.navbar-active .burger-bar:nth-child(1) {
+      transform: translateY(5px) rotate(45deg);
+   }
+
+   .hamburger.navbar-active .burger-bar:nth-child(3) {
+      transform: translateY(-5px) rotate(-45deg);
+   }
+
+}
 
 
 .page-xyzsqw {
