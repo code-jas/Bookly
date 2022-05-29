@@ -72,8 +72,6 @@ body{
 
 
 /*END DEOPDOWN CSS*/
-
-
 i.fa-solid{
   font-size: 20px;
   color: black;
@@ -167,9 +165,6 @@ i.magnifying{
   object-fit: cover;
 }
 
-.book-title, .authors{
-  margin-bottom:  px;
-}
 
 .authors{
   font-size: 10px;
@@ -226,17 +221,174 @@ i.magnifying{
 
 .pagination a:hover:not(.active) {background-color: #ddd;}
 
-@media only screen and (max-width: 1500px) {}
+@media only screen and (max-width: 1500px) {
+  
+  .filter-dropdown-content {
+    width: 600px;
+    height: 505px;
+  }
 
-@media only screen and (max-width: 1366px) {}
+  .filter-grid-container{
+    grid-template-columns: auto auto auto auto;
+    grid-gap: 0px 0px;
+    width: 100%;
+    height: 505px;
+  }
+  
+  .filter-grid-content{
+    width: 90%;
+    height: 170px;
+  }
+  
+  .filter-search-container{
+    width: 80%;
+  }
 
-@media only screen and (max-width: 1280px) {}
+  .grid-container{  
+    border: 1px solid black;
+    grid-template-columns: auto auto auto auto;
+    grid-gap: 20px;
+    width: 80%;
+}
+
+.grid-content{
+    width: 200px;
+    height: 365px;
+}
+
+.img-book{
+  width: 200px;
+  height: 300px;
+}
+
+.authors, .book-title{
+  font-size: 10px;
+}
+
+.price{ 
+  font-size: 15px;
+}
+
+}
+
+@media only screen and (max-width: 1366px) {
+  
+
+}
+
+@media only screen and (max-width: 1280px) {
+   .filter-dropdown-content {
+    width: 560px;
+    height: 530px;
+  }
+  
+    .filter-grid-container{
+    grid-template-columns: auto auto auto;
+    grid-gap: 0px 0px;
+    width: 100%;
+    height: 515px;
+    }
+
+     .grid-container{  
+    border: 1px solid black;
+    grid-template-columns: auto auto auto auto;
+    grid-gap: 50px;
+    width: 80%;
+    height: 100%;
+}
+
+.grid-content{
+    width: 120px;
+    height: 250px;
+}
 
 
-@media only screen and (max-width: 1024px) {}
+  
+  .img-book{
+    width: 120px;
+    height: 200px;
+  }
+  
+  .authors, .book-title{
+    font-size: 9px;
+  }
+  
+  .price{ 
+    font-size: 10px;
+  }
+}
+
+
+@media only screen and (max-width: 1024px) {
+  
+  
+  .grid-container{  
+    border: 1px solid black;
+    grid-template-columns: auto auto auto auto;
+    grid-gap: 50px;
+    width: 80%;
+    height: 100%;
+}
+
+.grid-content{
+    width: 120px;
+    height: 250px;
+}
+
+
+  
+  .img-book{
+    width: 120px;
+    height: 180px;
+  }
+  
+  .authors, .book-title{
+    font-size: 9px;
+  }
+  
+  .price{ 
+    font-size: 10px;
+  }
+  
+}
 
 
 
-@media only screen and (max-width: 820px) {}
+@media only screen and (max-width: 820px) {
+  input.search-field {
+    width: 200px;
+  } 
+
+ 
+  
+  .grid-container{  
+    border: 1px solid black;
+    grid-template-columns: auto auto;
+    grid-gap: 50px;
+    width: 80%;
+    height: 100%;
+}
+
+.grid-content{
+    width: 200px;
+    height: 340px;
+}
+
+
+  
+  .img-book{
+    width: 200px;
+    height: 280px;
+  }
+  
+  .authors, .book-title{
+    font-size: 10px;
+  }
+  
+  .price{ 
+    font-size: 15px;
+  }
+  
+}
 
 @media only screen and (max-width: 375px) {}
