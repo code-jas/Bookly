@@ -116,11 +116,11 @@ header {
 }
 
 .session-false {
-   display: none;
+   display: flex;
 }
 
 .session-true {
-   display: flex;
+   display: none;
 }
 
 .right-navbar {
@@ -550,7 +550,8 @@ header {
    right: 10px;
    top: 4px;
    cursor: pointer;
-   margin: 1rem;
+   margin: 11px;
+
    z-index: 10;
    transition: all 0.3s ease-in-out;
 }
@@ -633,19 +634,50 @@ header {
       margin: 5px
    }
 
+   .branding-text {
+      font-size: 20px;
+   }
 
    .right-navbar .session-true ul li .ic-prof-view-tgl {
-
       padding: 8px;
-
-
-
    }
 
    /* .menu {
 
          gap: 20px;
       } */
+
+
+   .right-navbar .cart_dd_menu {
+      right: -110px;
+      top: 53px;
+   }
+
+   .right-navbar .cart_dd_menu:before {
+      top: -20px;
+      right: 120px;
+   }
+
+   .right-navbar .notif_dd_menu {
+      right: -60px;
+      top: 53px;
+   }
+
+   .right-navbar .notif_dd_menu:before {
+      top: -20px;
+      right: 70px;
+   }
+
+   .right-navbar .prof_dd_menu {
+      right: -10px;
+      top: 53px;
+   }
+
+   .right-navbar .prof_dd_menu:before {
+      top: -20px;
+      right: 20px;
+   }
+
 }
 
 
@@ -658,7 +690,7 @@ header {
    .navbar {
       width: 100vw;
       min-height: 40px;
-      margin: 15px auto 0 auto;
+      margin: 8px auto 8px auto;
       padding: 0 40px;
    }
 
@@ -719,6 +751,10 @@ header {
    }
 
 
+   .branding-text {
+      font-size: 22px;
+   }
+
    .session-false {
       margin-right: 35px;
    }
@@ -750,6 +786,14 @@ header {
    }
 
 
+   .right-navbar .session-true>ul {
+      margin-right: 40px;
+   }
+
+   .right-navbar .session-true ul li .ic-prof-view-tgl {
+      padding: 8px;
+      /* font-size: 23px; */
+   }
 }
 
 @media only screen and (max-width: 390px) {
@@ -814,6 +858,26 @@ header {
       transform: translateY(-5px) rotate(-45deg);
    }
 
+
+   .right-navbar .session-true>ul {
+      margin-right: 40px;
+   }
+
+   .right-navbar .session-true ul li .ic-prof-view-tgl {
+      padding: 8px;
+      font-size: 17px;
+   }
+
+   .right-navbar .session-true ul li .profile-card-nav-br {
+      width: 22px;
+      height: 22px;
+      margin: 5px;
+   }
+
+   .right-navbar .session-true ul li.nr_li {
+      display: flex;
+      align-items: center;
+   }
 }
 
 
