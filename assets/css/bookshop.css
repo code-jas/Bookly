@@ -242,7 +242,6 @@ i.magnifying{
   }
 
   .grid-container{  
-    border: 1px solid black;
     grid-template-columns: auto auto auto auto;
     grid-gap: 20px;
     width: 80%;
@@ -288,7 +287,7 @@ i.magnifying{
 
 @media only screen and (max-width: 1024px) {
  .grid-container{  
-    border: 1px solid black;
+
     grid-template-columns: auto auto auto auto;
     grid-gap: 20px;
     width: 80%;
@@ -314,7 +313,7 @@ i.magnifying{
   } 
 
   .grid-container{  
-    border: 1px solid black;
+
     grid-template-columns: auto auto;
     grid-gap: 50px;
     width: 80%;
@@ -366,7 +365,6 @@ i.magnifying{
   }
   
   .filter-grid-content{
-    border: 1px solid black;
     width:100%;
     height: 170px;
     display: flex;
@@ -376,7 +374,6 @@ i.magnifying{
   
   }
   .grid-container{  
-    border: 1px solid black;
     grid-template-columns: auto;
     grid-gap: 50px;
     width: 80%;
