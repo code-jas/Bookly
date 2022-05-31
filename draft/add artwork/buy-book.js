@@ -8,20 +8,18 @@ let currentActive = 1;
 
 
 $('#vb-buy-book-btn').on('click', function() {
-   $('#check').prop('checked', false);
-   $('.artwork-accepted').hide();
-   $('#close-button').hide();
- 
-    $('.buy-book-modal-container').fadeIn('fast');
-    $('.buy-book-cont').show();
-    $('.buy-book-body').show();
-    $('.summary-body-mod').hide();
- 
-    $('.done-section').hide();
+  $('#check').prop('checked', false);
+  $('.artwork-accepted').hide();
+  $('#close-button').hide();
+
+  $('.buy-book-modal-container').fadeIn('fast');
+  $('.buy-book-cont').show();
+  $('.buy-book-body').show();
+  $('.summary-body-mod').hide();
+
+  $('.done-section').hide();
    //  currentActive = 1;
    //  update();
- 
- 
  
   });
   
