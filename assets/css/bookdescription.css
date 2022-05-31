@@ -449,6 +449,7 @@ a.links:hover{
         height: 290px;
         font-size: 12px;
     }
+
 }
 
 
@@ -499,7 +500,6 @@ a.links:hover{
         background-color: #FE4764;
         color: white;
     }
-
 }
 
 @media only screen and (max-width: 650px){
@@ -564,7 +564,7 @@ a.links:hover{
     }
 }
 
-@media only screen and (max-width: 375px) {
+@media only screen and (max-width: 390px) {
     .book-description-container{
         width: 90%;
         height: 100%;
@@ -615,4 +615,7 @@ a.links:hover{
         height: 290px;
         font-size: 12px;
     }
+
+    
+    
 }
