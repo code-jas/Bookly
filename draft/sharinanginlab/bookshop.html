@@ -95,8 +95,8 @@
 <section id="filter-search-section">
 <div class="filter-search-container">
    <div  class="filter-dropdown-container">
-       <button id="filter-btn" class="filter"><i class="fa-solid fa-filter"></i>Filter</button>
-       <div id="filter-dropdown"class="filter-dropdown-content">
+       <button  id="filter-btn" class="filter "><i class="fa-solid fa-filter"></i>Filter</button>
+       <div id="filter-dropdown" class="filter-dropdown-content ">
            <div class="filter-grid-container">
                <div class="filter-grid-content">
                    <h6 id="category-1" style="padding-left: 5px; padding-right: 5px">Biographies & Memoirs</h6>
@@ -368,6 +368,15 @@
 <!-- END | FOOTER -->
 
 <script src="./assets/javascript/global.js"></script>
+<script>
+   // Get the button, and when the user clicks on it, execute myFunction
+   document.getElementById("filter-btn").onclick = function() {myFunction()};
+
+   /* myFunction toggles between adding and removing the show class, which is used to hide and show the dropdown content */
+   function myFunction() {
+   document.getElementById("filter-dropdown").classList.toggle("show");
+   }
+</script>
 <script src="https://kit.fontawesome.com/a0043d9bc2.js" crossorigin="anonymous"></script>
 
 

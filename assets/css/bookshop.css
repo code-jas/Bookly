@@ -66,7 +66,7 @@ body{
 
 .filter-dropdown-content a:hover {background-color: #F6F3FC; color: black;}
 
-.filter-dropdown-container:hover .filter-dropdown-content {display: block;}
+.show {display:block;}
 
 .filter-dropdown-container:hover .filter{background-color: #f6f3fc;}
 
