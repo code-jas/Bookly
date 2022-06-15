@@ -42,6 +42,7 @@ const ddProfMain = document.querySelector(".prof_dd_main");
 const ddNotifMain = document.querySelector(".notif_dd_main");
 const ddCartMain = document.querySelector(".cart_dd_main");
 
+
    ddProfMain.addEventListener("click", function () {
       ddCartMain.classList.toggle("active", false);
       ddNotifMain.classList.toggle("active", false);
@@ -58,3 +59,5 @@ const ddCartMain = document.querySelector(".cart_dd_main");
       ddNotifMain.classList.toggle("active", false);
       this.classList.toggle("active");
    })
+
+

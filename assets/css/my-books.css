@@ -486,10 +486,7 @@
    .view_cart_details_container,
    .order_status_details_container,
    .purchase_history_details_container {
-
-
-      height: 100%;
-
+      height: 100vh;
    }
 
    .sidebar_menu {
