@@ -79,6 +79,7 @@
    position: relative;
 }
 
+
 .sidebar-active::before {
    content: "";
    position: absolute;
