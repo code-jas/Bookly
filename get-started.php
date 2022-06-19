@@ -38,7 +38,7 @@
          <div class="edit_profile_content">
             <h2 class="edit-profile-margin">Welcome! Let's create your profile</h2>
             <p class="hd-desc">Let others get to know you better! You can do these later</p>
-            <form method="POST">
+            <form method="POST" enctype="multipart/form-data">
                <h4 class="avatar-label">Add an avatar</h4>
 
                <div class="file-upload">
@@ -50,7 +50,7 @@
                         onchange="readURL(this);" accept="image/*" />
                   </div>
                   <div class="file-upload-content">
-                     <img class="file-upload-image" id="file-upload-image" src="" alt="your image" />
+                     <img class="file-upload-image" id="file-upload-image" src="" alt="avatar image" />
                      <span class="image-title">uploaded image</span>
                      <div class="image-title-wrap">
                         <button type="button" onclick="removeUpload()" class="remove-image"><i class="fas fa-times"></i>
@@ -58,7 +58,7 @@
                         </button>
                      </div>
                   </div>
-                  <span class="error-msg-1"><br>Please upload artwork.</span>
+                  <span class="error-msg-1"><?php echo $uploadErr ?></span>
                   <button class="file-upload-btn" type="button"
                      onclick="$('.file-upload-input').trigger( 'click' )">Upload Image</button>
                </div>
@@ -157,7 +157,12 @@
 <!-- <script src="./assets/javascript/global.js"></script> -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 
-
+<script>
+window.addEventListener("DOMContentLoaded", () => {
+   showSuccessToast();
+});
+</script>
+<script src="./assets/javascript/toast.js"></script>
 
 <script src="./assets/javascript/get-started.js"></script>
 

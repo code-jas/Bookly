@@ -5,8 +5,10 @@ include("db-config.php");
 
 $firstname = $lastname = $username = $email = $birthdate  = $address = $barangay = $city = $zipcode = "";
 
-$firstnameErr = $lastnameErr = $birthdateErr = $usernameErr = $emailErr = $birthdateErr = $addressErr = $barangayErr = $cityErr = $zipcodeErr = "";
+$firstnameErr = $lastnameErr = $birthdateErr = $usernameErr = $emailErr = $birthdateErr = $addressErr = $barangayErr = $cityErr = $zipcodeErr = $uploadErr =  "";
  
+
+
 
 if(isset($_GET['user'])){ 
 
@@ -28,8 +30,12 @@ if(isset($_GET['user'])){
 }
 
 
+
+$target_dir = "./assets/images/profile_imgs/";
 if(isset($_POST['get_started_btn'])){
    $valid = true;
+  
+
    if(empty($_POST['firstname'])){
       $firstnameErr = "First Name is required";
    }else{
@@ -102,17 +108,58 @@ if(isset($_POST['get_started_btn'])){
    if($firstname && $lastname && $username && $email && $birthdate && $address && $barangay && $city && $zipcode){
       if($valid){
 
-         // Insert the user into the database
-         echo "success";
-         echo $firstname;
-         echo $lastname;
-         echo $username;
-         echo $email;
-         echo date("Y-m-d", $birthdate);
-         echo $address;
-         echo $barangay;
-         echo $city;
-         echo $zipcode;
+         $target_file  = $target_dir . basename($_FILES["profile_img"]["name"]);
+ 
+  
+         $uploadOk = 1;
+      
+         if(file_exists($target_file)){
+           $target_file = $target_dir . rand(1,9) . rand(1,9) . rand(1,9) . rand(1,9) . "_" . basename($_FILES["profile_img"]["name"]);
+      
+            $uploadOk = 1;
+          
+         }
+      
+         $imageFileType = strtolower(pathinfo($target_file,PATHINFO_EXTENSION));
+      
+         if($_FILES["profile_img"]["size"] > 5000000) {
+            $uploadErr =  "Sorry, your file is too large.";
+            $uploadOk = 0;
+         }
+         
+         if($imageFileType != "jpg" && $imageFileType != "png" && $imageFileType != "jpeg" && $imageFileType != "gif") {
+            $uploadErr =  "Sorry, only JPG, JPEG, PNG & GIF files are allowed.";
+            $uploadOk = 0;
+         }
+      
+         if($uploadOk == 1) { 
+            if(move_uploaded_file($_FILES["profile_img"]["tmp_name"], $target_file)) {
+               // echo "<font color=green> The file ". basename( $_FILES["profile_pic"]["name"]). " has been uploaded.  </font>";
+      
+               mysqli_query($conn, "UPDATE account_user SET 
+            
+               firstname = '$firstname',
+               lastname = '$lastname',
+              
+               address = '$address',
+               barangay = '$barangay',
+               city = '$city',
+               zipcode = '$zipcode',
+               profile_img='$target_file'
+               WHERE username='$username'
+               "); 
+      
+               $notify = "<font color=green> The file ". basename($_FILES["profile_img"]["name"]) ." has been uploaded.</font>";
+               
+
+               echo "<script>window.location.href='home?signin=sign-in-321jkh1jkasd';</script>";
+    
+             
+            } else {
+               echo "Sorry, there was an error uploading your file.";
+            }
+         }
+   
 
       } else { 
          echo "error";
@@ -123,12 +170,22 @@ if(isset($_POST['get_started_btn'])){
 }
 
 
+
+// if(empty($_GET["notify"])) { 
+//    //do nothing
+// } else { 
+//   echo "<center>". $_GET["notify"] ."</center>";
+// }
+
+
 function test_input($data) {
    $data = trim($data);
    $data = stripslashes($data);
    $data = htmlspecialchars($data);
    return $data;
  }
+
+
 
 
 ?>
