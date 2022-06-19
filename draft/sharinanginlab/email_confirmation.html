@@ -1,114 +1,126 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Email Confirmation</title>
-        <!--google Fonts-->
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
 
-        <style>
-            body{
-                background-color: #FFFFFF;
-                font-family: 'Montserrat', sans-serif;
-            }
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Email Confirmation</title>
 
-            .box-container{
-                border-radius: 10px;
-                background-color: #F0F2F7;
-                margin: 0 auto;
-            
-                height: 550px;
-                width: 35%;
-                padding: 50px;
-                box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-            
-            }
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
 
-            .box-content{
-                display: block;
-                margin: 0 auto;
-                border-radius: 10px;
-               
-                background-color: #FFFFFF;
-                box-shadow: 0 4px 8px 0 rgba(80, 80, 80, 0.2), 0 6px 20px 0 rgba(117, 117, 117, 0.19);
-            }
+        body {
+            background-color: #FFFFFF;
+            font-family: 'Montserrat', sans-serif;
 
-            .icon-content{
-                border-radius: 10px;
-                height: 200px;
-                width: 100%;
-                background-color: #FFFFFF;
-                object-fit: cover;
-            }
+        }
 
-            .mail-svg{
-                 display: block;
-                margin: 0 auto;
-                height: 200px;
-                object-fit: cover;
-            }
+        .box-container {
+            border-radius: 10px;
+            background-color: #F0F2F7;
+            margin: 30px auto;
+            height: auto;
+            width: 30%;
+            padding: 20px;
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 
-            h2{
-               
-                text-align: center;
-            }
+        }
 
-            p{
-                margin: 0 auto;
-                text-align: center;
-                padding: 30px;
-                width: 80%;
-                
-            }
+        .box-content {
+            display: block;
+            margin: 0 auto;
+            border-radius: 10px;
+            height: 100%;
+            background-color: #FFFFFF;
 
-            .style{
-                color: #A1A6BB;
-            }
-           
-            .btn-confirm{
-                display: block;
-                margin: auto;
-                border: none;
-                border-radius: 30px;
-                padding: 10px;
-                height: 10%;
-                width: 30%;
-                text-align: center;
-                text-transform: uppercase;
-                color: #FFFFFF;
-                background-color: #FE3152;
-                
-            }
+        }
 
-            .btn-confirm:hover{
-                background-color: #be1d38;
-                cursor: pointer;
-            }
+        .icon-content {
+            border-radius: 10px;
+            height: 250px;
+            background-color: #FFFFFF;
+            padding-top: 50px;
+        }
 
-            #confirm{
-                margin: 0 auto;
-                text-align: center;
-                text-decoration: none;
-                color: #FFFFFF;
-            }
-        </style>
-    </head>
-    <body>
-        <div class="box-container">
-            <div class="box-content">
-                <div class="icon-content">
-                    <img class="mail-svg" src="mail-svg.jpg" alt="Mail"/>
-                </div>
+        .mail-svg {
+            display: block;
+            margin: 0 auto;
+            height: 100%;
+            object-fit: cover;
+        }
 
-                    <h2>Verify your email address</h2>
-                    <p>Welcome to <a href="#">Bookly</a> <br><br> Please click the button below to confirm your email address and activate your account.</p>
-                    <a href="#" id="confirm"><button class="btn-confirm">Confirm Email</button></a>
-                    <p class="style">If you received this in error, simply ignore this email and do not click the button.</p>
+        h2 {
+            font-weight: 700;
+            text-align: center;
+        }
+
+        p {
+            font-weight: 300;
+            margin: 0 auto;
+            text-align: center;
+            padding: 30px;
+            width: 80%;
+
+        }
+
+        .style {
+            color: #686D81;
+        }
+
+        .btn-confirm {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 700;
+            display: block;
+            margin: auto;
+            border: none;
+            border-radius: 30px;
+            padding: 10px;
+            height: 10%;
+            width: 30%;
+            text-align: center;
+
+            color: #FFFFFF;
+            background-color: #FE3152;
+            cursor: pointer;
+
+            transition: all 0.2s ease-in-out;
+
+        }
+
+        .btn-confirm:hover {
+            transform: scale(1.03);
+            opacity: 0.8;
+
+        }
+
+        .btn-confirm:active {
+            transform: translateY(2px);
+        }
+
+        #confirm {
+            margin: 0 auto;
+            text-align: center;
+            text-decoration: none;
+            color: #FFFFFF;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box-container">
+        <div class="box-content">
+            <div class="icon-content">
+                <img class="mail-svg" src="mail-svg.jpg" alt="Mail" />
             </div>
+
+            <h2>Verify your email address</h2>
+            <p>Welcome to <a href="#">Bookly</a> <br><br> Please click the button below to confirm your email address
+                and activate your account.</p>
+            <a href="#" id="confirm"><button class="btn-confirm">Confirm Email</button></a>
+            <p class="style">If you received this in error, simply ignore this email and do not click the button.</p>
         </div>
-    </body>
+    </div>
+</body>
+
 </html>

@@ -2,24 +2,6 @@
 
 
 
- function showSuccessToast() {
-   toast({
-   
-      message: "Congratulations! Your account has been successfully verified.",
-      type: "success",
-      duration: 10000
-   });
-}
-
-function showErrorToast() {
-   toast({
-      title: "Thất bại!",
-      message: "Có lỗi xảy ra, vui lòng liên hệ quản trị viên.",
-      type: "error",
-      duration: 5000
-   });
-}
-
 
 function toast({ title = "", message = "", type = "info", duration = 3000 }) {
    const main = document.getElementById("toast");
@@ -64,6 +46,7 @@ function toast({ title = "", message = "", type = "info", duration = 3000 }) {
                      </div>
                  `;
      main.appendChild(toast);
+
    }
  }
  

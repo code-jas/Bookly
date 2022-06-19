@@ -38,8 +38,9 @@
 
 
    <div class="home">
-      <div class="home-content">
 
+      <div class="home-content">
+         <div id="toast"></div>
          <div class="home-text">
 
             <p class="home-parag">Let’s make the best investements</p>
@@ -252,10 +253,35 @@
    </footer>
 
 
+
+   <script src="./assets/javascript/toast.js"></script>
+
+   <script>
+   function showSuccessToast() {
+      toast({
+         message: "Your account has been successfully created. You  may now login.",
+         type: "success",
+         duration: 3000
+      });
+
+   }
+
+   function showErrorToast() {
+      toast({
+         title: "Thất bại!",
+         message: "Có lỗi xảy ra, vui lòng liên hệ quản trị viên.",
+         type: "error",
+         duration: 5000
+      });
+   }
+   </script>
+
+
    <!-- END | FOOTER -->
    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
    <script src="./assets/javascript/sign-in-sign-up.js"></script>
    <script src="./assets/javascript/global.js"></script>
+   <script src="./assets/javascript/toast.js"></script>
 
    <script src="./assets/javascript/feature-books.js"></script>
 

@@ -31,7 +31,7 @@ if(isset($_GET['vkey'])){
        
          // insert the verified user into user account where all accounts are verified
 
-         $account_user_query  = mysqli_query($conn, "INSERT INTO account_user(username, password, email) VALUES('$username', '$password', '$email')") or die(mysqli_error($conn));
+         $account_user_query  = mysqli_query($conn, "INSERT INTO account_user(username, password, email,account_type) VALUES('$username', '$password', '$email','2')") or die(mysqli_error($conn));
   
          echo "<script>window.location.href='get-started?user=$username';</script>";
 
