@@ -15,6 +15,12 @@ h3.title {
     text-transform: none;
 }
 
+.error {
+    color: var(--error-dark);
+    font-size: 12px;
+    text-transform: none;
+    margin-left: 5px;
+}
 
 
 
@@ -73,7 +79,7 @@ h3.title {
     background: white;
     padding: 20px;
     width: 400px;
-    height: 500px;
+    /* height: 500px; */
     border-radius: 10px;
     margin: 0 auto;
 }
@@ -189,6 +195,7 @@ h3.title {
 } */
 .sign-in-submit,
 .sign-up-submit {
+    text-align: center;
     font-size: 14px;
     font-weight: 700;
     border-style: none;
@@ -246,11 +253,16 @@ a.links {
     font-weight: bolder;
 }
 
-.verify-email-section {
+.verify-email-section,
+.loading-verification {
     display: flex;
     flex-direction: column;
     justify-content: center;
     transition: all 0.3s ease-in-out;
+}
+
+.loading-verification {
+    height: 300px;
 }
 
 a.links:hover {
@@ -279,6 +291,70 @@ a.links:hover {
     font-weight: 900;
     margin: 20px 0 10px 0;
     text-align: center;
+}
+
+
+.centered {
+    width: 150px;
+    height: 150px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: white;
+    filter: blur(10px) contrast(20);
+}
+
+.blob-1,
+.blob-2 {
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    background: #fff;
+    border-radius: 50%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.blob-1 {
+    left: 40%;
+    animation: osc-l 2s ease infinite;
+    background: #3b3c41;
+}
+
+.blob-2 {
+    left: 70%;
+    animation: osc-r 2s ease infinite;
+    background: #0ff;
+}
+
+@keyframes osc-l {
+    0% {
+        left: 20%;
+    }
+
+    50% {
+        left: 50%;
+    }
+
+    100% {
+        left: 20%;
+    }
+}
+
+@keyframes osc-r {
+    0% {
+        left: 80%;
+    }
+
+    50% {
+        left: 50%;
+    }
+
+    100% {
+        left: 80%;
+    }
 }
 
 

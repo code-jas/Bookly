@@ -14,6 +14,8 @@
 
    --btn-color: #FE3152;
    --btn-color-light: #FE4764;
+   --btn-color-50: #fe47668f;
+   --btn-color-15: #fe476623;
    --cyan: #51DDE9;
    --cyan-dark: #32CDDA;
    --blue: #3B55E6;
@@ -26,6 +28,7 @@
    --dark-blue-dark: #222328;
 
    --success: #4BE1AB;
+   --success-50: #4be1aa86;
    --success-15: #4BE1AB26;
 
    --success-dark: #43D29E;
@@ -35,6 +38,7 @@
    --pending-dark: #E8C63B;
 
    --error: #FE5339;
+   --error-50: #fe533983;
    --error-15: #FE533926;
    --error-dark: #EB4E36;
 
