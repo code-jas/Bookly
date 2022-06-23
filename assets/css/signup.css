@@ -68,7 +68,7 @@ h3.title {
     z-index: 10;
 }
 
-
+.delete-account-section-container,
 .sign-in-section-container,
 .sign-up-section-container,
 .done-section {
@@ -86,6 +86,11 @@ h3.title {
 
 .sign-in-section-container {
     height: 370px;
+}
+
+.delete-account-section-container {
+    width: 350px;
+    height: 300px;
 }
 
 
@@ -193,6 +198,7 @@ h3.title {
     color: #3A405B;
     text-align: center;
 } */
+.delete-account-submit,
 .sign-in-submit,
 .sign-up-submit {
     text-align: center;
@@ -211,6 +217,24 @@ h3.title {
 
 }
 
+.delete-account-submit {
+    color: var(--dark-blue);
+    background-color: var(--dark-gray);
+
+    width: 90%;
+    border-radius: 10px;
+    margin: 10px auto 20px auto;
+    font-weight: 700;
+}
+
+.delete-account-submit:hover {
+    color: white;
+    transform: scale(1.03);
+    background-color: var(--error-dark);
+    border: 1px solid var(--error);
+    outline: 3px solid var(--error-50);
+}
+
 .sign-in-submit:hover,
 .sign-up-submit:hover {
     transform: scale(1.03);
@@ -220,6 +244,7 @@ h3.title {
 
 }
 
+.delete-account-submit:active,
 .sign-in-submit:active,
 .sign-up-submit:active {
     transform: translateY(2px);
@@ -234,6 +259,8 @@ h3.title {
     margin: 0 auto 20px auto;
 
 }
+
+
 
 
 

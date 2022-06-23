@@ -1,8 +1,22 @@
+<?php
+
+session_start();
+
+if(isset($_SESSION["username"])){
+   $username = $_SESSION["username"];
+}
+else{
+   echo "<script>window.location.href='../home?error=404';</script>";
+}
+
+?>
+
+
 <header>
    <nav class="navbar">
       <div class="logo">
-         <a href="home" class="branding">
-            <img src="assets/images/illustrations/logo.png" alt="book logo" class="nav-image">
+         <a href="../home" class="branding">
+            <img src="../assets/images/illustrations/logo.png" alt="book logo" class="nav-image">
             <h1 class="branding-text">BOOKLY</h1>
          </a>
       </div>
@@ -20,16 +34,7 @@
             </ul>
          </div>
 
-         <?php
-         
-         session_start();
-         
 
-
-
-
-         
-         ?>
 
 
          <div class="session-false <?php
@@ -45,7 +50,6 @@
          <div class="session-true  <?php
          if(isset($_SESSION["username"])) {
             echo "active-session";
-            include('assets/php/display-user-account.php');
          } ?>">
             <!-- <span class="material-symbols-outlined">
                   shopping_cart
@@ -66,7 +70,7 @@
                         <a href="#">
                            <li class="cart-item-list">
                               <div class="cart-item-img-card">
-                                 <img src="angelo.jpg" alt="">
+                                 <img src=".././angelo.jpg" alt="">
                               </div>
                               <div class="cart-item-details">
                                  <h3>Parcel delivered</h3>
@@ -78,7 +82,7 @@
                         <a href="#">
                            <li class="cart-item-list">
                               <div class="cart-item-img-card">
-                                 <img src="angelo.jpg" alt="">
+                                 <img src=".././angelo.jpg" alt="">
                               </div>
                               <div class="cart-item-details">
                                  <h3>Parcel delivered</h3>
@@ -90,7 +94,7 @@
                         <a href="#">
                            <li class="cart-item-list">
                               <div class="cart-item-img-card">
-                                 <img src="angelo.jpg" alt="">
+                                 <img src=".././angelo.jpg" alt="">
                               </div>
                               <div class="cart-item-details">
                                  <h3>Parcel delivered</h3>
@@ -102,7 +106,7 @@
                         <a href="#">
                            <li class="cart-item-list">
                               <div class="cart-item-img-card">
-                                 <img src="angelo.jpg" alt="">
+                                 <img src=".././angelo.jpg" alt="">
                               </div>
                               <div class="cart-item-details">
                                  <h3>Parcel delivered</h3>
@@ -114,7 +118,7 @@
                         <a href="#">
                            <li class="cart-item-list">
                               <div class="cart-item-img-card">
-                                 <img src="angelo.jpg" alt="">
+                                 <img src=".././angelo.jpg" alt="">
                               </div>
                               <div class="cart-item-details">
                                  <h3>Parcel delivered</h3>
@@ -139,7 +143,7 @@
                         <a href="#">
                            <li class="notif-item-list">
                               <div class="notif-item-img-card">
-                                 <img src="angelo.jpg" alt="">
+                                 <img src=".././angelo.jpg" alt="">
                               </div>
                               <div class="notif-item-details">
                                  <h3>Parcel delivered</h3>
@@ -151,7 +155,7 @@
                         <a href="#">
                            <li class="notif-item-list">
                               <div class="notif-item-img-card">
-                                 <img src="angelo.jpg" alt="">
+                                 <img src=".././angelo.jpg" alt="">
                               </div>
                               <div class="notif-item-details">
                                  <h3>Parcel delivered</h3>
@@ -163,7 +167,7 @@
                         <a href="#">
                            <li class="notif-item-list">
                               <div class="notif-item-img-card">
-                                 <img src="angelo.jpg" alt="">
+                                 <img src=".././angelo.jpg" alt="">
                               </div>
                               <div class="notif-item-details">
                                  <h3>Parcel delivered</h3>
@@ -175,7 +179,7 @@
                         <a href="#">
                            <li class="notif-item-list">
                               <div class="notif-item-img-card">
-                                 <img src="profile_img" alt="">
+                                 <img src=".././angelo.jpg" alt="">
                               </div>
                               <div class="notif-item-details">
                                  <h3>Parcel delivered</h3>
@@ -187,7 +191,7 @@
                         <a href="#">
                            <li class="notif-item-list">
                               <div class="notif-item-img-card">
-                                 <img src="angelo.jpg" alt="">
+                                 <img src=".././angelo.jpg" alt="">
                               </div>
                               <div class="notif-item-details">
                                  <h3>Parcel delivered</h3>
@@ -203,11 +207,9 @@
                   </div>
 
                </li>
-
                <li class="nr_li prof_dd_main">
                   <div class="profile-card-nav-br">
-                     <img src="<?php echo $profile_img_db;?>"
-                        alt="<?php echo ucfirst($firstname) . ' '. ucfirst($lastname);?>">
+                     <img src=".././angelo.jpg" alt="profile_img">
                   </div>
 
 
@@ -216,23 +218,22 @@
                      <ul>
                         <div class="prof0-menu-li">
                            <div class="profile-card-inner-kwz">
-                              <img src="<?php echo $profile_img_db;?>"
-                                 alt="<?php echo ucfirst($firstname) . " ". ucfirst($lastname);?>">
+                              <img src=".././angelo.jpg" alt="profile_img">
                            </div>
                            <div class="profile-details-0oq">
-                              <h3><?php echo ucfirst($firstname) . " ". ucfirst($lastname);?></h3>
-                              <p><?php echo $username?></p>
+                              <h3>Angelo Silvestre</h3>
+                              <p>See your profile</p>
                            </div>
                         </div>
                         <div class="line-break-profile"></div>
-                        <a href="account-settings/overview">
+                        <a href="../account-settings/overview">
                            <li><i class="fa-solid fa-gear ic-dd-items-fl"></i></i> Account Settings</li>
                         </a>
                         <a href="my-book/viewcart">
                            <li><i class="fa-solid fa-book-bookmark ic-dd-items-fl"></i> My Book</li>
                         </a>
                         <div class="line-break-profile"></div>
-                        <a href="logout.php">
+                        <a href="../logout.php">
                            <li><i class="fas fa-sign-out-alt ic-dd-items-fl"></i>Logout</li>
                         </a>
                      </ul>
@@ -257,101 +258,16 @@
 
 
 
-<div class="sign-in-section-container-bg">
-   <div class="sign-in-section-container">
-      <span tabIndex="0" class="close"><i class="fas fa-times"></i></span>
-
-      <h2 class="title">Sign-in Account</h2>
-      <form method="POST" id="sign-in-form-container" class="su_form_cont">
-         <div class="su-input-item wks31">
-            <label for="username">Username</label>
-            <input class="txt-field wks231" id="username" name="username" type="text" />
-            <p class="error" id="si_username_err"></p>
-         </div>
-         <div class="su-input-item wks31">
-            <label for="password">Password</label>
-            <input class="txt-field wks231" id="password" name="password" type="password" />
-            <p class="error" id="si_password_err"></p>
-         </div>
-         <p><a href="" class="link-fpw">Forgot Password?</a></p>
-         <input type="submit" id="sign-in-submit-btn" class="sign-in-submit" name="sign_in_submit"
-            value="Sign In"></input></a>
-      </form>
-   </div>
-</div>
-
-
 
 <?php
 
 
-include('assets/php/sign_up_verification.php');
+include('../assets/php/sign_up_verification.php');
 
 
 ?>
 
 
-<div class="sign-up-modal-container-bg">
-   <div class="sign-up-section-container">
-      <span tabIndex="0" class="close"><i class="fas fa-times"></i></span>
-
-      <div class="sign-up-section">
-         <h2 class="title">Create Account</h2>
-         <form method="POST" id="sign-up-form-container" class="su_form_cont" id="sign_up_form">
-            <div class="su-input-item">
-               <label for="su_username">Username</label>
-               <input class="txt-field" id="su_username" name="su_username" type="text" /><br>
-               <p class="error" id="su_username_err"></p>
-
-            </div>
-            <div class="su-input-item">
-               <label for="su_password">Create Password</label>
-               <input class="txt-field" id="su_password" name="su_password" type="password" /><br>
-               <p class="error" id="su_password_err"></p>
-            </div>
-            <div class="su-input-item">
-               <label for="su_confirm_password">Confirm Password</label>
-               <input class="txt-field" id="su_confirm_password" name="su_confirm_password" type="password" />
-               <p class="error" id="su_confirm_password_err"></p>
-            </div>
-            <div class="su-input-item">
-               <label for="su_email">Email</label>
-               <input class="txt-field" id="su_email" name="su_email" type="email" /><br>
-               <p class="error" id="su_email_err"></p>
-            </div>
-            <button id="sign-up-submit-btn" class="sign-up-submit" name="sign_up_submit" value="submit">Create
-               Account</button></a>
-         </form>
-         <p class="terms-a3m3">By signing up, you agree to the <a class="links">Terms of Service </a>
-            and <a class="links">Privacy Policy</a>, including <a class="links">Cookie Use</a>.</p>
-      </div>
-      <!--END | CREATE ACCOUNT-->
-
-      <div class="loading-verification">
-         <div class="centered">
-            <div class="blob-1"></div>
-            <div class="blob-2"></div>
-         </div>
-      </div>
-      <!--START | VERIFY EMAIL-->
-      <div class="verify-email-section">
-
-         <div class="verify-email-img-card">
-            <img class="img-content" src="./assets/images/illustrations/email-verification.png">
-         </div>
-         <h2 class="title">Verify your Email Address</h2>
-
-         <p class="terms-a3m3">You’ve entered <b><span id="email-display">BuildBuildBuild@gmail.com</span></b> as the
-            email
-            address for your
-            account.
-            To complete the process please check your email for a validation request.</p>
-
-         <button id="sign-up-done-btn" class="sign-up-submit">Done</button>
-
-      </div>
-   </div>
-</div>
 
 
 

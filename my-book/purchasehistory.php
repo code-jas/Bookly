@@ -14,6 +14,7 @@
    <link rel="stylesheet" href="../assets/css/root.css">
    <!-- navbar css -->
    <link rel="stylesheet" href="../assets/css/navbar.css">
+   <!-- <link rel="stylesheet" href="../assets/css/signup.css"> -->
    <!-- footer css -->
    <link rel="stylesheet" href="../assets/css/footer.css">
 
@@ -25,65 +26,11 @@
 
 </head>
 
-
-<!-- START | NAVIGATION BAR -->
-
-
-<nav class="navbar">
-   <div class="logo">
-      <a href="index.html" class="branding">
-         <img src="../assets/images/illustrations/book-icon.svg" alt="book icon" class="nav-image">
-         <h1 class="branding-text">BOOKLY</h1>
-      </a>
-   </div>
-
-   <div class="right-navbar">
-
-      <div class="nav-menu">
-         <ul class="menu">
-            <li class="nav-item"><a href="../home.html" accesskey="1" tabindex="1" class="nav-link">Home</a></li>
-            <li class="nav-item"><a href="../book-shop.html" accesskey="2" tabindex="2" class="nav-link">Book
-                  Shop</a>
-            </li>
-            <li class="nav-item"><a href="../about-us.html" accesskey="3" tabindex="3" class="nav-link">About us</a>
-            </li>
-         </ul>
-      </div>
-      <div class="session-false">
-         <button class="sign-in-btn">SIGN IN</button>
-         <button class="sign-up-btn">SIGN UP</button>
-      </div>
-      <div class="session-true">
-         <span class="material-symbols-outlined">
-            shopping_cart
-         </span>
-         <span class="material-symbols-outlined">
-            notifications
-         </span>
-         <button>
-            <span class="material-symbols-outlined profile-button">
-               person
-            </span>
-
-         </button>
-      </div>
-
-
-   </div>
-
-
-   <div class="hamburger">
-      <span class="burger-bar"></span>
-      <span class="burger-bar"></span>
-      <span class="burger-bar"></span>
-   </div>
-
-
-</nav>
-
-
-<!-- END | NAVIGATION BAR -->
-
+<?php
+   
+   include("navbar.php");
+   
+   ?>
 
 <!-- START | VIEW CART -->
 <div class="sidebar-wrapper-outer">
@@ -92,10 +39,10 @@
       <nav class="my_book_sidebar">
          <h1 class="sidebar-header">My Book</h1>
          <div class="sidebar_menu">
-            <a href="viewcart.html" class="sidebar-link">View
+            <a href="viewcart" class="sidebar-link">View
                Cart</a>
-            <a href="orderstatus.html" class="sidebar-link">Order Status</a>
-            <a href="purchasehistory.html" class="sidebar-link sidebar-active">Purchase History</a>
+            <a href="orderstatus" class="sidebar-link">Order Status</a>
+            <a href="purchasehistory" class="sidebar-link sidebar-active">Purchase History</a>
          </div>
       </nav>
 
@@ -486,89 +433,15 @@
 
 
 
-<!-- START | FOOTER -->
-<footer class="footer-wrapper">
-   <div class="footer-content">
-      <div class="footer-text">
-         <h1 class="footer-header">
-            Stay Connected
-         </h1>
-         <p class="footer-parag">
-            Books lists, affordable prices, special offers, and more - right in your
-            inbox!
-         </p>
-      </div>
+<?php
+   
+   include("../footer.php");
+   
+   ?>
 
-      <div class="footer-menu-container">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 
-         <div class="footer-menu-item">
-            <p class="footer-menu-item-header">ABOUT</p>
-            <ul class="footer-list">
-               <li class="footer-item"><a href="#" class="footer-link">Contact Us</a></li>
-               <li class="footer-item"><a href="#" class="footer-link">Team</a></li>
-               <li class="footer-item"><a href="#" class="footer-link">Policy </a></li>
-            </ul>
-         </div>
-
-         <div class="footer-menu-item">
-            <p class="footer-menu-item-header">EXPLORE</p>
-            <ul class="footer-list">
-               <li class="footer-item"><a href="#" class="footer-link">Home</a></li>
-               <li class="footer-item"><a href="#" class="footer-link">Book Shop</a></li>
-               <li class="footer-item"><a href="#" class="footer-link">About Us </a></li>
-            </ul>
-         </div>
-
-         <div class="footer-menu-item">
-            <p class="footer-menu-item-header">ACCOUNT</p>
-            <ul class="footer-list">
-               <li class="footer-item"><a href="#" class="footer-link">Account Overview</a></li>
-               <li class="footer-item"><a href="#" class="footer-link">Edit Profile</a></li>
-               <li class="footer-item"><a href="#" class="footer-link">Change Password</a></li>
-            </ul>
-         </div>
-      </div>
-
-   </div>
-   <div class="line-break"></div>
-
-   <div class="footer-socmed-link">
-      <a href="https://www.facebook.com/angelo.silvestre.315">
-         <div class="icon facebook">
-
-            <div class="tooltip">Facebook</div>
-            <span><i class="fab fa-facebook-f"></i></span>
-
-         </div>
-      </a>
-      <a href="https://twitter.com/CodeJs04">
-         <div class="icon twitter">
-            <div class="tooltip">Twitter</div>
-            <span><i class="fab fa-twitter"></i></span>
-         </div>
-      </a>
-      <a href="https://www.instagram.com/iamgroot04/">
-         <div class="icon instagram">
-            <div class="tooltip">Instagram</div>
-            <span><i class="fab fa-instagram"></i></span>
-         </div>
-      </a>
-   </div>
-
-   <div class="footer-copyright">
-      <p class="footer-copyright-text">
-         © 2020 Bookly, Inc. All rights reserved.
-      </p>
-   </div>
-
-
-
-</footer>
-
-
-<!-- END | FOOTER -->
-
-<script src="/assets/javascript/navbar.js"></script>
+<script src="../assets/javascript/navbar.js"></script>
 <script src="https://kit.fontawesome.com/a0043d9bc2.js" crossorigin="anonymous"></script>
 
 <body>

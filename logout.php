@@ -1,7 +1,8 @@
 <?php
 
-session_start();
-
+if (session_status() === PHP_SESSION_NONE) {
+   session_start();
+}
 
 $logout = md5($_SESSION['username']);
 $username_md5 = md5($logout);
@@ -10,7 +11,7 @@ unset($_SESSION['username']);
 
 
 session_unset();
-// session_destroy();
+session_destroy();
 
 
 echo "Logging out...";

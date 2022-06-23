@@ -174,7 +174,7 @@ function featureTextContent() {
 
   movies.forEach((item,index) => {
     
-    console.log("index: " + index);
+  
     // descTitle[item.length].innerHTML = item.title;
     let descContainer = document.querySelectorAll('.description__text-container')[index + iterate];
     let descTitle = document.querySelectorAll(".description__title")[index + iterate];
@@ -215,7 +215,7 @@ btnLeft.addEventListener("click", (e) => {
     behavior: "smooth",
   });
   activeIndex = (activeIndex - 1) % 3;
-  console.log(activeIndex);
+
   // updateIndicators(activeIndex);
 });
 
@@ -225,8 +225,7 @@ btnRight.addEventListener("click", (e) => {
     .width;
   let scrollDistance = movieWidth * 3; // Scroll the length of 6 movies. TODO: make work for mobile because (4 movies/page instead of 6)
 
-  console.log(`movieWidth = ${movieWidth}`);
-  console.log(`scrolling right ${scrollDistance}`);
+
 
   // if we're on the last page
   if (activeIndex == 2) {
@@ -248,7 +247,7 @@ btnRight.addEventListener("click", (e) => {
       behavior: "smooth",
     });
     activeIndex = (activeIndex + 1) % 3;
-    console.log(activeIndex);
+ 
     // updateIndicators(activeIndex);
   }
 });

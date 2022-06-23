@@ -3,9 +3,9 @@ include("db-config.php");
 
 // Path: assets\php\sign_up_verification.php
 
-$firstname = $lastname = $username = $email = $birthdate  = $address = $barangay = $city = $zipcode = "";
+$firstname = $lastname = $username = $email = $contact = $birthdate  = $address = $barangay = $city = $zipcode = "";
 
-$firstnameErr = $lastnameErr = $birthdateErr = $usernameErr = $emailErr = $birthdateErr = $addressErr = $barangayErr = $cityErr = $zipcodeErr = $uploadErr =  "";
+$firstnameErr = $lastnameErr = $birthdateErr = $contactErr = $usernameErr = $emailErr = $birthdateErr = $addressErr = $barangayErr = $cityErr = $zipcodeErr = $uploadErr =  "";
  
 
 
@@ -70,6 +70,20 @@ if(isset($_POST['get_started_btn'])){
       $email = test_input($_POST['email']);
       if(!filter_var($email, FILTER_VALIDATE_EMAIL)){
          $emailErr = "Invalid email format";
+         $valid = false;
+      }
+   }
+
+   if(empty($_POST['contact'])){
+      $contactErr = "Contact Number is required";
+   } else{
+      $contact = test_input($_POST['contact']);
+      if(!preg_match("/^[0-9]*$/", $contact)){
+         $contactErr = "Only numbers allowed";
+         $valid = false;
+      }
+      if(strlen($contact) != 11){
+         $contactErr = "Contact number must be 11 digits";
          $valid = false;
       }
    }

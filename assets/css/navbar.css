@@ -39,8 +39,8 @@ header {
 }
 
 .nav-image {
-   width: 22px;
-   height: 22px;
+   width: 35px;
+   height: 35px;
 
 }
 
@@ -48,10 +48,14 @@ header {
    font-family: var(--montserrat-font);
    font-size: 23px;
    font-weight: 900;
-   color: var(--primary-font-color);
+   color: var(--btn-color);
    text-decoration: none;
    text-transform: uppercase;
    letter-spacing: 1px;
+
+   background: -webkit-linear-gradient(var(--btn-color), #ff6854);
+   -webkit-background-clip: text;
+   -webkit-text-fill-color: transparent;
 
    margin: 0 0 0 10px;
 
@@ -215,10 +219,14 @@ header {
 }
 
 .right-navbar .session-true ul li .profile-card-nav-br {
-   width: 35px;
-   height: 35px;
+   width: 34px;
+   height: 34px;
    border-radius: 50%;
-   background-color: red;
+   background-color: white;
+   border: 1px solid white;
+   margin-top: -5px;
+
+   box-shadow: rgba(0, 0, 0, 0.189) 0px 2px 4px;
    overflow: hidden;
 
 
@@ -473,7 +481,7 @@ header {
    width: 40px;
    height: 40px;
    border-radius: 50%;
-   background-color: red;
+   background-color: white;
    overflow: hidden;
 
 
@@ -487,12 +495,12 @@ header {
 }
 
 .prof0-menu-li .profile-details-0oq h3 {
-   font-size: 15px;
+   font-size: 13px;
    font-weight: 500;
    color: var(--secondary-font-color);
    text-transform: capitalize;
-
-   padding: 2px 0 4px 0;
+   margin-bottom: 5px;
+   padding: 2px 0 0 0;
 }
 
 .prof0-menu-li .profile-details-0oq p {
@@ -811,8 +819,8 @@ header {
    }
 
    .nav-image {
-      width: 18px;
-      height: 18px;
+      width: 30px;
+      height: 30px;
 
    }
 

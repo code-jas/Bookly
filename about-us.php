@@ -14,6 +14,7 @@
    <link rel="stylesheet" href="./assets/css/root.css">
    <!-- navbar css -->
    <link rel="stylesheet" href="./assets/css/navbar.css">
+   <link rel="stylesheet" href="./assets/css/signup.css">
    <!-- footer css -->
    <link rel="stylesheet" href="./assets/css/footer.css">
 
@@ -27,239 +28,9 @@
    </svg>
 </section>
 <!-- START | NAVIGATION BAR -->
-<header>
-
-   <nav class="navbar">
-      <div class="logo">
-         <a href="index.html" class="branding">
-            <img src="./assets/images/illustrations/book-icon.svg" alt="book icon" class="nav-image">
-            <h1 class="branding-text">BOOKLY</h1>
-         </a>
-      </div>
-
-      <div class="right-navbar">
-
-         <div class="nav-menu">
-            <ul class="menu">
-               <li class="nav-item"><a href="home.html" accesskey="1" tabindex="1" class="nav-link">Home</a></li>
-               <li class="nav-item"><a href="book-shop.html" accesskey="2" tabindex="2" class="nav-link">Book
-                     Shop</a>
-               </li>
-               <li class="nav-item"><a href="about-us.html" accesskey="3" tabindex="3" class="nav-link">About us</a>
-               </li>
-            </ul>
-         </div>
-         <div class="session-false">
-            <button class="sign-in-btn">SIGN IN</button>
-            <button class="sign-up-btn">SIGN UP</button>
-         </div>
-         <div class="session-true">
-            <!-- <span class="material-symbols-outlined">
-               shopping_cart
-            </span>
-            <span class="material-symbols-outlined">
-               notifications
-            </span> -->
-            <ul>
-               <li class="nr_li cart_dd_main">
-                  <span class="material-symbols-outlined ic-prof-view-tgl">
-                     shopping_cart
-                  </span>
-
-                  <div class="cart_dd_menu">
-
-                     <ul>
-                        <h1>Recently Added Books</h1>
-                        <a href="#">
-                           <li class="cart-item-list">
-                              <div class="cart-item-img-card">
-                                 <img src="angelo.jpg" alt="">
-                              </div>
-                              <div class="cart-item-details">
-                                 <h3>Parcel delivered</h3>
-                                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quisquam,
-                                    quia.</p>
-                              </div>
-                           </li>
-                        </a>
-                        <a href="#">
-                           <li class="cart-item-list">
-                              <div class="cart-item-img-card">
-                                 <img src="angelo.jpg" alt="">
-                              </div>
-                              <div class="cart-item-details">
-                                 <h3>Parcel delivered</h3>
-                                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quisquam,
-                                    quia.</p>
-                              </div>
-                           </li>
-                        </a>
-                        <a href="#">
-                           <li class="cart-item-list">
-                              <div class="cart-item-img-card">
-                                 <img src="angelo.jpg" alt="">
-                              </div>
-                              <div class="cart-item-details">
-                                 <h3>Parcel delivered</h3>
-                                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quisquam,
-                                    quia.</p>
-                              </div>
-                           </li>
-                        </a>
-                        <a href="#">
-                           <li class="cart-item-list">
-                              <div class="cart-item-img-card">
-                                 <img src="angelo.jpg" alt="">
-                              </div>
-                              <div class="cart-item-details">
-                                 <h3>Parcel delivered</h3>
-                                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quisquam,
-                                    quia.</p>
-                              </div>
-                           </li>
-                        </a>
-                        <a href="#">
-                           <li class="cart-item-list">
-                              <div class="cart-item-img-card">
-                                 <img src="angelo.jpg" alt="">
-                              </div>
-                              <div class="cart-item-details">
-                                 <h3>Parcel delivered</h3>
-                                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quisquam,
-                                    quia.</p>
-                              </div>
-                           </li>
-                        </a>
-                     </ul>
-
-                  </div>
-               </li>
-               <li class="nr_li notif_dd_main">
-                  <span class="material-symbols-outlined  ic-prof-view-tgl">
-                     notifications
-                  </span>
-
-                  <div class="notif_dd_menu">
-
-                     <ul>
-                        <h1>Recently Notification</h1>
-                        <a href="#">
-                           <li class="notif-item-list">
-                              <div class="notif-item-img-card">
-                                 <img src="angelo.jpg" alt="">
-                              </div>
-                              <div class="notif-item-details">
-                                 <h3>Parcel delivered</h3>
-                                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quisquam,
-                                    quia.</p>
-                              </div>
-                           </li>
-                        </a>
-                        <a href="#">
-                           <li class="notif-item-list">
-                              <div class="notif-item-img-card">
-                                 <img src="angelo.jpg" alt="">
-                              </div>
-                              <div class="notif-item-details">
-                                 <h3>Parcel delivered</h3>
-                                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quisquam,
-                                    quia.</p>
-                              </div>
-                           </li>
-                        </a>
-                        <a href="#">
-                           <li class="notif-item-list">
-                              <div class="notif-item-img-card">
-                                 <img src="angelo.jpg" alt="">
-                              </div>
-                              <div class="notif-item-details">
-                                 <h3>Parcel delivered</h3>
-                                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quisquam,
-                                    quia.</p>
-                              </div>
-                           </li>
-                        </a>
-                        <a href="#">
-                           <li class="notif-item-list">
-                              <div class="notif-item-img-card">
-                                 <img src="angelo.jpg" alt="">
-                              </div>
-                              <div class="notif-item-details">
-                                 <h3>Parcel delivered</h3>
-                                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quisquam,
-                                    quia.</p>
-                              </div>
-                           </li>
-                        </a>
-                        <a href="#">
-                           <li class="notif-item-list">
-                              <div class="notif-item-img-card">
-                                 <img src="angelo.jpg" alt="">
-                              </div>
-                              <div class="notif-item-details">
-                                 <h3>Parcel delivered</h3>
-                                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quisquam,
-                                    quia.</p>
-                              </div>
-                           </li>
-                        </a>
-
-
-                     </ul>
-
-                  </div>
-
-               </li>
-               <li class="nr_li prof_dd_main">
-                  <div class="profile-card-nav-br">
-                     <img src="angelo.jpg" alt="profile_img">
-                  </div>
-
-
-                  <div class="prof_dd_menu">
-
-                     <ul>
-                        <div class="prof0-menu-li">
-                           <div class="profile-card-inner-kwz">
-                              <img src="angelo.jpg" alt="profile_img">
-                           </div>
-                           <div class="profile-details-0oq">
-                              <h3>Angelo Silvestre</h3>
-                              <p>See your profile</p>
-                           </div>
-                        </div>
-                        <div class="line-break-profile"></div>
-                        <a href="#">
-                           <li><i class="fa-solid fa-gear ic-dd-items-fl"></i></i> Account Settings</li>
-                        </a>
-                        <a href="#">
-                           <li><i class="fa-solid fa-book-bookmark ic-dd-items-fl"></i> My Book</li>
-                        </a>
-                        <div class="line-break-profile"></div>
-                        <a href="#">
-                           <li><i class="fas fa-sign-out-alt ic-dd-items-fl"></i> Logout</li>
-                        </a>
-                     </ul>
-
-                  </div>
-               </li>
-
-            </ul>
-         </div>
-
-
-      </div>
-
-
-      <div class="hamburger">
-         <span class="burger-bar"></span>
-         <span class="burger-bar"></span>
-         <span class="burger-bar"></span>
-      </div>
-
-
-   </nav>
-</header>
+<?php
+      include("navbar.php");
+?>
 
 <!-- END | NAVIGATION BAR -->
 
@@ -406,8 +177,7 @@
                         <span><i class="fab fa-twitter"></i></span>
                      </div>
                   </a>
-                  <a
-                     href="https://www.instagram.com/kimxvillacer/" target="_blank">
+                  <a href="https://www.instagram.com/kimxvillacer/" target="_blank">
                      <div class="icon instagram">
                         <div class="tooltip">Instagram</div>
                         <span><i class="fab fa-instagram"></i></span>
@@ -580,90 +350,16 @@
 <!-- END | ABOUT US CONTAINER -->
 
 
-
-
-<!-- START | FOOTER -->
-<footer class="footer-wrapper">
-   <div class="footer-content">
-      <div class="footer-text">
-         <h1 class="footer-header">
-            Stay Connected
-         </h1>
-         <p class="footer-parag">
-            Books lists, affordable prices, special offers, and more - right in your
-            inbox!
-         </p>
-      </div>
-
-      <div class="footer-menu-container">
-
-         <div class="footer-menu-item">
-            <p class="footer-menu-item-header">ABOUT</p>
-            <ul class="footer-list">
-               <li class="footer-item"><a href="#" class="footer-link">Contact Us</a></li>
-               <li class="footer-item"><a href="#" class="footer-link">Team</a></li>
-               <li class="footer-item"><a href="#" class="footer-link">Policy </a></li>
-            </ul>
-         </div>
-
-         <div class="footer-menu-item">
-            <p class="footer-menu-item-header">EXPLORE</p>
-            <ul class="footer-list">
-               <li class="footer-item"><a href="#" class="footer-link">Home</a></li>
-               <li class="footer-item"><a href="#" class="footer-link">Book Shop</a></li>
-               <li class="footer-item"><a href="#" class="footer-link">About Us </a></li>
-            </ul>
-         </div>
-
-         <div class="footer-menu-item">
-            <p class="footer-menu-item-header">ACCOUNT</p>
-            <ul class="footer-list">
-               <li class="footer-item"><a href="#" class="footer-link">Account Overview</a></li>
-               <li class="footer-item"><a href="#" class="footer-link">Edit Profile</a></li>
-               <li class="footer-item"><a href="#" class="footer-link">Change Password</a></li>
-            </ul>
-         </div>
-      </div>
-
-   </div>
-   <div class="line-break"></div>
-
-   <div class="footer-socmed-link">
-      <a href="https://www.facebook.com/angelo.silvestre.315" target="_blank">
-         <div class="icon facebook">
-
-            <div class="tooltip">Facebook</div>
-            <span><i class="fab fa-facebook-f"></i></span>
-
-         </div>
-      </a>
-      <a href="https://twitter.com/CodeJs04" target="_blank">
-         <div class="icon twitter">
-            <div class="tooltip">Twitter</div>
-            <span><i class="fab fa-twitter"></i></span>
-         </div>
-      </a>
-      <a href="https://www.instagram.com/iamgroot04/" target="_blank">
-         <div class="icon instagram">
-            <div class="tooltip">Instagram</div>
-            <span><i class="fab fa-instagram"></i></span>
-         </div>
-      </a>
-   </div>
-
-   <div class="footer-copyright">
-      <p class="footer-copyright-text">
-         © 2020 Bookly, Inc. All rights reserved.
-      </p>
-   </div>
-
-
-
-</footer>
-
+<?php
+   
+   include("footer.php");
+   
+   ?>
 
 <!-- END | FOOTER -->
-
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="./assets/javascript/sign-in-sign-up.js"></script>
+<script src="./assets/javascript/toast.js"></script>
 <script src="./assets/javascript/global.js"></script>
 <script src="./assets/javascript/privacy-policy-display.js"></script>
 <script src="https://kit.fontawesome.com/a0043d9bc2.js" crossorigin="anonymous"></script>

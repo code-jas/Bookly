@@ -1,5 +1,8 @@
 <?php
 
+
+session_start();
+
 include("db-config.php");
 
 
@@ -8,7 +11,7 @@ $usernameErr = $passwordErr = "";
 
 
 
-if(isset($_POST["sign_in_submit"])){
+if(isset($_POST["username"])){
    
    if(empty($_POST["username"])){
       $usernameErr = "Username is required";
@@ -22,6 +25,12 @@ if(isset($_POST["sign_in_submit"])){
       $password = $_POST["password"];
    }
 
+   
+   // echo json_encode(array(
+   //    "status" => "success", 
+   // ));
+
+  
    $username = $conn->real_escape_string($username);
    $password = $conn->real_escape_string($password);
 
@@ -42,10 +51,12 @@ if(isset($_POST["sign_in_submit"])){
                // SUCCESS
                // GO TO ADMIN PAGE 
             
-               echo "Login Successful";
-               session_start();
-               // $_SESSION["username"] = $username;
-               // header("Location: admin/index.php");
+               $_SESSION["username"] = $username;
+               
+               echo json_encode(array(
+                  "status" => "login success", 
+               ));
+
             } else {
                $passwordErr = "The password you’ve entered is incorrect.";
             }
@@ -53,16 +64,27 @@ if(isset($_POST["sign_in_submit"])){
             if($db_password == $password) { 
                // SUCCESS
                // GO TO USER PAGE 
-               echo "Login Successful";
               
                $_SESSION["username"] = $username;
+
+               echo json_encode(array(
+                  "status" => "login success", 
+               ));
+               
+             
+      
                
             } else {
+               echo json_encode("incorect");
                $passwordErr = "The password you’ve entered is incorrect.";
             }
          }
 
       } else {
+
+         echo json_encode(array(
+            "isExists" => "notExists", 
+         ));
          $usernameErr = "We couldn't find your username.";
       }
 

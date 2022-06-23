@@ -24,7 +24,7 @@ $('#sign-up-btn').on('click', function() {
 
 
 $(document).ready(function() {
-
+  
    $('#su_username').on('input', function () {
       checkUsername();
    });
@@ -38,7 +38,84 @@ $(document).ready(function() {
       checkEmail();
    });
 
+   $('#sign-in-form-container').on('submit', function(e) {
+      e.preventDefault();
+      var username = $('#username').val();
+      var password = $('#password').val();
+      var isEmpty = false;
+
+      if(username == '') {
+         $('#si_username_err').html('Username is required');
+         isEmpty = true;
+      } else { 
+         $('#si_username_err').html('');
+      }
+      if(password == '') {
+         $('#si_password_err').html('Password is required');
+         isEmpty = true;
+      } else { 
+         $('#si_password_err').html('');
+      }
+      if(isEmpty){
+         console.log('empty');
+      } else {
+
+         var form_data = new FormData(this);
+         $.ajax({
+            url: './assets/php/login.php',
+            method: "POST",
+            data: form_data,
+            dataType: "JSON",
+            processData:false,
+            contentType:false,
+            beforeSend: function(){
+               // $('.sign-up-section').hide();
+               // $('.loading-verification').show()
+            },
+            complete: function(){
+               // $('.loading-verification').hide()
+            },
+            success: function(response) {
+               
+               
+               const messageSignIn = { status: "login success" };
+               const notExistUsername = { isExists: "notExists" };
+               const passwordInc = "incorect";
+               // const existEmail = { password: "exists"};
+
+               
    
+               if(JSON.stringify(response.status) == JSON.stringify(messageSignIn.status)){
+                  // $('.sign-up-section').hide();
+                  // $('.verify-email-section').show();
+                  // $('#email-display').html($('#su_email').val());
+                  console.log('success');
+                  window.location.href = "home";
+
+               }else{
+        
+               
+                  $('.sign-up-section').show();
+                  if(JSON.stringify(response.isExists) == JSON.stringify(notExistUsername.isExists)){
+                     console.log('not exist');
+                     $('#si_username_err').html("We couldn't find your username.");
+                  }
+                  if(response == passwordInc){
+                     console.log('password incorect');
+                     $('#si_password_err').html('The password you’ve entered is incorrect.');
+                  }
+                
+               }
+
+
+            },
+            error: function (request, status, error) {
+              
+               console.log(request.responseText);
+            }
+         })
+      }
+   });
 
    $('#sign-up-form-container').on('submit', function(e) {
       e.preventDefault();
@@ -76,10 +153,12 @@ $(document).ready(function() {
                const existUsername = { username: "exists"};
                const existEmail = { email: "exists"};
 
+               
    
                if(JSON.stringify(response) == JSON.stringify(message)){
                   $('.sign-up-section').hide();
                   $('.verify-email-section').show();
+                  $('#email-display').html($('#su_email').val());
                }else{
                   // console.log(response);
                   $('.sign-up-section').show();
@@ -89,6 +168,7 @@ $(document).ready(function() {
                   if(JSON.stringify(response) == JSON.stringify(existEmail)){
                      $('#su_email_err').html('Email already exists');
                   }
+                
                }
 
 
@@ -113,7 +193,7 @@ $(document).ready(function() {
 
 function checkUsername(){
 
-   var pattern = /^[a-zA-Z0-9]{3,20}$/;
+   var pattern = /^[a-zA-Z0-9-_]{5,20}$/;
    var user = $('#su_username').val();
    var validuser = pattern.test(user);
    if($('#su_username').val() == ''){
@@ -144,7 +224,7 @@ function checkPassword() {
       return false;
    }  else if (!validpass) {
      
-      $('#su_password_err').html('Minimum 5 and up to 15 characters, at least one uppercase letter, one lowercase letter, one number and one special character:');
+      $('#su_password_err').html('Minimum 5 and up to 15 characters, at least one uppercase letter, one lowercase letter, one number and one special character.');
       return false;
    } else {
       $('#su_password_err').html("");
@@ -222,7 +302,17 @@ if(signinKey == 'sign-in-321jkh1jkasd'){
    $('.sign-in-section-container-bg').fadeIn('fast');
    showSuccessToast();
 }
+const signInForbiddenKey = searchParams.get('error');
+if(signInForbiddenKey == '404'){
+   $('.sign-up-modal-container-bg').fadeOut('fast');
+   $('.sign-in-section-container-bg').fadeIn('fast');
+}
 
+const deletedAccountKey = searchParams.get('deleteaccnotif');
+
+if(deletedAccountKey == 'successfullydeletedaccount'){
+   showDeletedSuccessToast();
+}
 
 // SIGN IN 
 $('#sign-in-btn').on('click', function() {

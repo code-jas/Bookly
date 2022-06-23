@@ -97,6 +97,16 @@
                         <span class=" error-inp-field"><?php echo $emailErr; ?></span>
                      </div>
 
+
+                     <div class="content-wrapper">
+                        <label id="name-title" for="contact">Contact No.</label>
+                        <input class="txt-field" id="contact" name="contact" type="text" maxlength="11"
+                           value="<?php echo $contact;?>" /><br>
+                        <span class=" error-inp-field">
+                           <?php echo $contactErr; ?>
+                        </span>
+                     </div>
+
                      <div class="content-wrapper">
                         <label id="name-title" for="bday">Birth Date</label>
                         <input class="txt-field" id="bdate" name="birthdate" type="date"
@@ -139,7 +149,7 @@
                </section>
 
                <div class="btn_wrapper_section">
-                  <input type="submit" class="create-acct-btn" name="get_started_btn"></input>
+                  <input type="submit" class="create-acct-btn" name="get_started_btn" value="Create Account"></input>
                </div>
             </form>
          </div>
