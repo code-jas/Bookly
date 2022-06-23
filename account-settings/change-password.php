@@ -123,7 +123,7 @@
 
 <?php
    
-   include("../footer.php");
+   include("footer.php");
    
    echo $showsuccess;
    ?>

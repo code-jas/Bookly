@@ -25,11 +25,11 @@ else{
 
          <div class="nav-menu">
             <ul class="menu">
-               <li class="nav-item"><a href="home" accesskey="1" tabindex="1" class="nav-link">Home</a></li>
-               <li class="nav-item"><a href="book-shop" accesskey="2" tabindex="2" class="nav-link">Book
+               <li class="nav-item"><a href="../home" accesskey="1" tabindex="1" class="nav-link">Home</a></li>
+               <li class="nav-item"><a href="../book-shop" accesskey="2" tabindex="2" class="nav-link">Book
                      Shop</a>
                </li>
-               <li class="nav-item"><a href="about-us" accesskey="3" tabindex="3" class="nav-link">About us</a>
+               <li class="nav-item"><a href="../about-us" accesskey="3" tabindex="3" class="nav-link">About us</a>
                </li>
             </ul>
          </div>
@@ -50,6 +50,7 @@ else{
          <div class="session-true  <?php
          if(isset($_SESSION["username"])) {
             echo "active-session";
+            include('../assets/php/display-user-account.php');
          } ?>">
             <!-- <span class="material-symbols-outlined">
                   shopping_cart
@@ -209,7 +210,8 @@ else{
                </li>
                <li class="nr_li prof_dd_main">
                   <div class="profile-card-nav-br">
-                     <img src=".././angelo.jpg" alt="profile_img">
+                     <img src="<?php echo $profile_img?>"
+                        alt="<?php echo ucfirst($firstname) . ' '. ucfirst($lastname);?>">
                   </div>
 
 
@@ -218,18 +220,19 @@ else{
                      <ul>
                         <div class="prof0-menu-li">
                            <div class="profile-card-inner-kwz">
-                              <img src=".././angelo.jpg" alt="profile_img">
+                              <img src="<?php echo $profile_img?>"
+                                 alt="<?php echo ucfirst($firstname) . ' '. ucfirst($lastname);?>">
                            </div>
                            <div class="profile-details-0oq">
-                              <h3>Angelo Silvestre</h3>
-                              <p>See your profile</p>
+                              <h3><?php echo ucfirst($firstname) . ' '. ucfirst($lastname);?></h3>
+                              <p><?php echo $username;?></p>
                            </div>
                         </div>
                         <div class="line-break-profile"></div>
                         <a href="../account-settings/overview">
                            <li><i class="fa-solid fa-gear ic-dd-items-fl"></i></i> Account Settings</li>
                         </a>
-                        <a href="my-book/viewcart">
+                        <a href="viewcart">
                            <li><i class="fa-solid fa-book-bookmark ic-dd-items-fl"></i> My Book</li>
                         </a>
                         <div class="line-break-profile"></div>

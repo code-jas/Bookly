@@ -190,7 +190,7 @@
 
 <?php
    
-   include("../footer.php");
+   include("footer.php");
    
 ?>
 
@@ -198,10 +198,19 @@
 
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-<!-- <script src="../assets/javascript/sign-in-sign-up.js"></script> -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
 <script src="../assets/javascript/navbar.js"></script>
-<script src="../assets/javascript/mybooks.js"></script>
+<script>
+$(window).on("load resize ", function() {
+
+   var scrollWidth = $('.tbl-content-cont').width() - $('.tbl-content-cont table').width();
+   $('.tbl-header-cont').css({
+      'padding-right': scrollWidth
+   });
+}).resize();
+</script>
+
+
 <script src="https://kit.fontawesome.com/a0043d9bc2.js" crossorigin="anonymous"></script>
 
 <body>

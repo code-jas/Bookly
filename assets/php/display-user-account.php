@@ -29,7 +29,7 @@ if(isset($_SESSION["username"])){
    
    $profile_img_db = $fetch["profile_img"];
 
-   // $profile_img = './.' . $profile_img_db;
+   $profile_img = './.' . $profile_img_db;
 
 
    

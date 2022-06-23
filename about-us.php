@@ -57,7 +57,7 @@
          </div>
       </div>
 
-      <div class="about-us-policy-cont">
+      <div class="about-us-policy-cont" id="policy">
          <h1 class="about-us-policy-header">Privacy Policies</h1>
          <h2 class="about-us-policy-header2">Bookly Privacy Notice</h2>
 
@@ -156,7 +156,7 @@
                </div>
             </div>
             <!-- Kim -->
-            <div class="team">
+            <div class="team" id="team">
                <img src="./assets/images/teams/kim.jpg" alt="Ma. Angelica Picture">
                <div class="team-details">
                   <h3>Kim Villacer</h3>
@@ -311,7 +311,7 @@
 
             <label class="contact-details-label">E-mail</label><br>
             <div class="input-icon">
-               <input class="contact-textbox" type="text" value="bookly@gmail.com" readonly />
+               <input class="contact-textbox" type="text" value="bookly.corpo@gmail.com" readonly />
                <i class="fas fa-envelope"></i>
             </div>
 

@@ -114,7 +114,7 @@
 <!--END | Verify Password MODAL -->
 <?php
    
-   include("../footer.php");
+   include("footer.php");
    
    ?>
 

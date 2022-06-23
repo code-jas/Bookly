@@ -16,29 +16,31 @@
             <div class="footer-menu-item">
                <p class="footer-menu-item-header">ABOUT</p>
                <ul class="footer-list">
-                  <li class="footer-item"><a href="about-us#contact-us" class="footer-link">Contact Us</a></li>
-                  <li class="footer-item"><a href="about-us#team" class="footer-link">Team</a></li>
-                  <li class="footer-item"><a href="about-us#policy" class="footer-link">Policy </a></li>
+                  <li class="footer-item"><a href="../about-us#contact-us" class="footer-link">Contact Us</a></li>
+                  <li class="footer-item"><a href="../about-us#team" class="footer-link">Team</a></li>
+                  <li class="footer-item"><a href="../about-us#policy" class="footer-link">Policy </a></li>
                </ul>
             </div>
 
             <div class="footer-menu-item">
                <p class="footer-menu-item-header">EXPLORE</p>
                <ul class="footer-list">
-                  <li class="footer-item"><a href="home" class="footer-link">Home</a></li>
-                  <li class="footer-item"><a href="book-shop" class="footer-link">Book Shop</a></li>
-                  <li class="footer-item"><a href="about-us" class="footer-link">About Us </a></li>
+                  <li class="footer-item"><a href="../home" class="footer-link">Home</a></li>
+                  <li class="footer-item"><a href="../book-shop" class="footer-link">Book Shop</a></li>
+                  <li class="footer-item"><a href="../about-us" class="footer-link">About Us </a></li>
                </ul>
             </div>
 
             <div class="footer-menu-item">
                <p class="footer-menu-item-header">ACCOUNT</p>
                <ul class="footer-list">
-                  <li class="footer-item"><a href="account-settings/overview" class="footer-link">Account Overview</a>
+                  <li class="footer-item"><a href="../account-settings/overview" class="footer-link">Account
+                        Overview</a>
                   </li>
-                  <li class="footer-item"><a href="account-settings/edit-profile" class="footer-link">Edit Profile</a>
+                  <li class="footer-item"><a href="../account-settings/edit-profile" class="footer-link">Edit
+                        Profile</a>
                   </li>
-                  <li class="footer-item"><a href="account-settings/change-password" class="footer-link">Change
+                  <li class="footer-item"><a href="../account-settings/change-password" class="footer-link">Change
                         Password</a></li>
                </ul>
             </div>

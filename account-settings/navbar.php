@@ -17,11 +17,11 @@ include("../assets/php/navbar-fetch-data.php");
 
          <div class="nav-menu">
             <ul class="menu">
-               <li class="nav-item"><a href="home" accesskey="1" tabindex="1" class="nav-link">Home</a></li>
-               <li class="nav-item"><a href="book-shop" accesskey="2" tabindex="2" class="nav-link">Book
+               <li class="nav-item"><a href="../home" accesskey="1" tabindex="1" class="nav-link">Home</a></li>
+               <li class="nav-item"><a href="../book-shop" accesskey="2" tabindex="2" class="nav-link">Book
                      Shop</a>
                </li>
-               <li class="nav-item"><a href="about-us" accesskey="3" tabindex="3" class="nav-link">About us</a>
+               <li class="nav-item"><a href="../about-us" accesskey="3" tabindex="3" class="nav-link">About us</a>
                </li>
             </ul>
          </div>
