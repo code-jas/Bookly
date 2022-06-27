@@ -1,55 +1,82 @@
+<!DOCTYPE html>
 <html>
 
 <head>
-   <title>Reset Password</title>
-   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Email Confirmation</title>
+   <!--google Fonts-->
+   <link rel="preconnect" href="https://fonts.googleapis.com">
+   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+   <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+   <link rel="stylesheet" type="text/css" href="./assets/css/root.css" />
+
+
+   <!-- edit profile css -->
+   <link rel="stylesheet" href="./assets/css/getstarted.css">
+
+   <link rel="stylesheet" type="text/css" href="./assets/css/forgot_password.css" />
+
+
 </head>
 
 <body>
 
-   <div class="container-fluid">
-      <div class="row">
-         <div class="col-md-4"></div>
-         <div class="col-md-4">
-            <?php
+   <div class="pw_container">
+      <div class="pw_content">
+         <?php
                   
-                    include('assets/php/db-config.php');
-                    $error="";
-                    if (isset($_GET["key"]) && isset($_GET["email"]) && isset($_GET["action"]) && ($_GET["action"] == "reset") && !isset($_POST["action"])) {
-                        $key = $_GET["key"];
-                        $email = $_GET["email"];
-                        $curDate = date("Y-m-d H:i:s");
-                        $query = mysqli_query($conn, "SELECT * FROM `password_reset_temp` WHERE `rkey`='" . $key . "' and `email`='" . $email . "';");
-                        $row = mysqli_num_rows($query);
-                        if ($row == "") {
-                            $error .= '<h2>Invalid Link</h2>';
-                        } else {
-                            $row = mysqli_fetch_assoc($query);
-                            $expDate = $row['expDate'];
-                            if ($expDate >= $curDate) {
-                                ?>
-            <h2>Reset Password</h2>
-            <form method="post" action="" name="update">
+            include('assets/php/db-config.php');
+            $error="";
+            if (isset($_GET["key"]) && isset($_GET["email"]) && isset($_GET["action"]) && ($_GET["action"] == "reset") && !isset($_POST["action"])) {
+                $key = $_GET["key"];
+                $email = $_GET["email"];
+                $curDate = date("Y-m-d H:i:s");
+                $query = mysqli_query($conn, "SELECT * FROM `password_reset_temp` WHERE `rkey`='" . $key . "' and `email`='" . $email . "';");
+                $row = mysqli_num_rows($query);
+                if ($row == "") {
+                    $error .= '<h2>Invalid Link</h2>';
+                } else {
+                    $row = mysqli_fetch_assoc($query);
+                    $expDate = $row['expDate'];
+                    if ($expDate >= $curDate) {
+                        ?>
+         <h2 class="title-fpw">Recovery Password</h2>
 
-               <input type="hidden" name="action" value="update" class="form-control" />
+         <form class="fpw-form-container" method="post" action="" name="update">
 
+            <input type="hidden" name="action" value="update" class="form-control" />
 
-               <div class="form-group">
-                  <label><strong>Enter New Password:</strong></label>
-                  <input type="password" name="pass1" value="" class="form-control" required />
-               </div>
+            <div class="content-wrapper block-1233">
+               <label id="new_password" class="pass-label" for="contact">New Password</label>
 
-               <div class="form-group">
-                  <label><strong>Re-Enter New Password:</strong></label>
-                  <input type="password" name="pass2" value="" class="form-control" required />
-               </div>
+               <input class="txt-field" id="new_password" name="pass1" type="password"
+                  placeholder="Enter your new password" required />
+               <span class=" error-inp-field error-pass">
+                  <?php //echo $new_passwordErr; ?>
+               </span>
+               <!-- <i class="fa fa-eye" aria-hidden="true"></i> -->
+
+            </div>
+            <div class="content-wrapper block-1233">
+               <label id="new_password_confirm" class="pass-label" for="contact">Confirm New Password</label>
+
+               <input class="txt-field" id="new_password_confirm" name="pass2" type="password"
+                  placeholder="Confirm your new password" required />
+               <span class="error-inp-field error-pass">
+                  <?php //echo $new_password_confirmErr; ?>
+               </span>
                <input type="hidden" name="email" value="<?php echo $email; ?>" />
-               <div class="form-group">
-                  <input type="submit" id="reset" value="Reset Password" class="btn btn-primary" />
-               </div>
+               <!-- <i class="fa fa-eye" aria-hidden="true"></i> -->
 
-            </form>
-            <?php
+            </div>
+            <div class="save-btn-container">
+               <input type="submit" class="save-pw-btn" id="reset-password" name="reset-password"
+                  value="Reset Password      " />
+            </div>
+         </form>
+         <?php
                             } else {
                                 $error .= "<h2>Link Expired</h2>>";
                             }
@@ -83,12 +110,9 @@
                     }
                     ?>
 
-         </div>
-         <div class="col-md-4"></div>
+
       </div>
    </div>
-
-
 </body>
 
 </html>
