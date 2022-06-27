@@ -156,7 +156,9 @@ input.search-field[type=search]:focus {
   width: 280px;
   height: auto;
   background: var(--bg-color-light);
+  /* background-color: white; */
 
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 25px 40px -20px;
   margin: 1.2rem;
   border-radius: 10px;
   cursor: pointer;
