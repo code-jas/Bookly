@@ -35,6 +35,7 @@
          <div class="session-false <?php
          if(!isset($_SESSION["username"])) {
             echo "active-session";
+            $profile_img_db="";
          } ?>">
             <!-- <button class="sign-in-btn">SIGN IN</button>
                <button class="sign-up-btn">SIGN UP</button> -->
@@ -175,7 +176,7 @@
                         <a href="#">
                            <li class="notif-item-list">
                               <div class="notif-item-img-card">
-                                 <img src="profile_img" alt="">
+                                 <img src="" alt="">
                               </div>
                               <div class="notif-item-details">
                                  <h3>Parcel delivered</h3>
@@ -273,10 +274,27 @@
             <input class="txt-field wks231" id="password" name="password" type="password" />
             <p class="error" id="si_password_err"></p>
          </div>
-         <p><a href="" class="link-fpw">Forgot Password?</a></p>
+
          <input type="submit" id="sign-in-submit-btn" class="sign-in-submit" name="sign_in_submit"
             value="Sign In"></input></a>
       </form>
+      <p><button id="goto-forgot-password-btn" class="link-fpw">Forgot Password?</button></p>
+   </div>
+   <div class="forgot-password-section-container">
+      <span tabIndex="0" class="close"><i class="fas fa-times"></i></span>
+
+      <h2 class="title fp-sdfsd">Forgot Password</h2>
+      <form method="POST" id="forgot-password-form-container" class="su_form_cont">
+         <div class="su-input-item wks31">
+            <label for="fp_email">Email</label>
+            <input class="txt-field wks231" id="fp_email" name="fp_email" type="email" required />
+            <p class="error" id="fp_email_err"></p>
+         </div>
+
+         <input type="submit" id="forgot-password-submit-btn" class="sign-in-submit" name="forgot_password_submit"
+            value="Recover"></input></a>
+      </form>
+
    </div>
 </div>
 

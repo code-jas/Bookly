@@ -7,13 +7,14 @@
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
    <title>Book Shop | Bookly</title>
 
-    <!--google Fonts-->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+   <!--google Fonts-->
+   <link rel="preconnect" href="https://fonts.googleapis.com">
+   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+   <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
 
    <!-- import icons -->
-   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+   <link rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.1/css/all.min.css">
    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" />
 
@@ -31,353 +32,352 @@
 </head>
 
 <body>
-<!-- START | NAVIGATION BAR -->
-<header>
+   <!-- START | NAVIGATION BAR -->
+   <header>
 
-   <nav class="navbar">
-      <div class="logo">
-         <a href="index.html" class="branding">
-            <img src="../../assets/images/illustrations/book-icon.svg" alt="book icon" class="nav-image">
-            <h1 class="branding-text">BOOKLY</h1>
+      <nav class="navbar">
+         <div class="logo">
+            <a href="index.html" class="branding">
+               <img src="../../assets/images/illustrations/book-icon.svg" alt="book icon" class="nav-image">
+               <h1 class="branding-text">BOOKLY</h1>
+            </a>
+         </div>
+
+         <div class="right-navbar">
+
+            <div class="nav-menu">
+               <ul class="menu">
+                  <li class="nav-item"><a href="index.html" accesskey="1" tabindex="1" class="nav-link">Home</a></li>
+                  <li class="nav-item"><a href="book-shop.html" accesskey="2" tabindex="2" class="nav-link">Book
+                        Shop</a>
+                  </li>
+                  <li class="nav-item"><a href="about-us.html" accesskey="3" tabindex="3" class="nav-link">About us</a>
+                  </li>
+               </ul>
+            </div>
+            <div class="session-false">
+               <button class="sign-in-btn">SIGN IN</button>
+               <button class="sign-up-btn">SIGN UP</button>
+            </div>
+            <div class="session-true">
+               <span class="material-symbols-outlined">
+                  shopping_cart
+               </span>
+               <span class="material-symbols-outlined">
+                  notifications
+               </span>
+               <button>
+                  <span class="material-symbols-outlined profile-button">
+                     person
+                  </span>
+
+               </button>
+            </div>
+
+
+         </div>
+
+
+         <div class="hamburger">
+            <span class="burger-bar"></span>
+            <span class="burger-bar"></span>
+            <span class="burger-bar"></span>
+         </div>
+
+
+      </nav>
+   </header>
+
+   <!-- END | NAVIGATION BAR -->
+
+
+
+   <!--START | FILTER DROPDOWN-->
+   <section id="filter-search-section">
+      <div class="filter-search-container">
+         <div class="filter-dropdown-container">
+            <button id="filter-btn" class="filter "><i class="fa-solid fa-filter"></i>Filter</button>
+            <div id="filter-dropdown" class="filter-dropdown-content ">
+               <div class="filter-grid-container">
+                  <div class="filter-grid-content">
+                     <h6 id="category-1" style="padding-left: 5px; padding-right: 5px">Biographies & Memoirs</h6>
+                     <a href="#" id="cat1-genre1">Arts & Literature</a>
+                     <a href="#" id="cat1-genre2">Cultural</a>
+                     <a href="#" id="cat1-genre3">European</a>
+                     <a href="#" id="cat1-genre4">Historical</a>
+                     <a href="#" id="cat1-genre5">Leaders & Notable People</a>
+                     <a href="#" id="cat1-all">Shop All</a>
+                  </div>
+
+                  <div class="filter-grid-content">
+                     <h6 id="category-1" style="padding-left: 5px; padding-right: 5px">Children's</h6>
+                     <a href="#" id="cat1-genre1">Action & Adventure</a>
+                     <a href="#" id="cat1-genre2">Activity Books</a>
+                     <a href="#" id="cat1-genre3">Animals</a>
+                     <a href="#" id="cat1-genre4">Cars & Trucks</a>
+                     <a href="#" id="cat1-genre5">Classics</a>
+                     <a href="#" id="cat1-all">Shop All</a>
+                  </div>
+
+                  <div class="filter-grid-content">
+                     <h6 id="category-1" style="padding-left: 5px; padding-right: 5px">Education & Reference</h6>
+                     <a href="#" id="cat1-genre1">Catalogs</a>
+                     <a href="#" id="cat1-genre2">Colleges</a>
+                     <a href="#" id="cat1-genre3">Curriculum</a>
+                     <a href="#" id="cat1-genre4">Dictonaries</a>
+                     <a href="#" id="cat1-genre5">Education</a>
+                     <a href="#" id="cat1-all">Shop All</a>
+                  </div>
+
+                  <div class="filter-grid-content">
+                     <h6 id="category-1" style="padding-left: 5px; padding-right: 5px">History</h6>
+                     <a href="#" id="cat1-genre1">African</a>
+                     <a href="#" id="cat1-genre2">Ancient</a>
+                     <a href="#" id="cat1-genre3">Asian</a>
+                     <a href="#" id="cat1-genre4">Black History</a>
+                     <a href="#" id="cat1-genre5">Canadian</a>
+                     <a href="#" id="cat1-all">Shop All</a>
+                  </div>
+
+                  <div class="filter-grid-content">
+                     <h6 id="category-1" style="padding-left: 5px; padding-right: 5px">Literature & Fiction</h6>
+                     <a href="#" id="cat1-genre1">Classics</a>
+                     <a href="#" id="cat1-genre2">Contemporary</a>
+                     <a href="#" id="cat1-genre3">Genre Fiction</a>
+                     <a href="#" id="cat1-all">Shop All</a>
+                  </div>
+
+                  <div class="filter-grid-content">
+                     <h6 id="category-1" style="padding-left: 5px; padding-right: 5px">Mystery & Suspense</h6>
+                     <a href="#" id="cat1-genre1">Conspiracy</a>
+                     <a href="#" id="cat1-genre2">Crime</a>
+                     <a href="#" id="cat1-genre3">Detective</a>
+                     <a href="#" id="cat1-genre4">Mysteries</a>
+                     <a href="#" id="cat1-all">Shop All</a>
+                  </div>
+
+                  <div class="filter-grid-content">
+                     <h6 id="category-1" style="padding-left: 5px; padding-right: 5px">Religion & Spirituality</h6>
+                     <a href="#" id="cat1-genre1">Agnosticism</a>
+                     <a href="#" id="cat1-genre2">Astrology</a>
+                     <a href="#" id="cat1-genre3">Atheism</a>
+                     <a href="#" id="cat1-genre4">Buddhism</a>
+                     <a href="#" id="cat1-genre5">Christian</a>
+                     <a href="#" id="cat1-all">Shop All</a>
+                  </div>
+
+                  <div class="filter-grid-content">
+                     <h6 id="category-1" style="padding-left: 5px; padding-right: 5px">More Categories</h6>
+                     <a href="#" id="cat1-genre1">Romance</a>
+                     <a href="#" id="cat1-genre2">Sci-Fi & Fantasy</a>
+                     <a href="#" id="cat1-genre3">Science & Math</a>
+                     <a href="#" id="cat1-genre4">Teen & Young Adult</a>
+                     <a href="#" id="cat1-genre5">Health, Fitness & Dieting</a>
+                     <a href="#" id="cat1-all">Shop All</a>
+                  </div>
+               </div>
+            </div>
+         </div>
+
+         <div class="search-container">
+            <form action="" style="display: flex;">
+               <input class="search-field" type="search" id="gsearch" name="gsearch" placeholder="Search for books">
+               <i class="magnifying fa-solid fa-magnifying-glass"></i>
+            </form>
+         </div>
+      </div>
+   </section>
+   <!-- END | Filter Dropdown-->
+
+   <!-- START | BOOK SHOP GALLERY -->
+   <section id="bookshop-gallery-section">
+      <div class="grid-container">
+         <div class="grid-content">
+            <a id="book-links" href="../../draft/sharinanginlab/bookdescription.html">
+               <img class="img-book" src="../../assets/images/bookshop-gallery/6.jpg" alt="" />
+               <div class="book-content">
+                  <h6 class="book-title">The Dinosaur Lords</h6>
+                  <p class="authors">Jhon Carlos</p>
+                  <p class="price">₱250</p>
+               </div>
+            </a>
+         </div>
+         <div class="grid-content">
+            <img class="img-book" src="../../assets/images/bookshop-gallery/f4.jpg" alt="" />
+            <div class="book-content">
+               <h6 class="book-title">The Girl Who Lived</h6>
+               <p class="authors">Tiffany Go</p>
+               <p class="price">₱250</p>
+            </div>
+         </div>
+
+         <div class="grid-content">
+            <img class="img-book" src="../../assets/images/bookshop-gallery/Loloko.jpg" alt="" />
+            <div class="book-content">
+               <h6 class="book-title">On The House</h6>
+               <p class="authors">Angelo Silvestre</p>
+               <p class="price">₱250</p>
+            </div>
+         </div>
+
+         <div class="grid-content">
+            <img class="img-book" src="../../assets/images/bookshop-gallery/Robin.jpg" alt="" />
+            <div class="book-content">
+               <h6 class="book-title">Fool's Errand</h6>
+               <p class="authors">Sharina Atienza</p>
+               <p class="price">₱250</p>
+            </div>
+         </div>
+
+         <div class="grid-content">
+            <img class="img-book" src="../../assets/images/bookshop-gallery/Sell1.jpg" alt="" />
+            <div class="book-content">
+               <h6 class="book-title">Night: The Last Of The Gods</h6>
+               <p class="authors">Sharina Atienza</p>
+               <p class="price">₱250</p>
+            </div>
+         </div>
+
+         <div class="grid-content">
+            <img class="img-book" src="../../assets/images/bookshop-gallery/Sell2.jpg" alt="" />
+            <div class="book-content">
+               <h6 class="book-title">Stephen King: Salem's Lot</h6>
+               <p class="authors">Sharina Atienza</p>
+               <p class="price">₱250</p>
+            </div>
+         </div>
+
+         <div class="grid-content">
+            <img class="img-book" src="../../assets/images/bookshop-gallery/Sell3.jpg" alt="" />
+            <div class="book-content">
+               <h6 class="book-title">Front Lines</h6>
+               <p class="authors">Sharina Atienza</p>
+               <p class="price">₱250</p>
+            </div>
+         </div>
+
+         <div class="grid-content">
+            <img class="img-book" src="../../assets/images/bookshop-gallery/shshh.jpg" alt="" />
+            <div class="book-content">
+               <h6 class="book-title">The Book Thief</h6>
+               <p class="authors">Sharina Atienza</p>
+               <p class="price">₱250</p>
+            </div>
+         </div>
+
+      </div>
+   </section>
+
+   <section id="pagination-section">
+      <div class="pagination-container">
+         <div class="pagination">
+            <a href="#"><i class="fa-solid fa-angle-left"></i></a>
+            <a href="#">1</a>
+            <a class="active" href="#">2</a>
+            <a href="#">3</a>
+            <a href="#">4</a>
+            <a href="#">5</a>
+            <a href="#">6</a>
+            <a href="#"><i class="fa-solid fa-angle-right"></i></a>
+         </div>
+      </div>
+   </section>
+
+   <!-- END | BOOK SHOP GALLERY -->
+
+   <!-- START | FOOTER -->
+   <footer class="footer-wrapper">
+      <div class="footer-content">
+         <div class="footer-text">
+            <h1 class="footer-header">
+               Stay Connected
+            </h1>
+            <p class="footer-parag">
+               Books lists, affordable prices, special offers, and more - right in your
+               inbox!
+            </p>
+         </div>
+
+         <div class="footer-menu-container">
+
+            <div class="footer-menu-item">
+               <p class="footer-menu-item-header">ABOUT</p>
+               <ul class="footer-list">
+                  <li class="footer-item"><a href="#" class="footer-link">Contact Us</a></li>
+                  <li class="footer-item"><a href="#" class="footer-link">Team</a></li>
+                  <li class="footer-item"><a href="#" class="footer-link">Policy </a></li>
+               </ul>
+            </div>
+
+            <div class="footer-menu-item">
+               <p class="footer-menu-item-header">EXPLORE</p>
+               <ul class="footer-list">
+                  <li class="footer-item"><a href="#" class="footer-link">Home</a></li>
+                  <li class="footer-item"><a href="#" class="footer-link">Book Shop</a></li>
+                  <li class="footer-item"><a href="#" class="footer-link">About Us </a></li>
+               </ul>
+            </div>
+
+            <div class="footer-menu-item">
+               <p class="footer-menu-item-header">ACCOUNT</p>
+               <ul class="footer-list">
+                  <li class="footer-item"><a href="#" class="footer-link">Account Overview</a></li>
+                  <li class="footer-item"><a href="#" class="footer-link">Edit Profile</a></li>
+                  <li class="footer-item"><a href="#" class="footer-link">Change Password</a></li>
+               </ul>
+            </div>
+         </div>
+
+      </div>
+      <div class="line-break"></div>
+
+      <div class="footer-socmed-link">
+         <a href="https://www.facebook.com/angelo.silvestre.315">
+            <div class="icon facebook">
+
+               <div class="tooltip">Facebook</div>
+               <span><i class="fab fa-facebook-f"></i></span>
+
+            </div>
+         </a>
+         <a href="https://twitter.com/CodeJs04">
+            <div class="icon twitter">
+               <div class="tooltip">Twitter</div>
+               <span><i class="fab fa-twitter"></i></span>
+            </div>
+         </a>
+         <a href="https://www.instagram.com/iamgroot04/">
+            <div class="icon instagram">
+               <div class="tooltip">Instagram</div>
+               <span><i class="fab fa-instagram"></i></span>
+            </div>
          </a>
       </div>
- 
-      <div class="right-navbar">
- 
-         <div class="nav-menu">
-            <ul class="menu">
-               <li class="nav-item"><a href="index.html" accesskey="1" tabindex="1" class="nav-link">Home</a></li>
-               <li class="nav-item"><a href="book-shop.html" accesskey="2" tabindex="2" class="nav-link">Book
-                     Shop</a>
-               </li>
-               <li class="nav-item"><a href="about-us.html" accesskey="3" tabindex="3" class="nav-link">About us</a>
-               </li>
-            </ul>
-         </div>
-         <div class="session-false">
-            <button class="sign-in-btn">SIGN IN</button>
-            <button class="sign-up-btn">SIGN UP</button>
-         </div>
-         <div class="session-true">
-            <span class="material-symbols-outlined">
-               shopping_cart
-            </span>
-            <span class="material-symbols-outlined">
-               notifications
-            </span>
-            <button>
-               <span class="material-symbols-outlined profile-button">
-                  person
-               </span>
- 
-            </button>
-         </div>
- 
- 
-      </div>
- 
- 
-      <div class="hamburger">
-         <span class="burger-bar"></span>
-         <span class="burger-bar"></span>
-         <span class="burger-bar"></span>
-      </div>
- 
- 
-   </nav>
- </header>
- 
- <!-- END | NAVIGATION BAR -->
 
-
-
-<!--START | FILTER DROPDOWN-->
-<section id="filter-search-section">
-<div class="filter-search-container">
-   <div  class="filter-dropdown-container">
-       <button  id="filter-btn" class="filter "><i class="fa-solid fa-filter"></i>Filter</button>
-       <div id="filter-dropdown" class="filter-dropdown-content ">
-           <div class="filter-grid-container">
-               <div class="filter-grid-content">
-                   <h6 id="category-1" style="padding-left: 5px; padding-right: 5px">Biographies & Memoirs</h6>
-                   <a href="#" id="cat1-genre1">Arts & Literature</a>
-                   <a href="#" id="cat1-genre2">Cultural</a>
-                   <a href="#" id="cat1-genre3">European</a>
-                   <a href="#" id="cat1-genre4">Historical</a>
-                   <a href="#" id="cat1-genre5">Leaders & Notable People</a>
-                   <a href="#" id="cat1-all">Shop All</a>
-               </div>
-
-               <div class="filter-grid-content">
-                   <h6 id="category-1" style="padding-left: 5px; padding-right: 5px">Children's</h6>
-                   <a href="#" id="cat1-genre1">Action & Adventure</a>
-                   <a href="#" id="cat1-genre2">Activity Books</a>
-                   <a href="#" id="cat1-genre3">Animals</a>
-                   <a href="#" id="cat1-genre4">Cars & Trucks</a>
-                   <a href="#" id="cat1-genre5">Classics</a>
-                   <a href="#" id="cat1-all">Shop All</a>
-               </div>
-
-               <div class="filter-grid-content">
-                   <h6 id="category-1" style="padding-left: 5px; padding-right: 5px">Education & Reference</h6>
-                   <a href="#" id="cat1-genre1">Catalogs</a>
-                   <a href="#" id="cat1-genre2">Colleges</a>
-                   <a href="#" id="cat1-genre3">Curriculum</a>
-                   <a href="#" id="cat1-genre4">Dictonaries</a>
-                   <a href="#" id="cat1-genre5">Education</a>
-                   <a href="#" id="cat1-all">Shop All</a>
-               </div>
-
-               <div class="filter-grid-content">
-                   <h6 id="category-1" style="padding-left: 5px; padding-right: 5px">History</h6>
-                   <a href="#" id="cat1-genre1">African</a>
-                   <a href="#" id="cat1-genre2">Ancient</a>
-                   <a href="#" id="cat1-genre3">Asian</a>
-                   <a href="#" id="cat1-genre4">Black History</a>
-                   <a href="#" id="cat1-genre5">Canadian</a>
-                   <a href="#" id="cat1-all">Shop All</a>
-               </div>
-
-               <div class="filter-grid-content">
-                   <h6 id="category-1" style="padding-left: 5px; padding-right: 5px">Literature & Fiction</h6>
-                   <a href="#" id="cat1-genre1">Classics</a>
-                   <a href="#" id="cat1-genre2">Contemporary</a>
-                   <a href="#" id="cat1-genre3">Genre Fiction</a>
-                   <a href="#" id="cat1-all">Shop All</a>
-               </div>
-
-               <div class="filter-grid-content">
-                   <h6 id="category-1" style="padding-left: 5px; padding-right: 5px">Mystery & Suspense</h6>
-                   <a href="#" id="cat1-genre1">Conspiracy</a>
-                   <a href="#" id="cat1-genre2">Crime</a>
-                   <a href="#" id="cat1-genre3">Detective</a>
-                   <a href="#" id="cat1-genre4">Mysteries</a>
-                   <a href="#" id="cat1-all">Shop All</a>
-               </div>
-
-               <div class="filter-grid-content">
-                   <h6 id="category-1" style="padding-left: 5px; padding-right: 5px">Religion & Spirituality</h6>
-                   <a href="#" id="cat1-genre1">Agnosticism</a>
-                   <a href="#" id="cat1-genre2">Astrology</a>
-                   <a href="#" id="cat1-genre3">Atheism</a>
-                   <a href="#" id="cat1-genre4">Buddhism</a>
-                   <a href="#" id="cat1-genre5">Christian</a>
-                   <a href="#" id="cat1-all">Shop All</a>
-               </div>
-
-               <div class="filter-grid-content">
-                   <h6 id="category-1" style="padding-left: 5px; padding-right: 5px">More Categories</h6>
-                   <a href="#" id="cat1-genre1">Romance</a>
-                   <a href="#" id="cat1-genre2">Sci-Fi & Fantasy</a>
-                   <a href="#" id="cat1-genre3">Science & Math</a>
-                   <a href="#" id="cat1-genre4">Teen & Young Adult</a>
-                   <a href="#" id="cat1-genre5">Health, Fitness & Dieting</a>
-                   <a href="#" id="cat1-all">Shop All</a>
-               </div>
-           </div>
-       </div>
-   </div>
-
-   <div class="search-container">
-       <form action="" style="display: flex;">
-           <input class="search-field" type="search" id="gsearch" name="gsearch" placeholder="Search for books">
-           <i class="magnifying fa-solid fa-magnifying-glass"></i>
-       </form>
-   </div>
-</div>
-</section>
-<!-- END | Filter Dropdown-->
-
-<!-- START | BOOK SHOP GALLERY -->
-<section id="bookshop-gallery-section"> 
-<div class="grid-container">
-   <div class="grid-content">
-       <a id="book-links" href="../../draft/sharinanginlab/bookdescription.html">
-       <img class="img-book" src="../../assets/images/bookshop-gallery/6.jpg" alt=""/>
-       <div class="book-content">
-           <h6 class="book-title">The Dinosaur Lords</h6> 
-           <p class="authors">Jhon Carlos</p>
-           <p class="price">₱250</p>
-       </div>
-       </a>
-      
-   </div>
-   <div class="grid-content">
-       <img class="img-book" src="../../assets/images/bookshop-gallery/f4.jpg" alt=""/>
-       <div class="book-content">
-           <h6 class="book-title">The Girl Who Lived</h6> 
-           <p class="authors">Tiffany Go</p>
-           <p class="price">₱250</p>
-       </div>
-   </div>
-
-   <div class="grid-content">
-       <img class="img-book" src="../../assets/images/bookshop-gallery/Loloko.jpg" alt=""/>
-       <div class="book-content">
-           <h6 class="book-title">On The House</h6> 
-           <p class="authors">Angelo Silvestre</p>
-           <p class="price">₱250</p>
-       </div>
-   </div>
-
-   <div class="grid-content">
-       <img class="img-book" src="../../assets/images/bookshop-gallery/Robin.jpg" alt=""/>
-       <div class="book-content">
-           <h6 class="book-title">Fool's Errand</h6> 
-           <p class="authors">Sharina Atienza</p>
-           <p class="price">₱250</p>
-       </div>
-   </div>
-
-   <div class="grid-content">
-       <img class="img-book" src="../../assets/images/bookshop-gallery/Sell1.jpg" alt=""/>
-       <div class="book-content">
-           <h6 class="book-title">Night: The Last Of The Gods</h6> 
-           <p class="authors">Sharina Atienza</p>
-           <p class="price">₱250</p>
-       </div>
-   </div>
-
-   <div class="grid-content">
-       <img class="img-book" src="../../assets/images/bookshop-gallery/Sell2.jpg" alt=""/>
-       <div class="book-content">
-           <h6 class="book-title">Stephen King: Salem's Lot</h6> 
-           <p class="authors">Sharina Atienza</p>
-           <p class="price">₱250</p>
-       </div>
-   </div>
-
-   <div class="grid-content">
-       <img class="img-book" src="../../assets/images/bookshop-gallery/Sell3.jpg" alt=""/>
-       <div class="book-content">
-           <h6 class="book-title">Front Lines</h6> 
-           <p class="authors">Sharina Atienza</p>
-           <p class="price">₱250</p>
-       </div>
-   </div>
-
-   <div class="grid-content">
-       <img class="img-book" src="../../assets/images/bookshop-gallery/shshh.jpg" alt=""/>
-       <div class="book-content">
-           <h6 class="book-title">The Book Thief</h6> 
-           <p class="authors">Sharina Atienza</p>
-           <p class="price">₱250</p>
-       </div>
-   </div>
-
-</div>
-</section>
-
-<section id="pagination-section">
-   <div class="pagination-container">
-       <div class="pagination">
-           <a href="#"><i class="fa-solid fa-angle-left"></i></a>
-           <a href="#">1</a>
-           <a class="active" href="#">2</a>
-           <a href="#">3</a>
-           <a href="#">4</a>
-           <a href="#">5</a>
-           <a href="#">6</a>
-           <a href="#"><i class="fa-solid fa-angle-right"></i></a>
-       </div>
-   </div>
-</section>
-
-<!-- END | BOOK SHOP GALLERY -->
-
-<!-- START | FOOTER -->
-<footer class="footer-wrapper">
-   <div class="footer-content">
-      <div class="footer-text">
-         <h1 class="footer-header">
-            Stay Connected
-         </h1>
-         <p class="footer-parag">
-            Books lists, affordable prices, special offers, and more - right in your
-            inbox!
+      <div class="footer-copyright">
+         <p class="footer-copyright-text">
+            © 2020 Bookly, Inc. All rights reserved.
          </p>
       </div>
 
-      <div class="footer-menu-container">
-
-         <div class="footer-menu-item">
-            <p class="footer-menu-item-header">ABOUT</p>
-            <ul class="footer-list">
-               <li class="footer-item"><a href="#" class="footer-link">Contact Us</a></li>
-               <li class="footer-item"><a href="#" class="footer-link">Team</a></li>
-               <li class="footer-item"><a href="#" class="footer-link">Policy </a></li>
-            </ul>
-         </div>
-
-         <div class="footer-menu-item">
-            <p class="footer-menu-item-header">EXPLORE</p>
-            <ul class="footer-list">
-               <li class="footer-item"><a href="#" class="footer-link">Home</a></li>
-               <li class="footer-item"><a href="#" class="footer-link">Book Shop</a></li>
-               <li class="footer-item"><a href="#" class="footer-link">About Us </a></li>
-            </ul>
-         </div>
-
-         <div class="footer-menu-item">
-            <p class="footer-menu-item-header">ACCOUNT</p>
-            <ul class="footer-list">
-               <li class="footer-item"><a href="#" class="footer-link">Account Overview</a></li>
-               <li class="footer-item"><a href="#" class="footer-link">Edit Profile</a></li>
-               <li class="footer-item"><a href="#" class="footer-link">Change Password</a></li>
-            </ul>
-         </div>
-      </div>
-
-   </div>
-   <div class="line-break"></div>
-
-   <div class="footer-socmed-link">
-      <a href="https://www.facebook.com/angelo.silvestre.315">
-         <div class="icon facebook">
-
-            <div class="tooltip">Facebook</div>
-            <span><i class="fab fa-facebook-f"></i></span>
-
-         </div>
-      </a>
-      <a href="https://twitter.com/CodeJs04">
-         <div class="icon twitter">
-            <div class="tooltip">Twitter</div>
-            <span><i class="fab fa-twitter"></i></span>
-         </div>
-      </a>
-      <a href="https://www.instagram.com/iamgroot04/">
-         <div class="icon instagram">
-            <div class="tooltip">Instagram</div>
-            <span><i class="fab fa-instagram"></i></span>
-         </div>
-      </a>
-   </div>
-
-   <div class="footer-copyright">
-      <p class="footer-copyright-text">
-         © 2020 Bookly, Inc. All rights reserved.
-      </p>
-   </div>
 
 
+   </footer>
 
-</footer>
 
+   <!-- END | FOOTER -->
 
-<!-- END | FOOTER -->
+   <script src="./assets/javascript/global.js"></script>
+   <script>
+      // Get the button, and when the user clicks on it, execute myFunction
+      document.getElementById("filter-btn").onclick = function () { myFunction() };
 
-<script src="./assets/javascript/global.js"></script>
-<script>
-   // Get the button, and when the user clicks on it, execute myFunction
-   document.getElementById("filter-btn").onclick = function() {myFunction()};
-
-   /* myFunction toggles between adding and removing the show class, which is used to hide and show the dropdown content */
-   function myFunction() {
-   document.getElementById("filter-dropdown").classList.toggle("show");
-   }
-</script>
-<script src="https://kit.fontawesome.com/a0043d9bc2.js" crossorigin="anonymous"></script>
+      /* myFunction toggles between adding and removing the show class, which is used to hide and show the dropdown content */
+      function myFunction() {
+         document.getElementById("filter-dropdown").classList.toggle("show");
+      }
+   </script>
+   <script src="https://kit.fontawesome.com/a0043d9bc2.js" crossorigin="anonymous"></script>
 
 
 </body>

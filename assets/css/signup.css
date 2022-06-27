@@ -71,6 +71,7 @@ h3.title {
 .delete-account-section-container,
 .sign-in-section-container,
 .sign-up-section-container,
+.forgot-password-section-container,
 .done-section {
     position: absolute;
     top: 50%;
@@ -85,7 +86,7 @@ h3.title {
 }
 
 .sign-in-section-container {
-    height: 370px;
+    height: auto;
 }
 
 .delete-account-section-container {
@@ -191,6 +192,10 @@ h3.title {
     margin-bottom: 20px;
 }
 
+.fp-sdfsd {
+    margin-bottom: 40px;
+}
+
 /* .su_terms_agreement {} */
 
 /* .footer-content {
@@ -264,14 +269,17 @@ h3.title {
 
 
 
-a.link-fpw {
-    float: right;
-    font-size: 8px;
+.link-fpw {
+    all: unset;
     color: var(--dark-blue-dark);
-    text-decoration: none;
+    text-align: center;
+    width: 100%;
+    margin: 0 auto;
+    font-size: 12px;
+    cursor: pointer;
 }
 
-a.link-fpw:hover {
+.link-fpw:hover {
     color: var(--blue);
 
 }

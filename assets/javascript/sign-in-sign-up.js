@@ -319,8 +319,59 @@ $('#sign-in-btn').on('click', function() {
    $('.sign-up-modal-container-bg').fadeOut('fast');
  
     $('.sign-in-section-container-bg').fadeIn('fast');
-   //  $('.sign-up-section').show();
-   //  $('.verify-email-section').hide();
+    $('.sign-in-section-container').show();
+    $('.forgot-password-section-container').hide();
 });
 
 
+$('#goto-forgot-password-btn').on('click', function() {
+  
+   $('.sign-in-section-container').hide();
+   $('.forgot-password-section-container').show();
+});
+
+
+
+
+
+
+$('#forgot-password-form-container').on('submit', function(e) {
+   e.preventDefault();
+   if($('#fp_email').val() == ''){
+      $('#fp_email_err').html('Email is required');
+   }else { 
+      $('#fp_email_err').html('');
+    
+      var email = $('#fp_email').val();
+      var form_data_fp = new FormData(this);
+  
+      $.ajax({
+         url: './assets/php/reset-password.php',
+         method: "POST",                     
+         data: form_data_fp,
+         dataType: "JSON",
+         processData:false,
+         contentType:false,
+         success: function(response) {
+
+            const fp_existEmail = {
+               "status": "emailExist",
+            };
+   
+
+            if(JSON.stringify(response.status) == JSON.stringify(fp_existEmail.status)){
+               // Proceeed to reset password
+              
+               console.log("Email exist");
+            }else{
+               $('#fp_email_err').html('Email does not exist');
+               console.log("Email does not exist");
+            }
+         },
+         error: function (request, status, error) {
+            console.log(request.responseText);
+         }
+      })
+   }
+
+});
