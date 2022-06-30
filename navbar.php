@@ -55,7 +55,7 @@
                   notifications
                </span> -->
             <ul>
-               <li class="nr_li cart_dd_main">
+               <li type="button" class="nr_li cart_dd_main">
                   <span class="material-symbols-outlined ic-prof-view-tgl">
                      shopping_cart
                   </span>
@@ -76,68 +76,20 @@
                               </div>
                            </li>
                         </a>
-                        <a href="#">
-                           <li class="cart-item-list">
-                              <div class="cart-item-img-card">
-                                 <img src="angelo.jpg" alt="">
-                              </div>
-                              <div class="cart-item-details">
-                                 <h3>Parcel delivered</h3>
-                                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quisquam,
-                                    quia.</p>
-                              </div>
-                           </li>
-                        </a>
-                        <a href="#">
-                           <li class="cart-item-list">
-                              <div class="cart-item-img-card">
-                                 <img src="angelo.jpg" alt="">
-                              </div>
-                              <div class="cart-item-details">
-                                 <h3>Parcel delivered</h3>
-                                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quisquam,
-                                    quia.</p>
-                              </div>
-                           </li>
-                        </a>
-                        <a href="#">
-                           <li class="cart-item-list">
-                              <div class="cart-item-img-card">
-                                 <img src="angelo.jpg" alt="">
-                              </div>
-                              <div class="cart-item-details">
-                                 <h3>Parcel delivered</h3>
-                                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quisquam,
-                                    quia.</p>
-                              </div>
-                           </li>
-                        </a>
-                        <a href="#">
-                           <li class="cart-item-list">
-                              <div class="cart-item-img-card">
-                                 <img src="angelo.jpg" alt="">
-                              </div>
-                              <div class="cart-item-details">
-                                 <h3>Parcel delivered</h3>
-                                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quisquam,
-                                    quia.</p>
-                              </div>
-                           </li>
-                        </a>
-                     </ul>
+
 
                   </div>
                </li>
-               <li class="nr_li notif_dd_main">
+               <li type="button" class="nr_li notif_dd_main">
                   <span class="material-symbols-outlined  ic-prof-view-tgl">
                      notifications
                   </span>
 
                   <div class="notif_dd_menu">
+                     <h1>Recently Notification</h1>
+                     <ul id="notif-retriever">
 
-                     <ul>
-                        <h1>Recently Notification</h1>
-                        <a href="#">
+                        <!-- <a href="#">
                            <li class="notif-item-list">
                               <div class="notif-item-img-card">
                                  <img src="angelo.jpg" alt="">
@@ -148,64 +100,23 @@
                                     quia.</p>
                               </div>
                            </li>
-                        </a>
-                        <a href="#">
-                           <li class="notif-item-list">
-                              <div class="notif-item-img-card">
-                                 <img src="angelo.jpg" alt="">
-                              </div>
-                              <div class="notif-item-details">
-                                 <h3>Parcel delivered</h3>
-                                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quisquam,
-                                    quia.</p>
-                              </div>
-                           </li>
-                        </a>
-                        <a href="#">
-                           <li class="notif-item-list">
-                              <div class="notif-item-img-card">
-                                 <img src="angelo.jpg" alt="">
-                              </div>
-                              <div class="notif-item-details">
-                                 <h3>Parcel delivered</h3>
-                                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quisquam,
-                                    quia.</p>
-                              </div>
-                           </li>
-                        </a>
-                        <a href="#">
-                           <li class="notif-item-list">
-                              <div class="notif-item-img-card">
-                                 <img src="" alt="">
-                              </div>
-                              <div class="notif-item-details">
-                                 <h3>Parcel delivered</h3>
-                                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quisquam,
-                                    quia.</p>
-                              </div>
-                           </li>
-                        </a>
-                        <a href="#">
-                           <li class="notif-item-list">
-                              <div class="notif-item-img-card">
-                                 <img src="angelo.jpg" alt="">
-                              </div>
-                              <div class="notif-item-details">
-                                 <h3>Parcel delivered</h3>
-                                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quisquam,
-                                    quia.</p>
-                              </div>
-                           </li>
-                        </a>
+                        </a> -->
 
+                        <!-- return this if there is no notification -->
 
                      </ul>
+                     <div id="empty-notif-nav" class="empty-notif">
+                        <div class="emp_notif_img_card">
+                           <img src="assets/images/illustrations/empty-notif.png" alt="empty notification">
+                           <p class="emp_notif_text">No notification</p>
+                        </div>
+                     </div>
 
                   </div>
 
                </li>
 
-               <li class="nr_li prof_dd_main">
+               <li type="button" class="nr_li prof_dd_main">
                   <div class="profile-card-nav-br">
                      <img src="<?php echo $profile_img_db;?>"
                         alt="<?php echo ucfirst($firstname) . ' '. ucfirst($lastname);?>">
@@ -372,8 +283,9 @@ include('assets/php/sign_up_verification.php');
 </div>
 
 
-
-
+<script>
+var user_id = <?php echo json_encode($user_id); ?>;
+</script>
 
 
 

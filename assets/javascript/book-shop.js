@@ -75,16 +75,16 @@ function displayIslandGroupButtons(menuBtns) {
 
 
 
-function truncateWords(shortDesc) {
-   const words = shortDesc.split(' ');
-   const amount = 15, tail = '...';
-
-   if (amount >= words.length) {
+function truncateWords(shortDesc,amount) {
+   const letters = shortDesc.split('');
+   const tail = '...';
+  
+   if (amount >= letters.length) {
       return shortDesc;
    }
 
-   const truncated = words.slice(0, amount);
-   return `${truncated.join(' ')}${tail}`;
+   const truncated = letters.slice(0, amount);
+   return `${truncated.join('')}${tail}`;
 }
 
 
@@ -94,60 +94,62 @@ function animateImage(images) {
 
 
 
-function searchButton() {
+
    // declaration of DOM
    const searchIcon = document.querySelector('.icon-font-awesome');
    const searchFest = document.querySelector('.search-festival');
    const btns = document.querySelectorAll(".filter-btn");
-   const searchBar = document.querySelector('#search-inp-fest');
+   const searchBar = document.querySelector('#gsearch');
    const searchEmptyEl = document.querySelector('#search-result-empty-state');
    const displayInputSearchEl = document.querySelector('#search-empty-state-keyword');
 
    var clickCount = 0;
    //show and hide the search button
-   searchIcon.onclick = function () {
-      searchFest.classList.toggle('search-active');
-      btns.forEach((btn) => btn.classList.toggle('search-hide'))
-      ++clickCount;
+   // searchIcon.onclick = function () {
+   //    searchFest.classList.toggle('search-active');
+   //    btns.forEach((btn) => btn.classList.toggle('search-hide'))
+   //    ++clickCount;
       
-      if (clickCount % 2 == 0) {
-         searchEmptyEl.style.display = 'none';
-         document.getElementById('search-inp-fest').value = '';
-         const acts = document.querySelector('.active');
+   //    if (clickCount % 2 == 0) {
+   //       searchEmptyEl.style.display = 'none';
+   //       document.getElementById('search-inp-fest').value = '';
+   //       const acts = document.querySelector('.active');
 
-         const category = acts.innerText.toLowerCase();
+   //       const category = acts.innerText.toLowerCase();
 
-         const landGrpCategory = festivalContent.filter((landItem) => {
-            if (landItem.islandGroup === category) {
-               return landItem;
+   //       const landGrpCategory = festivalContent.filter((landItem) => {
+   //          if (landItem.islandGroup === category) {
+   //             return landItem;
 
-            }
+   //          }
 
-         });
-         if (category === 'all') {
-            displayFestivalItems(festivalContent);
+   //       });
+   //       if (category === 'all') {
+   //          displayFestivalItems(festivalContent);
 
-         }
-         else {
-            displayFestivalItems(landGrpCategory);
-         }
+   //       }
+   //       else {
+   //          displayFestivalItems(landGrpCategory);
+   //       }
 
-      } else {
+   //    } else {
 
-      }
-   }
+   //    }
+   // }
 
   
    //functions for search button
    searchBar.addEventListener('keyup', (e) => {
-
+ 
       const searchString = e.target.value;
       // console.log(searchString);
 
       displayInputSearchEl.innerHTML = searchString;
-      const filteredSearchFestival = festivalContent.filter((festival) => {
+      const filteredSearchFestival = bookContentList.filter((festival) => {
          return (
-            festival.title.toLowerCase().includes(searchString.toLowerCase())
+            festival.title.toLowerCase().includes(searchString.toLowerCase()) ||
+            festival.author.toLowerCase().includes(searchString.toLowerCase()) ||
+            festival.price.toLowerCase().includes(searchString.toLowerCase())
          );
       });
       festivalFoundCount = filteredSearchFestival.length;
@@ -162,7 +164,6 @@ function searchButton() {
    });
 
 
-}
 
 
 
@@ -173,6 +174,24 @@ const closeSearchInput = () => {
    displayFestivalItems(festivalContent);
 }
 
+
+// function  to display title what's in the url 
+
+let urlBookCat  = new URL(window.location.href);
+let searchParamsBooks  = new URLSearchParams(urlBookCat.search);
+
+let bookGenreKey = searchParamsBooks.get('genre');
+let bookCategoryKey = searchParamsBooks.get('book-category');
+
+if(bookGenreKey !== null) {
+   $('#header-title-dynamic').html(bookGenreKey);
+}
+
+if(bookCategoryKey !== null) {
+   $('#header-title-dynamic').html(bookCategoryKey);
+}
+
+// if()
 
 
 function goingUpBtn(){ 
@@ -230,3 +249,23 @@ function goingUpBtn(){
    };
 }
 
+document.getElementById("filter-btn").onclick = function() {myFunction()};
+
+/* myFunction toggles between adding and removing the show class, which is used to hide and show the dropdown content */
+function myFunction() {
+  document.getElementById("filter-dropdown").classList.toggle("show");
+}
+
+
+// let bookContentList = [];
+
+// var xhr  = new XMLHttpRequest();
+// xhr.open('POST', './assets/php/load-books.php');   
+// xhr.onload =  function() {
+//    bookContentList = xhr.responseText;
+//    console.log("imin");
+// }
+
+// xhr.send();
+
+console.log(bookContentList);

@@ -26,169 +26,79 @@
 
 </head>
 
+<body>
 
 
-<?php
+   <?php
    
    include("navbar.php");
-   
+
+   if($_SESSION["username"]) { 
+      $username = $_SESSION["username"];
+      $get_user_id = mysqli_query($conn , "SELECT id_user FROM account_user WHERE username='$username'");
+
+      $row = mysqli_fetch_assoc($get_user_id);
+      $user_id= $row["id_user"];
+   }
+
+
 ?>
 
-<!-- START | VIEW CART -->
-<div class="sidebar-wrapper-outer">
-   <div class="sidebar-wrapper">
-      <nav class="my_book_sidebar">
-         <h1 class="sidebar-header">My Book</h1>
-         <div class="sidebar_menu">
-            <a href="viewcart" class="sidebar-link">View
-               Cart</a>
-            <a href="orderstatus" class="sidebar-link sidebar-active">Order Status</a>
-            <a href="purchasehistory" class="sidebar-link">Purchase History</a>
-         </div>
-      </nav>
-      <div class="order_status_details_container" style="overflow-x:scroll;">
-         <div class="order_status_details_header">
-            <h1>Order Status</h1>
-         </div>
-         <div class="sidebar_line_break"></div>
-         <section class="order_status_tbl_cont">
-            <div class="tbl-header-cont">
-               <table cellpadding="0" cellspacing="0" border="0" class="tbl_head">
-                  <thead class="thead_os">
-                     <tr class="tr_os">
-                        <th class="td_os_title">Book</th>
-                        <th>Price</th>
-                        <th>Date Ordered</th>
-                        <th>Status</th>
-                        <th>More Info</th>
-                     </tr>
-                  </thead>
-               </table>
+   <!-- START | VIEW CART -->
+   <div class="sidebar-wrapper-outer">
+      <div class="sidebar-wrapper">
+         <nav class="my_book_sidebar">
+            <h1 class="sidebar-header">My Book</h1>
+            <div class="sidebar_menu">
+               <a href="viewcart" class="sidebar-link">View
+                  Cart</a>
+               <a href="orderstatus" class="sidebar-link sidebar-active">Order Status</a>
+               <a href="purchasehistory" class="sidebar-link">Purchase History</a>
             </div>
-            <div class="tbl-content-cont">
-               <table cellpadding="0" cellspacing="0" border="0" class="tbl_head">
-                  <tbody>
-                     <tr class="tr_os">
-                        <td class="td_os_title">Harry Potter Book Bundle and the Squid Game with StartUp CoreanDrama
-                        </td>
-                        <td>250Php</td>
-                        <td>05/14/2022</td>
-                        <td><span class="status_os success-stats">Sucess</span></td>
-                        <td><a class="view_more_os" href="#"><span>View</span></a></td>
-                     </tr>
-                     <tr class="tr_os">
-                        <td>Harry Potter Book Bundle</td>
-                        <td>250Php</td>
-                        <td>05/14/2022</td>
-                        <td><span class="status_os pending-stats">Pending</span></td>
-                        <td><a class="view_more_os" href="#"><span>View</span></a></td>
-                     </tr>
-                     <tr class="tr_os">
-                        <td>Harry Potter Book Bundle</td>
-                        <td>250Php</td>
-                        <td>05/14/2022</td>
-                        <td><span class="status_os error-stats">Error</span></td>
-                        <td><a class="view_more_os" href="#"><span>View</span></a></td>
-                     </tr>
-                     <tr class="tr_os">
-                        <td>Harry Potter Book Bundle</td>
-                        <td>250Php</td>
-                        <td>05/14/2022</td>
-                        <td><span class="status_os success-stats">Sucess</span></td>
-                        <td><a class="view_more_os" href="#"><span>View</span></a></td>
-                     </tr>
-                     <tr class="tr_os">
-                        <td>Harry Potter Book Bundle</td>
-                        <td>250Php</td>
-                        <td>05/14/2022</td>
-                        <td><span class="status_os success-stats">Sucess</span></td>
-                        <td><a class="view_more_os" href="#"><span>View</span></a></td>
-                     </tr>
-                     <tr class="tr_os">
-                        <td>Harry Potter Book Bundle</td>
-                        <td>250Php</td>
-                        <td>05/14/2022</td>
-                        <td><span class="status_os success-stats">Sucess</span></td>
-                        <td><a class="view_more_os" href="#"><span>View</span></a></td>
-                     </tr>
-                     <tr class="tr_os">
-                        <td>Harry Potter Book Bundle</td>
-                        <td>250Php</td>
-                        <td>05/14/2022</td>
-                        <td><span class="status_os success-stats">Sucess</span></td>
-                        <td><a class="view_more_os" href="#"><span>View</span></a></td>
-                     </tr>
-                     <tr class="tr_os">
-                        <td>Harry Potter Book Bundle</td>
-                        <td>250Php</td>
-                        <td>05/14/2022</td>
-                        <td><span class="status_os success-stats">Sucess</span></td>
-                        <td><a class="view_more_os" href="#"><span>View</span></a></td>
-                     </tr>
-                     <tr class="tr_os">
-                        <td>Harry Potter Book Bundle</td>
-                        <td>250Php</td>
-                        <td>05/14/2022</td>
-                        <td><span class="status_os success-stats">Sucess</span></td>
-                        <td><a class="view_more_os" href="#"><span>View</span></a></td>
-                     </tr>
-                     <tr class="tr_os">
-                        <td>Harry Potter Book Bundle</td>
-                        <td>250Php</td>
-                        <td>05/14/2022</td>
-                        <td><span class="status_os success-stats">Sucess</span></td>
-                        <td><a class="view_more_os" href="#"><span>View</span></a></td>
-                     </tr>
-                     <tr class="tr_os">
-                        <td>Harry Potter Book Bundle</td>
-                        <td>250Php</td>
-                        <td>05/14/2022</td>
-                        <td><span class="status_os success-stats">Sucess</span></td>
-                        <td><a class="view_more_os" href="#"><span>View</span></a></td>
-                     </tr>
-                     <tr class="tr_os">
-                        <td>Harry Potter Book Bundle</td>
-                        <td>250Php</td>
-                        <td>05/14/2022</td>
-                        <td><span class="status_os success-stats">Sucess</span></td>
-                        <td><a class="view_more_os" href="#"><span>View</span></a></td>
-                     </tr>
-                     <tr class="tr_os">
-                        <td>Harry Potter Book Bundle</td>
-                        <td>250Php</td>
-                        <td>05/14/2022</td>
-                        <td><span class="status_os success-stats">Sucess</span></td>
-                        <td><a class="view_more_os" href="#"><span>View</span></a></td>
-                     </tr>
-                     <tr class="tr_os">
-                        <td>Harry Potter Book Bundle</td>
-                        <td>250Php</td>
-                        <td>05/14/2022</td>
-                        <td><span class="status_os success-stats">Sucess</span></td>
-                        <td><a class="view_more_os" href="#"><span>View</span></a></td>
-                     </tr>
-                     <tr class="tr_os">
-                        <td>Harry Potter Book Bundle</td>
-                        <td>250Php</td>
-                        <td>05/14/2022</td>
-                        <td><span class="status_os success-stats">Sucess</span></td>
-                        <td><a class="view_more_os" href="#"><span>View</span></a></td>
-                     </tr>
+         </nav>
+         <div class="order_status_details_container">
+            <div class="order_status_details_header">
+               <h1>Order Status</h1>
+            </div>
+            <div class="sidebar_line_break"></div>
+            <section class="order_status_tbl_cont">
+               <div class="tbl-header-cont">
+                  <table cellpadding="0" cellspacing="0" border="0" class="tbl_head">
+                     <thead class="thead_os">
+                        <tr class="tr_os">
+                           <th class="td_os_title">Book</th>
+                           <th>Price</th>
+                           <th>Date Ordered</th>
+                           <th>Status</th>
+                           <th>More Info</th>
+                        </tr>
+                     </thead>
+                  </table>
+               </div>
+               <div class="tbl-content-cont">
+                  <table cellpadding="0" cellspacing="0" border="0" class="tbl_head">
+                     <tbody id="retriever_os">
 
-                  </tbody>
-               </table>
-            </div>
-         </section>
+
+
+                     </tbody>
+                  </table>
+
+               </div>
+               <div id="ph_data_empty" class="ph_data_empty">
+                  <h1>No data found</h1>
+               </div>
+            </section>
+         </div>
       </div>
    </div>
-</div>
-<!-- END | VIEW CART -->
+   <!-- END | VIEW CART -->
 
 
 
 
 
-<?php
+   <?php
    
    include("footer.php");
    
@@ -197,23 +107,59 @@
 
 
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 
-<script src="../assets/javascript/navbar.js"></script>
-<script>
-$(window).on("load resize ", function() {
+   <script src="../assets/javascript/navbar.js"></script>
+   <script>
+   $(window).on("load resize ", function() {
 
-   var scrollWidth = $('.tbl-content-cont').width() - $('.tbl-content-cont table').width();
-   $('.tbl-header-cont').css({
-      'padding-right': scrollWidth
+      var scrollWidth = $('.tbl-content-cont').width() - $('.tbl-content-cont table').width();
+      $('.tbl-header-cont').css({
+         'padding-right': scrollWidth
+      });
+   }).resize();
+
+
+   let isOnDiv = false;
+   $("#retriever_os").mouseenter(
+      function() {
+         isOnDiv = true;
+      }
+   );
+
+   $("#retriever_os").mouseleave(
+      function() {
+         isOnDiv = false;
+      }
+   );
+
+
+
+
+
+
+   $(document).ready(function() {
+      setInterval(() => {
+         if (!isOnDiv) {
+            $('#retriever_os').load('../assets/php/retriever_order_status.php', {
+               user_id: <?php echo $user_id ?>
+            })
+            if ($('#retriever_os').children('.tr_os').length > 0) {
+               $('#ph_data_empty').hide();
+
+            } else {
+               $('#ph_data_empty').show();
+
+            }
+         }
+      }, 500);
    });
-}).resize();
-</script>
+   </script>
 
 
-<script src="https://kit.fontawesome.com/a0043d9bc2.js" crossorigin="anonymous"></script>
+   <script src="https://kit.fontawesome.com/a0043d9bc2.js" crossorigin="anonymous"></script>
 
-<body>
+
 
 </body>
 

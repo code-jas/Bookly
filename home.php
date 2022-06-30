@@ -10,6 +10,7 @@
    <meta http-equiv="X-UA-Compatible" content="IE=edge">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
    <title>Home | Bookly</title>
+   <link rel="icon" href="./assets/images/illustrations/logo.png">
    <!-- import icons -->
    <link rel="stylesheet"
       href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
@@ -48,7 +49,7 @@
             <p class="home-parag">Browse our assortment of pre-loved books to find
                your next favorite.</p>
 
-            <button class="btn-get-started">Get Started</button>
+            <a href="book-shop"><button class="btn-get-started">Get Started</button></a>
          </div>
          <div class="home-image">
             <img src="./assets/images/illustrations/bundle-books-without-shadow.png" alt="bundle books"
@@ -181,7 +182,7 @@
    ?>
 
 
-   <script src="./assets/javascript/toast.js"></script>
+   <!-- <script src="./assets/javascript/toast.js"></script> -->
 
    <script>
    function showSuccessToast() {
@@ -215,6 +216,7 @@
    <!-- END | FOOTER -->
    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
    <script src="./assets/javascript/sign-in-sign-up.js"></script>
+   <script src="./assets/javascript/navbar-retriever.js"></script>
    <script src="./assets/javascript/global.js"></script>
    <script src="./assets/javascript/toast.js"></script>
 

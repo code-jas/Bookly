@@ -70,7 +70,7 @@
 }
 
 .filter-dropdown-content a:hover {
-  background-color: #F6F3FC;
+  background-color: var(--dark-gray-dark);
   border-radius: 5px;
   color: var(--blue)
 }
@@ -80,7 +80,7 @@
 }
 
 .filter-dropdown-container:hover .filter {
-  background-color: #f6f3fc;
+  background-color: var(--light-gray);
 }
 
 
@@ -91,19 +91,15 @@
 }
 
 input.search-field {
-  border-top: 1px;
-  border-bottom: 1px;
-  border-left: 1px;
-  border-right: 0px;
-  border-style: solid;
-  border-color: #B8BFD3;
+  border: 1px solid #B8BFD3;
+
   padding: 10px;
   width: 400px;
   height: 35px;
-  border-radius: 10px 0px 0px 10px;
+  border-radius: 10px 10px 10px 10px;
 }
 
-input.search-field[type=search]:focus {
+input.search-field[type=text]:focus {
   border: none;
   outline: 3px solid #ffc7d2;
 
@@ -111,6 +107,8 @@ input.search-field[type=search]:focus {
 
 
 .magnifying {
+  position: absolute;
+  right: 0;
   font-size: 15px;
   color: white;
   background-color: #FE3152;
@@ -178,7 +176,21 @@ input.search-field[type=search]:focus {
 
 #book-links {
   text-decoration: none;
-  color: #000000;
+  color: var(--primary-font-color)
+}
+
+.no-books-available {
+  display: none;
+  justify-content: center;
+  color: var(--primary-font-color);
+  align-items: center;
+  min-height: 40vh;
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+.no-books-available.active {
+  display: flex;
 }
 
 .img-book {
@@ -215,12 +227,13 @@ input.search-field[type=search]:focus {
 
 
 .price {
-  float: right;
-  font-size: 15px;
+  font-weight: 500;
+  font-size: 17px;
 }
 
-.filter-search-container {
 
+.filter-search-container {
+  position: relative;
   width: 100%;
   max-width: 1200px;
   display: flex;
@@ -294,10 +307,6 @@ input.search-field[type=search]:focus {
     width: 80%;
   }
 
-  .grid-content {
-    width: 200px;
-    height: 365px;
-  }
 
   .img-book {
     width: 200px;
@@ -342,10 +351,7 @@ input.search-field[type=search]:focus {
 
   }
 
-  .grid-content {
-    width: 170px;
-    height: 320px;
-  }
+
 
   .img-book {
     width: 170px;
@@ -369,10 +375,7 @@ input.search-field[type=search]:focus {
     height: 100%;
   }
 
-  .grid-content {
-    width: 200px;
-    height: 340px;
-  }
+
 
   .img-book {
     width: 200px;
@@ -432,10 +435,7 @@ input.search-field[type=search]:focus {
     height: 100%;
   }
 
-  .grid-content {
-    width: 200px;
-    height: 340px;
-  }
+
 
   .img-book {
     width: 200px;

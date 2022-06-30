@@ -380,18 +380,18 @@ h4 {
 }
 
 .img-box {
-  /* position: absolute;
- top: 50%;
- transform: translateY(-50%);
- width: 100%;
- height: 100%;
- transition: .5s; */
+  position: relative;
   width: 280px;
   height: 410px;
   overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
 }
 
 .img-box img {
+  background-position: center;
   object-fit: cover;
   height: 100%;
   width: 100%;

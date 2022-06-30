@@ -44,20 +44,20 @@ const ddCartMain = document.querySelector(".cart_dd_main");
 
 
    ddProfMain.addEventListener("click", function () {
-      ddCartMain.classList.toggle("active", false);
-      ddNotifMain.classList.toggle("active", false);
-      this.classList.toggle("active");
+      ddCartMain.classList.toggle("active--nav-s", false);
+      ddNotifMain.classList.toggle("active--nav-s", false);
+      this.classList.toggle("active--nav-s");
    })
 
    ddNotifMain.addEventListener("click", function () {
-      ddProfMain.classList.toggle("active", false);
-      ddCartMain.classList.toggle("active", false);
-      this.classList.toggle("active");
+      ddProfMain.classList.toggle("active--nav-s", false);
+      ddCartMain.classList.toggle("active--nav-s", false);
+      this.classList.toggle("active--nav-s");
    })
    ddCartMain.addEventListener("click", function () {
-      ddProfMain.classList.toggle("active", false);
-      ddNotifMain.classList.toggle("active", false);
-      this.classList.toggle("active");
+      ddProfMain.classList.toggle("active--nav-s", false);
+      ddNotifMain.classList.toggle("active--nav-s", false);
+      this.classList.toggle("active--nav-s");
    })
 
 

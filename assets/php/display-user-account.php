@@ -5,14 +5,17 @@
 
 include('db-config.php');
 
-$firstname = $lastname =  $username = $password = $email = $contact = $birthdate = $address = $barangay = $city = $zipcode = "";
+$user_id = $firstname = $lastname =  $username = $password = $email = $contact = $birthdate = $address = $barangay = $city = $zipcode = "";
 $profile_img = "";
 
 if(isset($_SESSION["username"])){
    $username = $_SESSION["username"];
 
+
    $check_username = mysqli_query($conn, "SELECT * FROM account_user WHERE username = '$username'");
    $fetch = mysqli_fetch_assoc($check_username);
+   
+   $user_id = $fetch['id_user'];
    
    $firstname = $fetch["firstname"];
    $lastname = $fetch["lastname"];
