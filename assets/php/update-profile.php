@@ -2,6 +2,7 @@
 
 
 include_once("db-config.php");
+include('notif-class.php');
 session_start();
 $status = $firstname = $lastname = $username = $password = $email = $contact = $birthdate = $address = $barangay = $city = $zipcode = $profile_img = "";
 
@@ -65,6 +66,7 @@ if(isset($_SESSION["username"])){
          $emailErr = "Email already exists";
       }
       else{
+
          $status = "success";
 
          if(empty($_FILES['profile_img']['name'])){
@@ -88,10 +90,6 @@ if(isset($_SESSION["username"])){
             "); 
          }
          else{
-         
-         
-         
-
       
             $target_file  = $target_dir . basename($_FILES["profile_img"]["name"]);
 
@@ -159,6 +157,23 @@ if(isset($_SESSION["username"])){
             }
             
          }
+
+           
+      $query_get_img = mysqli_query($conn , "SELECT * FROM account_user WHERE username = '$username'"); 
+
+
+         $fetch_img = mysqli_fetch_assoc($query_get_img);
+         $db_user_id = $fetch_img["id_user"];
+         $db_img = $fetch_img["profile_img"];
+
+
+         $notif = new Notification("update_prof", "");
+  
+         $notif->checkType();
+         // QUERY TO INSERT NOTIF TABLE
+         $notif_query = "INSERT INTO notification (notif_subject, notif_message, notif_type, user_id, notif_href ,notif_img,datetime_added)
+         VALUES ('". $notif->getSubject() ."', '". $notif->getMessage() ."', '". $notif->getType() ."', '$db_user_id', '". $notif->getHref() ."', '$db_img',NOW())";
+         $notif_result = mysqli_query($conn, $notif_query);
       }
   
    }

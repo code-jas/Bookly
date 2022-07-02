@@ -300,12 +300,14 @@ const signinKey = searchParams.get('signin');
 if(signinKey == 'sign-in-321jkh1jkasd'){
    $('.sign-up-modal-container-bg').fadeOut('fast');
    $('.sign-in-section-container-bg').fadeIn('fast');
+   $('.forgot-password-section-container').hide();
    showSuccessToast();
 }
 const signInForbiddenKey = searchParams.get('error');
 if(signInForbiddenKey == '404'){
    $('.sign-up-modal-container-bg').fadeOut('fast');
    $('.sign-in-section-container-bg').fadeIn('fast');
+   $('.forgot-password-section-container').hide();
 }
 
 const deletedAccountKey = searchParams.get('deleteaccnotif');

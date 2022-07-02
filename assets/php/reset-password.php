@@ -70,7 +70,7 @@ if(isset($_POST["fp_email"])){
          
          $output.='<p>Please click on the following link to reset your password.</p>';
          //replace the site url
-         $output.='<p><a href="http://localhost/bookly/reset-password?key=' . $key . '&email=' . $email . '&action=reset" target="_blank">http://localhost/bookly/reset-password?key=' . $key . '&email=' . $email . '&action=reset</a></p>';
+         $output.='<p><a href="bookly.com/reset-password?key=' . $key . '&email=' . $email . '&action=reset" target="_blank">http://localhost/bookly/reset-password?key=' . $key . '&email=' . $email . '&action=reset</a></p>';
       
       
 

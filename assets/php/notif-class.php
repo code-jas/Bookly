@@ -5,27 +5,34 @@
    private $subject;
    private $message;
    private $href;
+   private $ref_id;
 
 
-  public function __construct($notif_type) {
+   public function __construct($notif_type, $ref_id) {
       $this->type = $notif_type; 
+      $this->ref_id = $ref_id;
    }
 
 
   public function checkType(){ 
       switch($this->type) { 
          case "order":
-            $this->subject = "Order";
-            $this->message = "You have a new order";
-            $this->href = "orderstatus.php";
+            $this->subject = "Order Placed";
+            $this->message = "Your order was submitted successfully. Thanks for shopping with bookly.";
+            $this->href = "orderstatus";
             break;
 
-         case "delivery": 
-            $this->subject = "Parcel delivered";
-            $this->message = "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quisquam, quia.";
-            $this->href = "orderstatus.php";
+         case "delivered": 
+            $this->subject = "Packaged delivered";
+            $this->message = "Your $this->ref_id package was delivered. ";
+            $this->href = "orderstatus";
             break;
          
+         case "update_prof": 
+            $this->subject = "Profile Updated";
+            $this->message = "Your profile details was successfully updated.";
+            $this->href = "overview";
+            break;
       }
    }
 

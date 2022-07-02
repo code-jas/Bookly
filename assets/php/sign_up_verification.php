@@ -262,7 +262,7 @@ $message = "
          <h2>Verify your email address</h2>
          <p>Welcome to <a href=\"#\">Bookly</a> <br><br> Please click the button below to confirm your email address and
             activate your account.</p>
-         <a href='http://localhost/bookly/verify?vkey=$vkey' id=\"confirm\"><button class=\"btn-confirm\">Confirm
+         <a href='bookly.com/verify?vkey=$vkey' id=\"confirm\"><button class=\"btn-confirm\">Confirm
                Email</button></a>
 
          <p class=\"style\">If you received this in error, simply ignore this email and do not click the button.</p>

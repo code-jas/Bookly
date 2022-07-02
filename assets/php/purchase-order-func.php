@@ -34,7 +34,7 @@ if(isset($_POST["user_id"])){
 
  
    $ref_id = createRefId();
-   $notif = new Notification("order");
+   $notif = new Notification("order", $ref_id);
   
    $notif->checkType();
 
@@ -54,8 +54,8 @@ if(isset($_POST["user_id"])){
    $po_result = mysqli_query($conn, $po_query);
 
    // QUERY TO INSERT NOTIF TABLE
-   $notif_query = "INSERT INTO notification (notif_subject, notif_message, notif_type, user_id, notif_href ,notif_img)
-    VALUES ('". $notif->getSubject() ."', '". $notif->getMessage() ."', '". $notif->getType() ."', '$user_id', '". $notif->getHref() ."', '$book_img')";
+   $notif_query = "INSERT INTO notification (notif_subject, notif_message, notif_type, user_id, notif_href ,notif_img,datetime_added)
+    VALUES ('". $notif->getSubject() ."', '". $notif->getMessage() ."', '". $notif->getType() ."', '$user_id', '". $notif->getHref() ."', '$book_img',NOW())";
    // INSERT TO NOTIF TABLE
    $notif_result = mysqli_query($conn, $notif_query);
 

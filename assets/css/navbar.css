@@ -259,6 +259,7 @@ header {
    right: -135px;
    top: 53px;
    display: flex;
+   flex-direction: column;
    background-color: #fff;
    min-height: 300px;
    max-height: 500px;
@@ -298,7 +299,7 @@ header {
 
 
 
-.right-navbar .cart_dd_main.active .cart_dd_menu {
+.right-navbar .cart_dd_main.active--nav-s .cart_dd_menu {
    display: flex;
    width: 245px;
 }
@@ -394,11 +395,12 @@ header {
 .notif-item-details,
 .cart-item-details {
    margin-left: 10px;
+   width: 150px;
 }
 
 .notif-item-details h3,
 .cart-item-details h3 {
-   font-size: 13px;
+   font-size: 11px;
    font-weight: 500;
    color: var(--secondary-font-color);
    text-transform: capitalize;
@@ -408,7 +410,7 @@ header {
 
 .notif-item-details p,
 .cart-item-details p {
-   font-size: 10px;
+   font-size: 11px;
    font-weight: 400;
    color: var(--secondary-font-color);
 
@@ -460,6 +462,7 @@ header {
    font-size: 13px;
    font-weight: 500;
    color: var(--dark-gray);
+   text-align: center;
    text-transform: capitalize;
    margin: 0;
    padding: 0;

@@ -121,6 +121,7 @@
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 <script src="../assets/javascript/navbar.js"></script>
+<script src="../assets/javascript/navbar-retriever-inner.js"></script>
 <script src="../assets/javascript/delete-account.js"></script>
 <script src="https://kit.fontawesome.com/a0043d9bc2.js" crossorigin="anonymous"></script>
 

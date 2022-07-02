@@ -175,7 +175,8 @@
     </script>
 
     <script src="../assets/javascript/navbar.js"></script>
-    </script>
+    <script src="../assets/javascript/navbar-retriever-inner.js"></script>
+
     <script src="https://kit.fontawesome.com/a0043d9bc2.js" crossorigin="anonymous"></script>
 
 

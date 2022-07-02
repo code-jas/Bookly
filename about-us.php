@@ -267,7 +267,7 @@
                         <span><i class="fab fa-twitter"></i></span>
                      </div>
                   </a>
-                  <a href="https://www.instagram.com/tffnygo_/" target="_blank">
+                  <a href="https://www.instagram.com/tffnygo_" target="_blank">
                      <div class="icon instagram">
                         <div class="tooltip">Instagram</div>
                         <span><i class="fab fa-instagram"></i></span>

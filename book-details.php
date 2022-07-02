@@ -7,10 +7,6 @@
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
    <title>Book Details | Bookly</title>
    <link rel="icon" href="./assets/images/illustrations/logo.png">
-   <!--google Fonts-->
-   <link rel="preconnect" href="https://fonts.googleapis.com">
-   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-   <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
 
    <!-- import icons -->
    <link rel="stylesheet"
@@ -269,7 +265,7 @@
             <div class="artwork-accepted">
                <h1>Thank you for ordering!</h1>
                <p>Your order has been processed. Items will be shipped within
-                  3-5 days. See your order status at transaction history. </p>
+                  3-5 minutes. See your order status at transaction history. </p>
             </div>
 
             <input class="submit-btn-osd1 fixed-bottom" id="close-button" type="button" value="Done">
@@ -302,11 +298,30 @@
    <script src="./assets/javascript/toast.js"></script>
 
    <script>
-   let isSold = "<?php echo $db_sold?>"
+   let isSold = "<?php echo $db_sold?>";
+   let cart_book_id = <?php echo $db_book_id?>;
+   let cart_user_id = <?php echo $db_user_id ?>;
+
+   function showSuccessToast() {
+      toast({
+         message: "You have successfully added this book to your cart!",
+         type: "success",
+         duration: 5000
+      });
+      // console.log("success");
+   }
 
    function showDeletedSuccessToast() {
       toast({
          message: "Sorry, this book is no longer available.",
+         type: "error",
+         duration: 5000
+      });
+   }
+
+   function showDeletedSuccessToastAlreadyAdded() {
+      toast({
+         message: "Sorry, this book is already in your cart.",
          type: "error",
          duration: 5000
       });

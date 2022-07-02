@@ -56,69 +56,11 @@ include("../assets/php/navbar-fetch-data.php");
                   </span>
 
                   <div class="cart_dd_menu">
+                     <h1>Recently Added Books</h1>
+                     <ul id="cart-retriever">
 
-                     <ul>
-                        <h1>Recently Added Books</h1>
-                        <a href="#">
-                           <li class="cart-item-list">
-                              <div class="cart-item-img-card">
-                                 <img src=".././angelo.jpg" alt="">
-                              </div>
-                              <div class="cart-item-details">
-                                 <h3>Parcel delivered</h3>
-                                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quisquam,
-                                    quia.</p>
-                              </div>
-                           </li>
-                        </a>
-                        <a href="#">
-                           <li class="cart-item-list">
-                              <div class="cart-item-img-card">
-                                 <img src=".././angelo.jpg" alt="">
-                              </div>
-                              <div class="cart-item-details">
-                                 <h3>Parcel delivered</h3>
-                                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quisquam,
-                                    quia.</p>
-                              </div>
-                           </li>
-                        </a>
-                        <a href="#">
-                           <li class="cart-item-list">
-                              <div class="cart-item-img-card">
-                                 <img src=".././angelo.jpg" alt="">
-                              </div>
-                              <div class="cart-item-details">
-                                 <h3>Parcel delivered</h3>
-                                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quisquam,
-                                    quia.</p>
-                              </div>
-                           </li>
-                        </a>
-                        <a href="#">
-                           <li class="cart-item-list">
-                              <div class="cart-item-img-card">
-                                 <img src=".././angelo.jpg" alt="">
-                              </div>
-                              <div class="cart-item-details">
-                                 <h3>Parcel delivered</h3>
-                                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quisquam,
-                                    quia.</p>
-                              </div>
-                           </li>
-                        </a>
-                        <a href="#">
-                           <li class="cart-item-list">
-                              <div class="cart-item-img-card">
-                                 <img src=".././angelo.jpg" alt="">
-                              </div>
-                              <div class="cart-item-details">
-                                 <h3>Parcel delivered</h3>
-                                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quisquam,
-                                    quia.</p>
-                              </div>
-                           </li>
-                        </a>
+
+
                      </ul>
 
                   </div>
@@ -129,72 +71,16 @@ include("../assets/php/navbar-fetch-data.php");
                   </span>
 
                   <div class="notif_dd_menu">
-
-                     <ul>
-                        <h1>Recently Notification</h1>
-                        <a href="#">
-                           <li class="notif-item-list">
-                              <div class="notif-item-img-card">
-                                 <img src=".././angelo.jpg" alt="">
-                              </div>
-                              <div class="notif-item-details">
-                                 <h3>Parcel delivered</h3>
-                                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quisquam,
-                                    quia.</p>
-                              </div>
-                           </li>
-                        </a>
-                        <a href="#">
-                           <li class="notif-item-list">
-                              <div class="notif-item-img-card">
-                                 <img src=".././angelo.jpg" alt="">
-                              </div>
-                              <div class="notif-item-details">
-                                 <h3>Parcel delivered</h3>
-                                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quisquam,
-                                    quia.</p>
-                              </div>
-                           </li>
-                        </a>
-                        <a href="#">
-                           <li class="notif-item-list">
-                              <div class="notif-item-img-card">
-                                 <img src=".././angelo.jpg" alt="">
-                              </div>
-                              <div class="notif-item-details">
-                                 <h3>Parcel delivered</h3>
-                                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quisquam,
-                                    quia.</p>
-                              </div>
-                           </li>
-                        </a>
-                        <a href="#">
-                           <li class="notif-item-list">
-                              <div class="notif-item-img-card">
-                                 <img src=".././angelo.jpg" alt="">
-                              </div>
-                              <div class="notif-item-details">
-                                 <h3>Parcel delivered</h3>
-                                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quisquam,
-                                    quia.</p>
-                              </div>
-                           </li>
-                        </a>
-                        <a href="#">
-                           <li class="notif-item-list">
-                              <div class="notif-item-img-card">
-                                 <img src=".././angelo.jpg" alt="">
-                              </div>
-                              <div class="notif-item-details">
-                                 <h3>Parcel delivered</h3>
-                                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quisquam,
-                                    quia.</p>
-                              </div>
-                           </li>
-                        </a>
-
+                     <h1>Recently Notification</h1>
+                     <ul id="notif-retriever">
 
                      </ul>
+                     <div id="empty-notif-nav" class="empty-notif">
+                        <div class="emp_notif_img_card">
+                           <img src="../assets/images/illustrations/empty-notif.png" alt="empty notification">
+                           <p class="emp_notif_text">No notification</p>
+                        </div>
+                     </div>
 
                   </div>
 
@@ -251,6 +137,11 @@ include("../assets/php/navbar-fetch-data.php");
 </header>
 
 
+
+<script>
+let user_id = <?php echo json_encode($user_id); ?>;
+let navbar_child = "user_side";
+</script>
 
 
 

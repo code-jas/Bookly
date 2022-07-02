@@ -13,7 +13,8 @@ if(isset($_SESSION["username"])){
 
    $check_username = mysqli_query($conn, "SELECT * FROM account_user WHERE username = '$username'");
    $fetch = mysqli_fetch_assoc($check_username);
-   
+ 
+   $user_id = $fetch['id_user'];
    $firstname = $fetch["firstname"];
    $lastname = $fetch["lastname"];
   
@@ -37,6 +38,7 @@ if(isset($_SESSION["username"])){
  
 }
 else{
+   
    echo "<script>window.location.href='../home?error=404';</script>";
 }
 

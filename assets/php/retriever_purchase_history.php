@@ -2,7 +2,7 @@
 
    require_once("db-config.php");
 
-  
+   $userID = $_POST['user_id'];
    
 
 

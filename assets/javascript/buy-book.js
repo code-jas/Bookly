@@ -5,6 +5,7 @@ const next = document.getElementById("continue1-submit");
 const circles = document.querySelectorAll(".circle");
 
 let currentActive = 1;
+let listOfBooksOrder = [];
 
 
 
@@ -16,11 +17,43 @@ function isThisBookSold(sold){
   
   }
 
-  console.log("sold :" + isSold);
+
 
   return isSold;
   
 }
+
+
+
+$("#add-to-cart-btn").on('click', () => { 
+  if(!isThisBookSold(isSold)){
+   
+    $.ajax({
+      type: "POST",
+      url: "assets/php/add-to-cart.php",
+      dataType: "JSON",
+      data : {book_id: cart_book_id, user_id: cart_user_id},
+    }).done(function(response) { 
+  
+      if(response.status_cart == "inserted"){ 
+        showSuccessToast();
+     
+      }
+      if(response.status_cart == "existed"){ 
+        showDeletedSuccessToastAlreadyAdded();
+        
+      }
+    });
+  
+
+    // add to cart 
+  } else { 
+    // show sold();
+ 
+    showDeletedSuccessToast();
+  }
+})
+
 
 $('#vb-buy-book-btn').on('click', function() {
   if(!isThisBookSold(isSold)){
@@ -42,6 +75,115 @@ $('#vb-buy-book-btn').on('click', function() {
      showDeletedSuccessToast();
   }
 });
+
+
+
+// view cart button
+$('#view_cart_buy_btn').on('click', function() {
+
+
+   var bookList = [];
+
+   $('#book_cart_retriever :checkbox:checked').each(function(i){                         
+
+      bookList[i] = $(this).val();  
+
+   });
+
+
+
+   if(bookList.length > 0){
+
+    // perform ajax call to buy book verification  from cart
+
+    $('#check').prop('checked', false);
+    $('.artwork-accepted').hide();
+    $('#close-button').hide();
+  
+    $('.buy-book-modal-container').fadeIn('fast');
+    $('.buy-book-cont').show();
+    $('.buy-book-body').show();
+    $('.summary-body-mod').hide();
+  
+    $('.done-section').hide();
+    
+    listOfBooksOrder = bookList;
+
+    console.log("listOfBooksOrder : " +listOfBooksOrder );
+
+    $.ajax({
+      type: "POST",
+      url: "../assets/php/retrieve-view-cart-selected-item.php",
+      dataType: "JSON",
+      data : {book_list: JSON.stringify(bookList), action : "order"},
+      success: function(response) {
+        console.log(response.count);
+  
+        // console.log();
+        $('#order_item_list').html(response.order_modal);
+        $('#summary_booklist_buy').html(response.summary_modal);
+        $('#user_delivery_address').html(response.user_address);
+        $('#total_price_order').html("₱"+response.total_price);
+        $('#total_price_summary').html("₱"+response.total_price);
+
+        // $('#book_cart_retriever').load('../assets/php/retriever_view_cart.php', {user_id : user_id});
+      },
+      error: function(request, status, error) {
+        console.log(request.responseText);
+      }
+   })
+
+
+
+   } else { 
+
+    // show no book selected
+    showNoSelectedBooks();
+
+   }
+
+
+
+});
+
+
+$('#buy-submit-form-from-viewcart').on('click', function(e){
+  e.preventDefault();
+  // console.log("call list of books order on submit : " + listOfBooksOrder);
+  $.ajax({
+    type: "POST",
+    url: '../assets/php/purchase-order-bundle-func.php',
+    dataType: "JSON",
+    data: {book_listed: JSON.stringify(listOfBooksOrder)},
+    success: function(response) {
+     console.log(response);
+     const purchaseResponse = { purchaseStatus : "success"};
+
+     if(JSON.stringify(response.purchaseStatus) === JSON.stringify("success")){
+      console.log("Successfully purchased");
+      isSold = response.isSold;
+      isThisBookSold(isSold);
+
+      //load cart
+      $('#book_cart_retriever').load('../assets/php/retriever_view_cart.php', {user_id : user_id});
+
+    } else { 
+      console.log("There's an error in the purchase order");
+    }
+    },
+    error: function(request, status, error) {
+      console.log(request.responseText);
+    }
+
+  });
+
+
+})
+
+
+
+
+
   
 
   $('#order-next-btn').on('click', function(){
@@ -61,7 +203,7 @@ $('#vb-buy-book-btn').on('click', function() {
 
 });
 
-$('#summary-next-btn').on('click', function(){
+$('#buy-submit-form-from-viewcart').on('click', function(){
   $('.buy-book-body').hide();
     $('.summary-body-mod').hide();
     $('.done-section').show();
@@ -127,7 +269,7 @@ $("#check").click(function() {
       success: function(response) {
         const purchaseResponse = { purchaseStatus : "success"};
 
-        if( JSON.stringify(response.purchaseStatus) === JSON.stringify("success")){
+        if(JSON.stringify(response.purchaseStatus) === JSON.stringify("success")){
           console.log("Successfully purchased");
           isSold = response.isSold;
           isThisBookSold(isSold);

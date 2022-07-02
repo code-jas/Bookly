@@ -183,7 +183,7 @@
 
 
    <!-- <script src="./assets/javascript/toast.js"></script> -->
-
+   <script src="./assets/javascript/toast.js"></script>
    <script>
    function showSuccessToast() {
       toast({
@@ -218,7 +218,7 @@
    <script src="./assets/javascript/sign-in-sign-up.js"></script>
    <script src="./assets/javascript/navbar-retriever.js"></script>
    <script src="./assets/javascript/global.js"></script>
-   <script src="./assets/javascript/toast.js"></script>
+
 
    <script src="./assets/javascript/feature-books.js"></script>
 

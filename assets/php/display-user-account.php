@@ -41,6 +41,7 @@ if(isset($_SESSION["username"])){
  
 }
 else{
+   
    echo "<script>window.location.href='home?error=404';</script>";
 }
 

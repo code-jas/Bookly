@@ -37,7 +37,7 @@ const ddCartMain = document.querySelector(".cart_dd_main");
    ddProfMain.addEventListener("click", function () {
       ddCartMain.classList.toggle("active--nav-s", false);
       ddNotifMain.classList.toggle("active--nav-s", false);
-      this.classList.toggle("active");
+      this.classList.toggle("active--nav-s");
    })
 
    ddNotifMain.addEventListener("click", function () {

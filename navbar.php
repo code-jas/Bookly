@@ -36,6 +36,7 @@
          if(!isset($_SESSION["username"])) {
             echo "active-session";
             $profile_img_db="";
+            $user_id="";
          } ?>">
             <!-- <button class="sign-in-btn">SIGN IN</button>
                <button class="sign-up-btn">SIGN UP</button> -->
@@ -47,6 +48,7 @@
          if(isset($_SESSION["username"])) {
             echo "active-session";
             include('assets/php/display-user-account.php');
+            
          } ?>">
             <!-- <span class="material-symbols-outlined">
                   shopping_cart
@@ -61,10 +63,10 @@
                   </span>
 
                   <div class="cart_dd_menu">
+                     <h1>Recently Added Books</h1>
+                     <ul id="cart-retriever">
 
-                     <ul>
-                        <h1>Recently Added Books</h1>
-                        <a href="#">
+                        <!-- <a id="cart-href" href="#" >
                            <li class="cart-item-list">
                               <div class="cart-item-img-card">
                                  <img src="angelo.jpg" alt="">
@@ -75,10 +77,12 @@
                                     quia.</p>
                               </div>
                            </li>
-                        </a>
-
+                        </a> -->
+                     </ul>
 
                   </div>
+
+
                </li>
                <li type="button" class="nr_li notif_dd_main">
                   <span class="material-symbols-outlined  ic-prof-view-tgl">
@@ -210,7 +214,6 @@
 </div>
 
 
-
 <?php
 
 
@@ -283,8 +286,15 @@ include('assets/php/sign_up_verification.php');
 </div>
 
 
+
 <script>
-var user_id = <?php echo json_encode($user_id); ?>;
+let session_username = false;
+
+<?php if ( isset($_SESSION["username"] )) {?>
+let user_id = "<?php echo $user_id; ?>";
+
+session_username = true;
+<?php } ?>
 </script>
 
 
