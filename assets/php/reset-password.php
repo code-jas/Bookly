@@ -96,7 +96,7 @@ if(isset($_POST["fp_email"])){
 
 
 function messageBody($email, $key) { 
-   return "
+   $output = "
    
          
       <!DOCTYPE html>
@@ -216,13 +216,13 @@ function messageBody($email, $key) {
             <div class=\"box-content\">
                <div class=\"icon-content\">
                   <img class=\"mail-svg\"
-                     src=\"https://raw.githubusercontent.com/code-jas/Bookly/master/assets/images/illustrations/mail-svg.jpg\"
+                     src=\"https://raw.githubusercontent.com/code-jas/Bookly/master/assets/images/illustrations/forgot-password_ai.svg\"
                      alt=\"Mail\" />
                </div>
 
-               <h2>Verify your email address</h2>
+               <h2>Reset your Password</h2>
                <p>Welcome to <a href=\"#\">Bookly</a> <br><br> Please click on the following link to reset your password.</p>
-               <a href='bookly.com/reset-password?key=' . $key . '&email=' . $email . '&action=reset' target = '_blank'
+               <a href='bookly.com/reset-password?key=$key&email=$email&action=reset' target = '_blank'
                id=\"confirm\">
                <button class=\"btn-confirm\">Reset Password</button>
                </a>
@@ -235,6 +235,8 @@ function messageBody($email, $key) {
       </html>
       ";
          
+
+      return $output;
      
       // $output.='<p>Please click on the following link to reset your password.</p>';
       // //replace the site url
