@@ -181,12 +181,26 @@ input.search-field[type=text]:focus {
 
 .no-books-available {
   display: none;
+  flex-direction: column;
   justify-content: center;
+
   color: var(--primary-font-color);
   align-items: center;
   min-height: 40vh;
   font-size: 2rem;
   font-weight: 700;
+}
+
+.no-books-img-card {
+  width: 500px;
+  height: 400px;
+  margin: 0 auto;
+}
+
+.no-books-img-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 .no-books-available.active {

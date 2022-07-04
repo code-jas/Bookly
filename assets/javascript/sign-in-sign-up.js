@@ -333,6 +333,23 @@ $('#goto-forgot-password-btn').on('click', function() {
 });
 
 
+$('#forgot-password-submit-btn').on('click', function() {
+
+
+    showSuccessEmailReset() ;
+
+
+});
+
+function showSuccessEmailReset() {
+   toast({
+      message: "An email has been sent to your email address. Please check your email and follow the instructions to reset your password.",
+      type: "success",
+      duration: 5000
+   });
+
+}
+
 
 
 

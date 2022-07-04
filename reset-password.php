@@ -43,7 +43,7 @@
                     $error .= '<h2>Invalid Link</h2>';
                 } else {
                     $row = mysqli_fetch_assoc($query);
-                    $expDate = $row['expDate'];
+                    $expDate = empty($row['expDate'])  ? "" : $row['expDate'];
                     if ($expDate >= $curDate) {
                         ?>
          <h2 class="title-fpw">Recovery Password</h2>
@@ -82,7 +82,7 @@
          </form>
          <?php
                             } else {
-                                $error .= "<h2>Link Expired</h2>>";
+                                $error .= "<h2>Link Expired</h2>";
                             }
                         }
                         if ($error != "") {
@@ -110,10 +110,12 @@
                             mysqli_query($conn, "DELETE FROM `password_reset_temp` WHERE `email` = '$email'");
                            
 
-                            echo '<div class="success-reset-password">
-                            <p>Your password has been reset successfully.</p>
-                            <p>You can now <a href="../">login</a> with your new password.</p>
-                         </div>';
+                        //     echo '<div class="success-reset-password">
+                        //     <p>Your password has been reset successfully.</p>
+                        //     <p>You can now <a href="../">login</a> with your new password.</p>
+                        //  </div>';
+
+                         echo "<script>window.location.href='home?signin=sign-in-321jkh1jkasd';</script>";
                         }
                     }
                     ?>

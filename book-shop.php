@@ -181,7 +181,10 @@
 
       </main>
       <div class="no-books-available">
-         No Books Available
+         <div class="no-books-img-card">
+            <img src="assets/images/illustrations/book-not-found.gif" alt="No books available illustration">
+         </div>
+         <p>No books available</p>
       </div>
    </div>
 
