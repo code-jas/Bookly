@@ -113,7 +113,7 @@
 
    <div class="buy-book-modal-container">
 
-      <div class="buy-book-cont">
+      <div class="buy-book-cont autoH-bd">
          <!-- header -->
 
          <div class="buy-book-head">

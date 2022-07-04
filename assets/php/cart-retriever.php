@@ -5,7 +5,7 @@ require_once("db-config.php");
 $userID = $_POST['user_id'];
 $navbarInner = $_POST['navbar_inner'];
 
-echo "<script>console.log('Debug Objects: " . $navbarInner . "' );</script>";
+// echo "<script>console.log('Debug Objects: " . $navbarInner . "' );</script>";
 
 $retrieve_query = "SELECT cart_item.id, books.book_id, books.title, books.author , books.price , books.book_cover, 
 account_user.id_user, account_user.firstname, account_user.lastname

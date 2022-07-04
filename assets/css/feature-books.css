@@ -73,7 +73,7 @@
 .description {
   position: absolute;
   display: none;
-  z-index: 9999;
+  z-index: 99;
   background-color: #F9F7FC;
   width: calc(var(--movie-width) - 3px);
   margin-top: -10px;
@@ -229,6 +229,7 @@
 .description__author,
 .description__price,
 .cat-s {
+  display: none;
   font-size: .8vw;
 }
 

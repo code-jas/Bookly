@@ -15,13 +15,17 @@
 
    <!-- edit profile css -->
    <link rel="stylesheet" href="./assets/css/getstarted.css">
+   <link rel="stylesheet" href="./assets/css/toast.css">
 
    <link rel="stylesheet" type="text/css" href="./assets/css/forgot_password.css" />
+
 
 
 </head>
 
 <body>
+
+   <div id="toast" style="align-self:center"></div>
 
    <div class="pw_container">
       <div class="pw_content">
@@ -104,8 +108,12 @@
                             mysqli_query($conn, "UPDATE `account_user` SET `password` = '$pass1'  WHERE `email` = '$email'");
 
                             mysqli_query($conn, "DELETE FROM `password_reset_temp` WHERE `email` = '$email'");
+                           
 
-                            echo '<div class="error"><p>Congratulations! Your password has been updated successfully.</p>';
+                            echo '<div class="success-reset-password">
+                            <p>Your password has been reset successfully.</p>
+                            <p>You can now <a href="../">login</a> with your new password.</p>
+                         </div>';
                         }
                     }
                     ?>
@@ -113,6 +121,23 @@
 
       </div>
    </div>
+
+
+   <script>
+   function showResetPasswordToast() {
+      toast({
+         message: ">Congratulations! Your password has been updated successfully.",
+         type: "success",
+         duration: 5000
+      });
+   }
+   </script>
+
+   <script src="./assets/javascript/toast.js"></script>
+
+
+
+
 </body>
 
 </html>

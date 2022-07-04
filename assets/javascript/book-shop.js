@@ -153,7 +153,7 @@ function animateImage(images) {
          );
       });
       festivalFoundCount = filteredSearchFestival.length;
-      console.log("search found = " + festivalFoundCount);
+      // console.log("search found = " + festivalFoundCount);
       if (festivalFoundCount === 0) {
          searchEmptyEl.style.display = 'block';
       } else {
@@ -268,4 +268,4 @@ function myFunction() {
 
 // xhr.send();
 
-console.log(bookContentList);
+// console.log(bookContentList);

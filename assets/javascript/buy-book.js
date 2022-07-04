@@ -24,55 +24,82 @@ function isThisBookSold(sold){
 }
 
 
-
-$("#add-to-cart-btn").on('click', () => { 
-  if(!isThisBookSold(isSold)){
-   
-    $.ajax({
-      type: "POST",
-      url: "assets/php/add-to-cart.php",
-      dataType: "JSON",
-      data : {book_id: cart_book_id, user_id: cart_user_id},
-    }).done(function(response) { 
-  
-      if(response.status_cart == "inserted"){ 
-        showSuccessToast();
-     
-      }
-      if(response.status_cart == "existed"){ 
-        showDeletedSuccessToastAlreadyAdded();
-        
-      }
-    });
-  
-
-    // add to cart 
-  } else { 
-    // show sold();
- 
-    showDeletedSuccessToast();
+function sessionStatus(){ 
+  if(cart_user_id === 0){ 
+    return false;
   }
-})
+  return true;
+}
+
+
+
+
+  $("#add-to-cart-btn").on('click', () => { 
+    if(sessionStatus()){
+      if(!isThisBookSold(isSold)){
+      
+        $.ajax({
+          type: "POST",
+          url: "assets/php/add-to-cart.php",
+          dataType: "JSON",
+          data : {book_id: cart_book_id, user_id: cart_user_id},
+        }).done(function(response) { 
+      
+          if(response.status_cart == "inserted"){ 
+            showSuccessToast();
+        
+          }
+          if(response.status_cart == "existed"){ 
+            showDeletedSuccessToastAlreadyAdded();
+            
+          }
+        });
+      
+
+        // add to cart 
+      } else { 
+        // show sold();
+    
+        showDeletedSuccessToast();
+      }
+    } else { 
+      $('.sign-up-modal-container-bg').fadeOut('fast');
+     
+      $('.sign-in-section-container-bg').fadeIn('fast');
+      $('.sign-in-section-container').show();
+      $('.forgot-password-section-container').hide();
+    }
+  })
+
 
 
 $('#vb-buy-book-btn').on('click', function() {
-  if(!isThisBookSold(isSold)){
-    $('#check').prop('checked', false);
-    $('.artwork-accepted').hide();
-    $('#close-button').hide();
+
+  if(sessionStatus()){
+    if(!isThisBookSold(isSold)){
+      $('#check').prop('checked', false);
+      $('.artwork-accepted').hide();
+      $('#close-button').hide();
+    
+      $('.buy-book-modal-container').fadeIn('fast');
+      $('.buy-book-cont').show();
+      $('.buy-book-body').show();
+      $('.summary-body-mod').hide();
+    
+      $('.done-section').hide();
+      //  currentActive = 1;
+      //  update();
+    } else { 
+      // show sold();
   
-    $('.buy-book-modal-container').fadeIn('fast');
-    $('.buy-book-cont').show();
-    $('.buy-book-body').show();
-    $('.summary-body-mod').hide();
-  
-    $('.done-section').hide();
-     //  currentActive = 1;
-     //  update();
+      showDeletedSuccessToast();
+    }
   } else { 
-     // show sold();
- 
-     showDeletedSuccessToast();
+    $('.sign-up-modal-container-bg').fadeOut('fast');
+  
+    $('.sign-in-section-container-bg').fadeIn('fast');
+    $('.sign-in-section-container').show();
+    $('.forgot-password-section-container').hide();
   }
 });
 
@@ -220,6 +247,25 @@ $('#buy-submit-form-from-viewcart').on('click', function(){
     $('#close-button').show();
   }, 4000);
 });
+
+$('#summary-next-btn').on('click', function(){
+  $('.buy-book-body').hide();
+    $('.summary-body-mod').hide();
+    $('.done-section').show();
+   
+  nextfunc();
+
+
+ 
+
+  setTimeout(function(){
+    $('#check').prop('checked', true);
+    $(".check").addClass("fas fa-check");  
+    $('.artwork-accepted').show();
+    $('#close-button').show();
+  }, 4000);
+});
+
 $("#check").click(function() {
   return false;
 });
@@ -260,11 +306,11 @@ $("#check").click(function() {
       processData:false,
       contentType:false,
       beforeSend: function(){
-        // $('.sign-up-section').hide();
-        // $('.loading-verification').show()
+        $('.sign-up-section').hide();
+        $('.loading-verification').show()
       },
       complete: function(){
-        // $('.loading-verification').hide()
+        $('.loading-verification').hide()
       },
       success: function(response) {
         const purchaseResponse = { purchaseStatus : "success"};

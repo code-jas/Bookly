@@ -137,6 +137,13 @@ body {
    margin: 0 auto;
 }
 
+.autoH-bd {
+   min-height: 600px;
+   height: auto;
+
+
+}
+
 .buy-book-head {
    background-color: #ffffff;
    display: flex;

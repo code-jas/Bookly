@@ -14,117 +14,117 @@ let activeIndex = 0; // the current page on the slider
 
 const urlImagePath = "./assets/images/feature-books/";
 
-let movies = [
-  {
-    src:
-    urlImagePath + "template-1.png",
-    title: "The Matrix",
-    author: "The Wachowski Brothers",
-    price: "$10.99",
-    genre: "Sci-Fi",
-  },
-  {
-    src:
-      "./assets/images/feature-books/template-2.png",
-      title: "The Siderman",
-      author: "The SPidermean Brothers",
-      price: "$12.99",
-      genre: "Sci-Fi",
-  },
-  {
-    src:
-      "./assets/images/feature-books/template-3.png",
-      title: "The Siderman",
-      author: "The SPidermean Brothers",
-      price: "$12.99",
-      genre: "Sci-Fi",
-  },
-  {
-    src:
-    urlImagePath + "template-1.png",
-    title: "The Matrix",
-    author: "The Wachowski Brothers",
-    price: "$10.99",
-    genre: "Sci-Fi",
-  },
-  {
-    src:
-      "./assets/images/feature-books/template-2.png",
-      title: "The Siderman and the Lover boy  ",
-      author: "The SPidermean Brothers",
-      price: "$12.99",
-      genre: "Sci-Fi",
-  },
-  {
-    src:
-      "./assets/images/feature-books/template-3.png",
-      title: "The Siderman",
-      author: "The SPidermean Brothers",
-      price: "$12.99",
-      genre: "Sci-Fi",
-  },
-  {
-    src:
-    urlImagePath + "template-1.png",
-    title: "The Matrix",
-    author: "The Wachowski Brothers",
-    price: "$10.99",
-    genre: "Sci-Fi",
-  },
-  {
-    src:
-      "./assets/images/feature-books/template-2.png",
-      title: "The Siderman",
-      author: "The SPidermean Brothers",
-      price: "$12.99",
-      genre: "Sci-Fi",
-  },
-  {
-    src:
-      "./assets/images/feature-books/template-3.png",
-      title: "Last Movie",
-      author: "The Moviews Brothers",
-      price: "$12.99",
-      genre: "Sci-Fi",
-  },
-  // {
-  //   src:
-  //     "https://images.unsplash.com/photo-1579156412503-f22426cc6386?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=1352&q=80",
-  // },
-  // {
-  //   src:
-  //     "https://images.unsplash.com/photo-1514068574489-503a8eb91592?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=1390&q=80",
-  // },
-  // {
-  //   src:
-  //     "https://images.unsplash.com/photo-1521714161819-15534968fc5f?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80",
-  // },
-  // {
-  //   src:
-  //     "https://images.unsplash.com/photo-1572188863110-46d457c9234d?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80",
-  // },
-  // {
-  //   src:
-  //     "https://images.unsplash.com/photo-1579702455224-c0dd4ac78234?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=1369&q=80",
-  // },
+// let movies = [
+//   {
+//     src:
+//     urlImagePath + "template-1.png",
+//     title: "The Matrix",
+//     author: "The Wachowski Brothers",
+//     price: "$10.99",
+//     genre: "Sci-Fi",
+//   },
+//   {
+//     src:
+//       "./assets/images/feature-books/template-2.png",
+//       title: "The Siderman",
+//       author: "The SPidermean Brothers",
+//       price: "$12.99",
+//       genre: "Sci-Fi",
+//   },
+//   {
+//     src:
+//       "./assets/images/feature-books/template-3.png",
+//       title: "The Siderman",
+//       author: "The SPidermean Brothers",
+//       price: "$12.99",
+//       genre: "Sci-Fi",
+//   },
+//   {
+//     src:
+//     urlImagePath + "template-1.png",
+//     title: "The Matrix",
+//     author: "The Wachowski Brothers",
+//     price: "$10.99",
+//     genre: "Sci-Fi",
+//   },
+//   {
+//     src:
+//       "./assets/images/feature-books/template-2.png",
+//       title: "The Siderman and the Lover boy  ",
+//       author: "The SPidermean Brothers",
+//       price: "$12.99",
+//       genre: "Sci-Fi",
+//   },
+//   {
+//     src:
+//       "./assets/images/feature-books/template-3.png",
+//       title: "The Siderman",
+//       author: "The SPidermean Brothers",
+//       price: "$12.99",
+//       genre: "Sci-Fi",
+//   },
+//   {
+//     src:
+//     urlImagePath + "template-1.png",
+//     title: "The Matrix",
+//     author: "The Wachowski Brothers",
+//     price: "$10.99",
+//     genre: "Sci-Fi",
+//   },
+//   {
+//     src:
+//       "./assets/images/feature-books/template-2.png",
+//       title: "The Siderman",
+//       author: "The SPidermean Brothers",
+//       price: "$12.99",
+//       genre: "Sci-Fi",
+//   },
+//   {
+//     src:
+//       "./assets/images/feature-books/template-3.png",
+//       title: "Last Movie",
+//       author: "The Moviews Brothers",
+//       price: "$12.99",
+//       genre: "Sci-Fi",
+//   },
+//   // {
+//   //   src:
+//   //     "https://images.unsplash.com/photo-1579156412503-f22426cc6386?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=1352&q=80",
+//   // },
+//   // {
+//   //   src:
+//   //     "https://images.unsplash.com/photo-1514068574489-503a8eb91592?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=1390&q=80",
+//   // },
+//   // {
+//   //   src:
+//   //     "https://images.unsplash.com/photo-1521714161819-15534968fc5f?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80",
+//   // },
+//   // {
+//   //   src:
+//   //     "https://images.unsplash.com/photo-1572188863110-46d457c9234d?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80",
+//   // },
+//   // {
+//   //   src:
+//   //     "https://images.unsplash.com/photo-1579702455224-c0dd4ac78234?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=1369&q=80",
+//   // },
 
-  // {
-  //   src:
-  //     "https://images.unsplash.com/photo-1575470180257-7183ddca844f?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=701&q=80",
-  // },
-  // {
-  //   src:
-  //     "https://images.unsplash.com/photo-1584253660192-de72b033c220?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=1350&q=80",
-  // },
-  // {
-  //   src:
-  //     "https://images.unsplash.com/photo-1611523792722-16952e48cffa?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=700&q=80",
-  // },
-  // {
-  //   src:
-  //     "https://images.unsplash.com/photo-1536300007881-7e482242baa5?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80",
-  // },
-];
+//   // {
+//   //   src:
+//   //     "https://images.unsplash.com/photo-1575470180257-7183ddca844f?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=701&q=80",
+//   // },
+//   // {
+//   //   src:
+//   //     "https://images.unsplash.com/photo-1584253660192-de72b033c220?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=1350&q=80",
+//   // },
+//   // {
+//   //   src:
+//   //     "https://images.unsplash.com/photo-1611523792722-16952e48cffa?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=700&q=80",
+//   // },
+//   // {
+//   //   src:
+//   //     "https://images.unsplash.com/photo-1536300007881-7e482242baa5?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80",
+//   // },
+// ];
 
 const descContainer = document.querySelectorAll(".description__text-container");
 const descTitle = document.querySelectorAll(".description__title");
@@ -133,6 +133,7 @@ const descPrice = document.querySelectorAll(".description__price");
 const newMovie = document.getElementById("ft-book0");
 let iterate = 0;
 
+// book-details?id=${item.book_id}
 
 // Fill the slider with all the movies in the "movies" array
 function populateSlider() {
@@ -145,10 +146,11 @@ function populateSlider() {
   
     let img = clone.querySelector("img");
 
-    img.src = image.src;
+    clone.href = `book-details?id=${image.book_id}`;
+    img.src = image.book_cover;
 
 
-    slider.insertBefore(clone, slider.childNodes[slider.childNodes.length -1]);
+    slider.insertBefore(clone, slider.childNodes[slider.childNodes.length - 1]);
 
   });
 
@@ -186,7 +188,7 @@ function featureTextContent() {
     
     descTitle.innerHTML = movies[index].title;
     descAuthor.innerHTML = movies[index].author;
-    descPrice.innerHTML = movies[index].price;
+    descPrice.innerHTML = "₱" +movies[index].price;
     index++;
   })
 }
@@ -251,6 +253,9 @@ btnRight.addEventListener("click", (e) => {
     // updateIndicators(activeIndex);
   }
 });
+
+
+
 
 // slider.addEventListener("scroll", (e) => {
 //   console.log(slider.scrollLeft);

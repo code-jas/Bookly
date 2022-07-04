@@ -37,6 +37,8 @@
             echo "active-session";
             $profile_img_db="";
             $user_id="";
+            $user_id = $firstname = $lastname =  $username = $password = $email = $contact = $birthdate = $address = $barangay = $city = $zipcode = "";
+            // $profile_img = "";
          } ?>">
             <!-- <button class="sign-in-btn">SIGN IN</button>
                <button class="sign-up-btn">SIGN UP</button> -->

@@ -1,12 +1,37 @@
 <?php
    require_once("db-config.php");
 
+   
+   if(isset($_SESSION["username"])) { 
+      
+      $username = $_SESSION["username"];
 
+      $get_user = mysqli_query($conn , "SELECT * FROM account_user WHERE username='$username'");
 
+      $row = mysqli_fetch_assoc($get_user);
+    
 
+      $db_user_id = $row["id_user"];
+      
+      $db_firstname = $row["firstname"];
+      $db_lastname = $row["lastname"];
+      $db_contact = $row["contact"];
+      $db_birthdate = $row["birthdate"];
+      $db_username = $row["username"];
+      $db_email = $row["email"];
+      $db_address = $row["address"];
+      $db_barangay = $row["barangay"];
+      $db_city = $row["city"];
+      $db_profile_img = $row["profile_img"];
+      $db_zipcode = $row["zipcode"];
 
-   if($_SESSION["username"]) { 
+   } else{ 
+      $db_user_id = "0";
 
+      $db_firstname = $db_lastname= $db_contact = $db_birthdate = $db_username = $db_email = $db_address = $db_barangay = $db_city = $db_profile_img = $db_zipcode = "";
+    
+   }
+     
       $user_id = $_REQUEST["id"];
       $get_book = mysqli_query($conn , "SELECT * FROM books WHERE book_id='$user_id'");
 
@@ -29,29 +54,11 @@
 
     
 
-      $username = $_SESSION["username"];
 
 
-      $get_user = mysqli_query($conn , "SELECT * FROM account_user WHERE username='$username'");
-
-      $row = mysqli_fetch_assoc($get_user);
-    
-
-      $db_user_id = $row["id_user"];
-      $db_firstname = $row["firstname"];
-      $db_lastname = $row["lastname"];
-      $db_contact = $row["contact"];
-      $db_birthdate = $row["birthdate"];
-      $db_username = $row["username"];
-      $db_email = $row["email"];
-      $db_address = $row["address"];
-      $db_barangay = $row["barangay"];
-      $db_city = $row["city"];
-      $db_profile_img = $row["profile_img"];
-      $db_zipcode = $row["zipcode"];
 
 
-   }
+   
 
 
 

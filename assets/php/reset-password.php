@@ -216,8 +216,8 @@ function messageBody($email, $key) {
             <div class=\"box-content\">
                <div class=\"icon-content\">
                   <img class=\"mail-svg\"
-                     src=\"https://raw.githubusercontent.com/code-jas/Bookly/master/assets/images/illustrations/forgot-password_ai.svg\"
-                     alt=\"Mail\" />
+                     src=\"https://raw.githubusercontent.com/code-jas/Bookly/master/assets/images/illustrations/forgot-password_ai.jpg\"
+                     alt=\"Forgot Password ai\" />
                </div>
 
                <h2>Reset your Password</h2>

@@ -25,7 +25,7 @@
    <link rel="stylesheet" href="./assets/css/footer.css">
    <!-- feature-books css -->
    <link rel="stylesheet" href="./assets/css/feature-books.css">
-
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 </head>
 
 
@@ -74,7 +74,8 @@
             <div class="indicator" data-index=2></div>
          </div> -->
          <div class="slider" id="mySlider">
-            <div class="ft-books" id="ft-book0">
+            <a href="#" class="ft-books" id="ft-book0">
+
                <img src="./assets/images/feature-books/template-1.png" alt="" srcset="">
                <div class="description">
 
@@ -83,17 +84,12 @@
                      <p class="description__author truncated">Angelo Silvestre</p>
                      <span class="description__price truncated">₱250</span>
                      <br>
-                     <div class="cat-s truncated">
-                        <span>Explosive</span>
-                        <span>&middot;</span>
-                        <span>Exciting</span>
-                        <span>&middot;</span>
-                        <span>Family</span>
-                     </div>
+
 
                   </div>
                </div>
-            </div>
+
+            </a>
          </div>
          <button type="button" id="moveRight" class="btn-nav">
             <span class="material-symbols-outlined right-btn">
@@ -178,13 +174,23 @@
    <?php
    
    include("footer.php");
+   include("./assets/php/load-books.php");
    
    ?>
+
 
 
    <!-- <script src="./assets/javascript/toast.js"></script> -->
    <script src="./assets/javascript/toast.js"></script>
    <script>
+   shuffle(bookContentList);
+   // console.log(bookContentList);
+   const movies = bookContentList.slice(0, 24);
+   // console.log(movies);
+
+
+
+
    function showSuccessToast() {
       toast({
          message: "Your account has been successfully created. You  may now login.",
@@ -210,17 +216,40 @@
          duration: 5000
       });
    }
+
+
+   function shuffle(array) {
+      var m = array.length,
+         t, i;
+
+      // While there remain elements to shuffle…
+      while (m) {
+
+         // Pick a remaining element…
+         i = Math.floor(Math.random() * m--);
+
+         // And swap it with the current element.
+         t = array[m];
+         array[m] = array[i];
+         array[i] = t;
+      }
+
+      return array;
+   }
    </script>
 
 
    <!-- END | FOOTER -->
-   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
    <script src="./assets/javascript/sign-in-sign-up.js"></script>
    <script src="./assets/javascript/navbar-retriever.js"></script>
    <script src="./assets/javascript/global.js"></script>
 
 
    <script src="./assets/javascript/feature-books.js"></script>
+
+
+
 
 
 
