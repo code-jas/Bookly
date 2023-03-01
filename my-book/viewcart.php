@@ -6,6 +6,7 @@
    <meta http-equiv="X-UA-Compatible" content="IE=edge">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
    <title>View Cart - MyBooks | Bookly</title>
+   <link rel="icon" href="../assets/images/illustrations/logo.png">
    <!-- import icons -->
    <link rel="stylesheet"
       href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
@@ -58,7 +59,7 @@
 
             <div class="view_cart_details_header">
                <h1>View Cart</h1>
-               <h2>2 items</h2>
+               <!-- <h2>2 items</h2> -->
             </div>
             <div class="sidebar_line_break"></div>
             <!-- MAIN CONTENT OF  BOOK CART -->

@@ -90,15 +90,28 @@ if($retrieve_row > 0){
    }
 
 } else { 
-   echo '
-   <div id="empty-cart-nav" class="empty-notif">
-      <div class="emp_notif_img_card">
-         <img src="assets/images/illustrations/empty_cart_img.png" alt="Cart empi">
-         <p class="emp_notif_text">Cart Empty</p>
+   if($navbarInner == "true"){
+      echo '
+      <div id="empty-cart-nav" class="empty-notif">
+         <div class="emp_notif_img_card">
+            <img src="../assets/images/illustrations/empty_cart_img.png" alt="Cart empi">
+            <p class="emp_notif_text">Cart Empty</p>
+         </div>
       </div>
-   </div>
-   
-   ';
+      
+      ';
+   } else { 
+      echo '
+      <div id="empty-cart-nav" class="empty-notif">
+         <div class="emp_notif_img_card">
+            <img src="assets/images/illustrations/empty_cart_img.png" alt="Cart empi">
+            <p class="emp_notif_text">Cart Empty</p>
+         </div>
+      </div>
+      
+      ';
+   }
+
 }
 
 ?>

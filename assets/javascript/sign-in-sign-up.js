@@ -156,6 +156,7 @@ $(document).ready(function() {
                
    
                if(JSON.stringify(response) == JSON.stringify(message)){
+                  console.log("sign-up")
                   $('.sign-up-section').hide();
                   $('.verify-email-section').show();
                   $('#email-display').html($('#su_email').val());

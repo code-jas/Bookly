@@ -203,19 +203,32 @@ header {
    display: flex;
    align-items: center;
    list-style: none;
+
 }
 
 .right-navbar .session-true ul li.nr_li {
    margin-left: 15px;
    cursor: pointer;
    color: var(--primary-font-color);
-   font-size: 20px;
+   font-size: 18px;
    position: relative;
+   padding: 0 1px;
+   border-radius: 50%;
+   transition: all 0.5s ease-in-out;
 }
 
 .right-navbar .session-true ul li.nr_li:hover {
-   color: var(--btn-color);
+   transform: scale(1.1);
+
+   color: var(--btn-color-light);
+   /* background-color: var(--light-gray-dark); */
    /* opacity: 0.5; */
+}
+
+.right-navbar .session-true ul li.nr_li:hover .ic-prof-view-tgl {
+
+   opacity: 0.8;
+
 }
 
 .right-navbar .session-true ul li .profile-card-nav-br {
@@ -298,8 +311,12 @@ header {
 }
 
 
+.right-navbar .cart_dd_main.active--nav-s .ic-prof-view-tgl {
+   color: var(--btn-color-light);
+}
 
 .right-navbar .cart_dd_main.active--nav-s .cart_dd_menu {
+
    display: flex;
    width: 245px;
 }
@@ -430,7 +447,9 @@ header {
    background-color: var(--light-gray);
 }
 
-
+.right-navbar .notif_dd_main.active--nav-s .ic-prof-view-tgl {
+   color: var(--btn-color-light);
+}
 
 .right-navbar .notif_dd_main.active--nav-s .notif_dd_menu {
    display: flex;
@@ -542,7 +561,6 @@ header {
    color: var(--secondary-font-color);
    text-transform: capitalize;
 
-
 }
 
 
@@ -574,6 +592,10 @@ header {
    border: 10px solid;
    border-color: transparent transparent #fff transparent;
 }
+
+/* .right-navbar .cart_dd_main.active--nav-s .ic-prof-view-tgl {
+   color: var(--btn-color-light);
+} */
 
 .right-navbar .prof_dd_main.active--nav-s .prof_dd_menu {
    display: flex;
@@ -698,6 +720,7 @@ header {
    .right-navbar .cart_dd_menu {
       right: -110px;
       top: 53px;
+
    }
 
    .right-navbar .cart_dd_menu:before {
@@ -764,8 +787,8 @@ header {
 
    .nav-menu {
       background-color: var(--dark-gray);
-      /* background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
-         url(/assets/images/illustrations/book-icon.svg); */
+      background-image:
+         url(/assets/images/illustrations/nav-bg.jpg);
       background-size: cover;
       background-position: center;
       height: 100vh;

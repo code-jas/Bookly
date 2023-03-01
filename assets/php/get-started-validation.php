@@ -154,6 +154,8 @@ if(isset($_POST['get_started_btn'])){
             
                firstname = '$firstname',
                lastname = '$lastname',
+               contact  = '$contact',
+               birthdate = '$birthdate',
               
                address = '$address',
                barangay = '$barangay',

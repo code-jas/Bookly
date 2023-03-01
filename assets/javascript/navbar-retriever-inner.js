@@ -50,7 +50,7 @@ $("#cart-retriever").mouseleave(
 
 $(document).ready(function() {
    setInterval(() => {
-      console.log("cart-retriever");
+    
       if (!isOnDivCart) {
          $('#cart-retriever').load('../assets/php/cart-retriever.php', {
             user_id: user_id,
